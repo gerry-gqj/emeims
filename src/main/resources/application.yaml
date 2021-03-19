@@ -1,0 +1,14 @@
+spring:
+  datasource:
+      #?serverTimezone=UTC解决时区的报错
+      url: jdbc:mysql://localhost:3306/emcims?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
+  mvc:
+    format:
+      date: dd-MM-yyyy
+
+mybatis:
+  type-aliases-package: com.emeims.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml

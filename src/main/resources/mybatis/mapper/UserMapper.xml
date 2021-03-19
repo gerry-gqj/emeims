@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.emeims.dao.UserMapper">
+
+    <resultMap id="allUserMap" type="User">
+        <result property="id" column="id"/>
+        <result property="email" column="email"/>
+        <result property="name" column="name"/>
+        <result property="gender" column="gender"/>
+        <result property="status" column="status"/>
+        <result property="company_id" column="company_id"/>
+        <result property="position_id" column="position_id"/>
+        <association property="position" javaType="Position">
+            <result property="id" column="id"/>
+            <result property="name" column="name"/>
+        </association>
+        <association property="company" javaType="Company">
+            <result property="id" column="id"/>
+            <result property="name" column="name"/>
+            <result property="address" column="address"/>
+            <result property="email" column="email"/>
+        </association>
+    </resultMap>
+
+
+    <select id="getAllUser" resultMap="allUserMap">
+        select *
+        from emcims.user,
+             emcims.position,
+             emcims.company
+        where user.position_id=position.id
+          and user.company_id=company.id
+    </select>
+
+
+
+    <select id="getUserById" resultMap="allUserMap">
+        select *
+        from emcims.user,
+             emcims.position,
+             emcims.company
+        where user.position_id=position.id
+          and user.company_id=company.id
+          and user.id=#{id}
+    </select>
+
+
+    <insert id="addUser" parameterType="User">
+        insert into emcims.user(email, password, name, gender)
+        value (#{email},#{password},#{name},#{gender})
+    </insert>
+
+<!--    <update id="updateUser" parameterType="User">-->
+<!--        update emcims.user set user.status=#{status} where id=#{id}-->
+<!--    </update>    -->
+
+    <update id="updateUser" parameterType="User">
+        update emcims.user
+            <set>
+                <if test="name!=null">
+                    user.name=#{name},
+                </if>
+                <if test="email!=null">
+                    user.email=#{email},
+                </if>
+                <if test="password!=null">
+                    user.password=#{password},
+                </if>
+                <if test="gender!=null">
+                    user.gender=#{gender},
+                </if>
+                <if test="status!=null">
+                    user.status=#{status},
+                </if>
+                <if test="position_id!=0">
+                    user.position_id=#{position_id}
+                </if>
+            </set>
+        where id=#{id}
+    </update>
+
+
+
+<!--    The content of element type "mapper" must match "-->
+<!--    (cache-ref|cache|resultMap*|parameterMap*|sql*|insert*|update*|delete*|select*)+".-->
+
+</mapper>
