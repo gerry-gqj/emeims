@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.emeims.dao.StockMapper">
+
+    <insert id="addStock" parameterType="map">
+        insert into emcims.stock (stock_id,stock_supplier,
+                                  stock_motor_type,stock_motor_model,
+                                  stock_motor_quantity,stock_motor_price_in)
+            value (#{stockId},#{stockSupplier},
+                   #{stockMotorType},#{stockMotorModel},
+                   #{stockMotorQuantity},#{stockMotorPriceIn})
+    </insert>
+
+
+
+    <resultMap id="StockMap" type="Stock">
+        <result property="stockId" column="stock_id"/>
+        <result property="stockSupplier" column="stock_supplier"/>
+        <result property="stockMotorType" column="stock_motor_type"/>
+        <result property="stockMotorModel" column="stock_motor_model"/>
+        <result property="stockMotorQuantity" column="stock_motor_quantity"/>
+        <result property="stockMotorPriceIn" column="stock_motor_price_in"/>
+        <result property="stockMotorPriceOut" column="stock_motor_price_out"/>
+
+        <result property="stockOperatorUp" column="stock_operator_up"/>
+        <result property="stockOperatorDown" column="stock_operator_down"/>
+
+        <result property="stockStatus" column="stock_status"/>
+        <result property="stockUpTime" column="stock_up_time"/>
+        <result property="stockDownTime" column="stock_down_time"/>
+    </resultMap>
+
+
+
+    <select id="getAllStock" resultMap="StockMap">
+        select *
+        from emcims.stock;
+    </select>
+
+    <select id="getStockByInfo" parameterType="map" resultMap="StockMap">
+        select *
+        from emcims.stock
+        <where>
+            <if test="stockId!=null and stockId!=''">
+                and stock_id=#{stockId}
+            </if>
+            <if test="stockSupplier!=null and stockSupplier!=''">
+                and stock_supplier=#{stockSupplier}
+            </if>
+            <if test="stockMotorType!=null and stockMotorType!=''">
+                and stock_motor_type=#{stockMotorType}
+            </if>
+            <if test="stockMotorModel!=null and stockMotorModel!=''">
+                and stock_motor_model=#{stockMotorModel}
+            </if>
+            <if test="stockMotorQuality!=null and stockMotorQuality!=''">
+                and stock_motor_quality=#{stockMotorQuality}
+            </if>
+
+            <if test="stockOperatorUp!=null and stockOperatorUp!=''">
+                and stock_operator_up=#{stockOperatorUp}
+            </if>
+            <if test="stockOperatorDown!=null and stockOperatorDown!=''">
+                and stock_operator_down=#{stockOperatorDown}
+            </if>
+            <if test="stockStatus!=null and stockStatus!=''">
+                and stock_status=#{stockStatus}
+            </if>
+        </where>
+    </select>
+
+
+    <update id="updateStock" parameterType="map">
+        update emcims.stock
+        <set>
+            <if test="stockStatus!=null and stockStatus!=''">
+                stock.stock_status=#{stockStatus},
+            </if>
+            <if test="stockOperatorUp!=null and stockOperatorUp!=''">
+                stock_operator_up=#{stockOperatorUp},
+            </if>
+            <if test="stockOperatorDown!=null and stockOperatorDown!=''">
+                stock_operator_down=#{stockOperatorDown},
+            </if>
+            <if test="stockStartTime!=null">
+                stock_start_time=#{stockStartTime},
+            </if>
+            <if test="stockEndTime!=null">
+                stock_end_time=#{stockEndTime},
+            </if>
+        </set>
+        where stock_id=#{stockId}
+    </update>
+</mapper>

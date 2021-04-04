@@ -1,6 +1,6 @@
 package com.emeims.dao;
 
-import com.emeims.pojo.Position;
+import com.emeims.entity.Position;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 

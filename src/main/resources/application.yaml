@@ -1,14 +1,33 @@
 spring:
   datasource:
       #?serverTimezone=UTC解决时区的报错
-      url: jdbc:mysql://localhost:3306/emcims?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      url: jdbc:mysql://localhost:3306/emcims?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
       driver-class-name: com.mysql.cj.jdbc.Driver
       username: root
       password: root
   mvc:
     format:
-      date: dd-MM-yyyy
+      date: yyyy-MM-dd
+
+  jackson:
+    default-property-inclusion: always
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
 
 mybatis:
-  type-aliases-package: com.emeims.pojo
+  type-aliases-package: com.emeims.entity
   mapper-locations: classpath:mybatis/mapper/*.xml
+
+
+logging:
+  level:
+    com.emeims.dao:
+      debug
+  file:
+    name: emeims.log
+
+server:
+  port:
+    9090
+
+

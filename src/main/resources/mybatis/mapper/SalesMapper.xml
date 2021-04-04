@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.emeims.dao.SalesMapper">
+
+    <insert id="addSales" parameterType="map">
+        insert into emcims.sales (sales_id,
+                                  sales_client,
+                                  sales_motor_type,
+                                  sales_motor_model,
+                                  sales_motor_quantity,
+                                  sales_motor_price,
+                                  sales_total_price,
+                                  sales_operator_submit,
+                                  sales_start_time)
+            value (#{salesId},
+                   #{salesClient},
+                   #{salesMotorType},
+                   #{salesMotorModel},
+                   #{salesMotorQuality},
+                   #{salesMotorPrice},
+                   #{salesTotalPrice},
+                   #{salesOperatorSubmit},
+                   #{salesStartTime})
+    </insert>
+
+    <resultMap id="SalesMap" type="Sales">
+        <result property="salesId" column="sales_id"/>
+        <result property="salesClient" column="client"/>
+        <result property="salesMotorType" column="sales_motor_type"/>
+        <result property="salesMotorModel" column="sales_motor_model"/>
+        <result property="salesMotorQuality" column="sales_motor_quantity"/>
+
+        <result property="salesMotorPrice" column="sales_motor_price"/>
+        <result property="salesTotalPrice" column="sales_total_price"/>
+        <result property="salesOperatorSubmit" column="sales_operator_submit"/>
+        <result property="salesOperatorConfirm" column="sales_operator_confirm"/>
+        <result property="salesOperatorCancel" column="sales_operator_cancel"/>
+
+        <result property="salesStatus" column="sales_status"/>
+        <result property="salesStartTime" column="sales_start_time"/>
+        <result property="salesEndTime" column="sales_end_time"/>
+        <result property="salesReturnTime" column="sales_return_time"/>
+    </resultMap>
+
+
+    <select id="getAllSales" resultMap="SalesMap">
+        select *
+        from emcims.sales;
+    </select>
+
+    <select id="getSalesByInfo" parameterType="map" resultMap="SalesMap">
+        select *
+        from emcims.sales
+        <where>
+            <if test="salesId!=null and salesId!=''">
+                and sales_id=#{salesId}
+            </if>
+            <if test="salesClient!=null and salesClient!=''">
+                and supplier=#{salesClient}
+            </if>
+            <if test="salesMotorType!=null and salesMotorType!=''">
+                and sales_motort_ype=#{salesMotorType}
+            </if>
+            <if test="salesMotorModel!=null and salesMotorModel!=''">
+                and sales_otor_model=#{salesMotorModel}
+            </if>
+            <if test="salesMotorQuality!=null and salesMotorQuality!=''">
+                and sales_motor_quality=#{salesMotorQuality}
+            </if>
+            <if test="salesMotorPrice!=null and salesMotorPrice!=''">
+                and sales_motor_price=#{salesMotorPrice}
+            </if>
+            <if test="salesTotalPrice!=null and salesTotalPrice!=''">
+                and sales_total_price=#{salesTotalPrice}
+            </if>
+            <if test="salesOperatorSubmit!=null and salesOperatorSubmit!=''">
+                and sales_operator_submit=#{salesOperatorSubmit}
+            </if>
+            <if test="salesOperatorConfirm!=null and salesOperatorConfirm!=''">
+                and sales_operator_confirm=#{salesOperatorConfirm}
+            </if>
+            <if test="salesOperatorCancel!=null and salesOperatorCancel!=''">
+                and sales_operator_cancel=#{salesOperatorCancel}
+            </if>
+            <if test="salesStatus!=null and salesStatus!=''">
+                and sales_status=#{salesStatus}
+            </if>
+            <if test="salesStartTimeFrom!=null">
+                and sales_start_time &gt;= #{salesStartTimeFrom}
+            </if>
+            <if test="salesStartTimeTo!=null">
+                and sales_start_time &lt;= #{salesStartTimeTo}
+            </if>
+            <if test="salesEndTimeFrom!=null">
+                and sales_end_time &gt;= #{salesEndTimeFrom}
+            </if>
+            <if test="salesEndTimeTo!=null">
+                and sales_end_time &lt;= #{salesEndTimeTo}
+            </if>
+            <if test="salesReturnTimeFrom!=null">
+                and sales_return_time &gt;= #{salesReturnTimeFrom}
+            </if>
+            <if test="salesReturnTimeTo!=null">
+                and sales_return_time &lt;= #{salesReturnTimeTo}
+            </if>
+        </where>;
+    </select>
+
+    <update id="updateSales" parameterType="map">
+        update emcims.sales
+        <set>
+            <if test="salesStatus!=null and salesStatus!=''">
+                sales_status=#{salesStatus},
+            </if>
+            <if test="salesOperatorConfirm!=null and salesOperatorConfirm!=''">
+                sales_operator_confirm=#{salesOperatorConfirm},
+            </if>
+            <if test="salesOperatorCancel!=null and salesOperatorCancel!=''">
+                 sales_operator_cancel=#{salesOperatorCancel},
+            </if>
+            <if test="salesEndTime!=null">
+                sales_end_time=#{salesEndTime},
+            </if>
+            <if test="salesReturnTime!=null">
+                sales_return_time=#{salesReturnTime},
+            </if>
+        </set>
+        where sales_id=#{salesId}
+    </update>
+
+</mapper>

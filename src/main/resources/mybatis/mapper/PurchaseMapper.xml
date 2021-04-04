@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.emeims.dao.PurchaseMapper">
+
+    <insert id="addPurchase" parameterType="map">
+        insert into emcims.purchase (purchase_id,
+                                     purchase_supplier,
+                                     purchase_motor_type,
+                                     purchase_motor_model,
+                                     purchase_motor_quantity,
+                                     purchase_motor_price,
+                                     purchase_total_price,
+                                     purchase_operator_submit,
+                                     purchase_start_time)
+          value (#{purchaseId},
+                 #{purchaseSupplier},
+                 #{purchaseMotorType},
+                 #{purchaseMotorModel},
+                 #{purchaseMotorQuality},
+                 #{purchaseMotorPrice},
+                 #{purchaseTotalPrice},
+                 #{purchaseOperatorSubmit},
+                 #{purchaseStartTime})
+    </insert>
+
+
+
+    <resultMap id="PurchaseMap" type="Purchase">
+        <result property="purchaseId" column="purchase_id"/>
+        <result property="purchaseSupplier" column="purchase_supplier"/>
+        <result property="purchaseMotorType" column="purchase_motor_type"/>
+        <result property="purchaseMotorModel" column="purchase_motor_model"/>
+        <result property="purchaseMotorQuality" column="purchase_motor_quantity"/>
+        <result property="purchaseMotorPrice" column="purchase_motor_price"/>
+        <result property="purchaseTotalPrice" column="purchase_total_price"/>
+
+        <result property="purchaseOperatorSubmit" column="purchase_operator_submit"/>
+        <result property="purchaseOperatorConfirm" column="purchase_operator_confirm"/>
+        <result property="purchaseOperatorCancel" column="purchase_operator_cancel"/>
+
+        <result property="purchaseStatus" column="purchase_status"/>
+        <result property="purchaseStartTime" column="purchase_start_time"/>
+        <result property="purchaseEndTime" column="purchase_end_time"/>
+        <result property="purchaseReturnTime" column="purchase_return_time"/>
+    </resultMap>
+
+
+
+    <select id="getAllPurchase" resultMap="PurchaseMap">
+        select *
+        from emcims.purchase;
+    </select>
+
+    <select id="getPurchaseByInfo" parameterType="map" resultMap="PurchaseMap">
+        select *
+        from emcims.purchase
+        <where>
+            <if test="purchaseId!=null and purchaseId!=''">
+                and purchase_id=#{purchaseId}
+            </if>
+            <if test="purchase_supplier!=null and purchase_supplier!=''">
+                and purchase_supplier=#{purchase_supplier}
+            </if>
+            <if test="purchaseMotorType!=null and purchaseMotorType!=''">
+                and purchase_motort_ype=#{purchaseMotorType}
+            </if>
+            <if test="purchaseMotorModel!=null and purchaseMotorModel!=''">
+                and purchase_otor_model=#{purchaseMotorModel}
+            </if>
+            <if test="purchaseMotorQuality!=null and purchaseMotorQuality!=''">
+                and purchase_motor_quality=#{purchaseMotorQuality}
+            </if>
+
+
+            <if test="purchaseOperatorSubmit!=null and purchaseOperatorSubmit!=''">
+                and purchase_operator_submit=#{purchaseOperatorSubmit}
+            </if>
+            <if test="purchaseOperatorConfirm!=null and purchaseOperatorConfirm!=''">
+                and purchase_operator_confirm=#{purchaseOperatorConfirm}
+            </if>
+            <if test="purchaseOperatorCancel!=null and purchaseOperatorCancel!=''">
+                and purchase_operator_cancel=#{purchaseOperatorCancel}
+            </if>
+
+            <if test="purchaseStatus!=null and purchaseStatus!=''">
+                and purchase_status=#{purchaseStatus}
+            </if>
+            <if test="purchaseStartTimeFrom!=null">
+                and purchase_start_time &gt;= #{purchaseStartTimeFrom}
+            </if>
+            <if test="purchaseStartTimeTo!=null">
+                and purchase_start_time &lt;= #{purchaseStartTimeTo}
+            </if>
+
+             <if test="purchaseEndTimeFrom!=null">
+                and purchase_end_time &gt;= #{purchaseEndTimeFrom}
+            </if>
+            <if test="purchaseEndTimeTo!=null">
+                and purchase_end_time &lt;= #{purchaseEndTimeTo}
+            </if>
+
+
+            <if test="purchaseReturnTimeFrom!=null">
+                and purchase_return_time &gt;= #{purchaseReturnTimeFrom}
+            </if>
+
+            <if test="purchaseReturnTimeTo!=null">
+                and purchase_return_time &lt;= #{purchaseReturnTimeTo}
+            </if>
+        </where>
+    </select>
+
+    <update id="updatePurchase" parameterType="map">
+        update emcims.purchase
+            <set>
+                <if test="purchaseStatus!=null and purchaseStatus!=''">
+                    purchase.purchase_status=#{purchaseStatus},
+                </if>
+                <if test="purchaseOperatorConfirm!=null and purchaseOperatorConfirm!=''">
+                    purchase_operator_confirm=#{purchaseOperatorConfirm},
+                </if>
+                <if test="purchaseOperatorCancel!=null and purchaseOperatorCancel!=''">
+                    purchase_operator_cancel=#{purchaseOperatorCancel},
+                </if>
+                <if test="purchaseEndTime!=null">
+                    purchase_end_time=#{purchaseEndTime},
+                </if>
+                <if test="purchaseReturnTime!=null">
+                    purchase_return_time=#{purchaseReturnTime},
+                </if>
+            </set>
+        where purchase_id=#{purchaseId}
+    </update>
+</mapper>

@@ -5,86 +5,123 @@
 
 <mapper namespace="com.emeims.dao.UserMapper">
 
+
     <resultMap id="allUserMap" type="User">
-        <result property="id" column="id"/>
-        <result property="email" column="email"/>
-        <result property="name" column="name"/>
-        <result property="gender" column="gender"/>
-        <result property="status" column="status"/>
-        <result property="company_id" column="company_id"/>
-        <result property="position_id" column="position_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="userEmail" column="user_email"/>
+        <result property="userName" column="user_name"/>
+        <result property="userPassword" column="user_password"/>
+        <result property="userGender" column="user_gender"/>
+        <result property="userStatus" column="user_status"/>
+        <result property="positionId" column="position_id"/>
+        <result property="companyId" column="company_id"/>
         <association property="position" javaType="Position">
-            <result property="id" column="id"/>
-            <result property="name" column="name"/>
+            <result property="postId" column="position_id"/>
+            <result property="postName" column="position_name"/>
         </association>
         <association property="company" javaType="Company">
-            <result property="id" column="id"/>
-            <result property="name" column="name"/>
-            <result property="address" column="address"/>
-            <result property="email" column="email"/>
+            <result property="companyId" column="company_id"/>
+            <result property="companyName" column="company_name"/>
+            <result property="companyAddress" column="company_address"/>
+            <result property="companyEmail" column="company_email"/>
         </association>
     </resultMap>
 
-
     <select id="getAllUser" resultMap="allUserMap">
         select *
-        from emcims.user,
-             emcims.position,
-             emcims.company
-        where user.position_id=position.id
-          and user.company_id=company.id
+        from emcims.user u,
+             emcims.position p,
+             emcims.company c
+        where u.position_id=p.position_id
+          and u.company_id=c.company_id
     </select>
-
-
 
     <select id="getUserById" resultMap="allUserMap">
         select *
-        from emcims.user,
-             emcims.position,
-             emcims.company
-        where user.position_id=position.id
-          and user.company_id=company.id
-          and user.id=#{id}
+        from emcims.user u,
+             emcims.position p,
+             emcims.company c
+        where u.position_id=p.position_id
+          and u.company_id=c.company_id
+          and u.user_id=#{userId}
     </select>
 
 
-    <insert id="addUser" parameterType="User">
-        insert into emcims.user(email, password, name, gender)
-        value (#{email},#{password},#{name},#{gender})
+    <select id="getUserByInfo" parameterType="map" resultMap="allUserMap">
+        select *
+        from emcims.user,
+             emcims.position,
+             emcims.company
+        where user.position_id=position.position_id and
+              user.company_id=company.company_id
+            <if test="userId!=null and userId!=''">
+                and user.user_id=#{userId}
+            </if>
+            <if test="userEmail!=null and userEmail!=''">
+                and user.user_email = #{userEmail}
+            </if>
+            <if test="userName!=null and userName!=''">
+                and user.user_name like "%"#{userName}"%"
+            </if>
+            <if test="userPassword!=null and userPassword!=''">
+                and user.user_password = #{userPassword}
+            </if>
+            <if test="userGender!=null and userGender!=''">
+                and user.user_gender = #{userGender}
+            </if>
+            <if test="positionId!=null and positionId!=''">
+                and user.position_id=#{positionId}
+            </if>
+            <if test="userStatus!=null and userStatus!=''">
+                and user.user_status =#{userStatus}
+            </if>
+    </select>
+
+
+    <insert id="addUser" parameterType="map">
+        insert into emcims.user(
+            user_email,
+            user_password,
+            user_name,
+            user_gender)
+        value (#{userEmail},
+               #{userPassword},
+               #{userName},
+               #{userGender})
     </insert>
 
-<!--    <update id="updateUser" parameterType="User">-->
-<!--        update emcims.user set user.status=#{status} where id=#{id}-->
-<!--    </update>    -->
 
-    <update id="updateUser" parameterType="User">
+    <update id="updateUser" parameterType="map">
         update emcims.user
             <set>
-                <if test="name!=null">
-                    user.name=#{name},
+                <if test="userName!=null and userName!=''">
+                    user.user_name=#{userName},
                 </if>
-                <if test="email!=null">
-                    user.email=#{email},
+                <if test="userEmail!=null and userEmail!=''">
+                    user.user_email=#{userEmail},
                 </if>
-                <if test="password!=null">
-                    user.password=#{password},
+                <if test="userPassword!=null and userPassword!=''">
+                    user.user_password=#{userPassword},
                 </if>
-                <if test="gender!=null">
-                    user.gender=#{gender},
+                <if test="userGender!=null and userGender!=''">
+                    user.user_gender=#{userGender},
                 </if>
-                <if test="status!=null">
-                    user.status=#{status},
+                <if test="userStatus!=null and userStatus!=''">
+                    user.user_status=#{userStatus},
                 </if>
-                <if test="position_id!=0">
-                    user.position_id=#{position_id}
+                <if test="positionId!=null and positionId!=''">
+                    user.position_id=#{positionId}
                 </if>
             </set>
-        where id=#{id}
+        where user_id=#{userId}
     </update>
 
 
+    <update id="deleteUser" parameterType="map">
+        update emcims.user
+        set user_status='已注销'
+        where user_id=#{userId}
+    </update>
 
-<!--    The content of element type "mapper" must match "-->
-<!--    (cache-ref|cache|resultMap*|parameterMap*|sql*|insert*|update*|delete*|select*)+".-->
 
 </mapper>
