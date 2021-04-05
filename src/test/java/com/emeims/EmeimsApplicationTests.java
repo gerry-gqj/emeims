@@ -2,7 +2,9 @@ package com.emeims;
 
 import com.emeims.dao.PositionMapper;
 import com.emeims.dao.UserMapper;
+import com.emeims.entity.Stock;
 import com.emeims.entity.User;
+import com.emeims.service.stockService.StockServiceImpl;
 import com.emeims.service.userService.UserServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,9 @@ class EmeimsApplicationTests {
 
     @Autowired
     private UserServiceImpl userService;
+
+    @Autowired
+    private StockServiceImpl stockService;
 
     @Autowired
     private PositionMapper positionMapper;
@@ -103,46 +108,46 @@ class EmeimsApplicationTests {
 
 
 
-//    @Test
-//    public void test(){
-//
-//        HashMap map = new HashMap<>();
-//        map.put("userId",3);
-////        map.put("userEmail","qwert@user.com");
-//        List<User> user = userMapper.getUserByInfo(map);
-//
-////        for (User user1 : user) {
-////            System.out.println(user1);
-////        }
-//
-//
-//    }
+    @Test
+    public void getUserByInfo(){
 
-//    @Test
-//    void test03(){
-//        Date date = new Date();
-//        System.out.println(date);
-//        String string = date.toString();
-//        System.out.println(string);
-//
-//        String format = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(date);
-//
-//        System.out.println(format);
-//
-//
-//        String replaceAll = format.toString().replaceAll("-", "");
-//
-//        System.out.println(replaceAll);
-//
-//        String all = replaceAll+2;
-//
-//        System.out.println(all);
-//
-//        String purchaseId = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss")
-//                .format(new Date()).toString()
-//                .replaceAll("-","")+1;
-//
-//    }
+        HashMap map = new HashMap<>();
+        map.put("userId",3);
+        map.put("userEmail","qwert@user.com");
+        List<User> user = userMapper.getUserByInfo(map);
+
+        for (User user1 : user) {
+            System.out.println(user1);
+        }
+
+
+    }
+
+    @Test
+    void test03(){
+        Date date = new Date();
+        System.out.println(date);
+        String string = date.toString();
+        System.out.println(string);
+
+        String format = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(date);
+
+        System.out.println(format);
+
+
+        String replaceAll = format.toString().replaceAll("-", "");
+
+        System.out.println(replaceAll);
+
+        String all = replaceAll+2;
+
+        System.out.println(all);
+
+        String purchaseId = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss")
+                .format(new Date()).toString()
+                .replaceAll("-","")+1;
+
+    }
 
 
     @Test
@@ -154,18 +159,37 @@ class EmeimsApplicationTests {
 
         long time = new Date().getTime();
         String sR = String.valueOf(time);
-
         int length = sR.length();
-
         System.out.println(length);
 
         map.put("salesId1",sR);
         map.put("salesId",sR+2);
-
         System.out.println(map.size());
-
         System.out.println(map);
+        System.out.println(String.valueOf(new Date().getTime())+123);
     }
+
+
+    @Test
+    public void  updateStock(){
+        Map mapUpdateStock = new HashMap<>();
+        mapUpdateStock.put("stockSupplier","sup");
+        mapUpdateStock.put("stockMotorType","交流电机");
+        mapUpdateStock.put("stockMotorModel","jl123");
+        mapUpdateStock.put("stockMotorPriceIn",500);
+        mapUpdateStock.put("stockMotorQuantity",10000);
+        stockService.updateStock(mapUpdateStock);
+    }
+
+    @Test
+    public void getAllStock(){
+        List<Stock> allStock = stockService.getAllStock();
+        for (Stock stock : allStock) {
+            System.out.println(stock);
+        }
+
+    }
+
 
 }
 

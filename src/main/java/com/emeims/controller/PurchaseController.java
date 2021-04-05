@@ -1,7 +1,10 @@
 package com.emeims.controller;
 
 import com.emeims.entity.Purchase;
+import com.emeims.entity.Stock;
+import com.emeims.service.purchaseService.PurchaseService;
 import com.emeims.service.purchaseService.PurchaseServiceImpl;
+import com.emeims.service.stockService.StockServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +28,7 @@ import java.util.Map;
 public class PurchaseController {
 
     private PurchaseServiceImpl purchaseService;
+    private StockServiceImpl stockService;
     /**
      * [Description]: 使用set注入
      * @param purchaseService (PurchaseServiceImpl)
@@ -32,6 +36,11 @@ public class PurchaseController {
     @Autowired
     public void setPurchaseService(PurchaseServiceImpl purchaseService) {
         this.purchaseService = purchaseService;
+    }
+
+    @Autowired
+    public void setStockService(StockServiceImpl stockService) {
+        this.stockService = stockService;
     }
 
     /* ********************[Method:No.1]: createPurchaseId()**********************/
@@ -182,6 +191,9 @@ public class PurchaseController {
         return purchaseService.getPurchaseByInfo(map);
     }
 
+
+
+
     /* ********************[Method:No.5]: updatePurchase()**********************/
     /**
      * [Method:No.5] updatePurchase()
@@ -197,15 +209,69 @@ public class PurchaseController {
     @ApiOperation("Description: 订单修改")
     @RequestMapping(value = "/updatePurchase/",method = RequestMethod.POST)
     public Map updatePurchase(Purchase purchase){
-
         Map mapReturn = new HashMap<>();
         Map map = new HashMap<>();
             map.put("purchaseId",purchase.getPurchaseId());
         if(purchase.getPurchaseStatus().equals("已完成")){
+            /* 更新采购订单状态*/
             map.put("purchaseEndTime",new Date());
             map.put("purchaseStatus",purchase.getPurchaseStatus());
             map.put("purchaseOperatorConfirm",purchase.getPurchaseOperatorConfirm());
             mapReturn.put("status","complete success");
+
+            /* 查询库存是否存在此电机的库存
+            * 如果有,直接更新此库存的数量和价值
+            * 如果没有,添加新的库存单
+            * */
+
+            /* 查询采购单信息*/
+            Map mapGetPurchase = new HashMap<>();
+                mapGetPurchase.put("purchaseId",purchase.getPurchaseId());
+            List<Purchase> purchaseList = purchaseService.getPurchaseByInfo(mapGetPurchase);
+                /* 各字段信息*/
+                String supplier = purchaseList.get(0).getPurchaseSupplier();
+                String motorType = purchaseList.get(0).getPurchaseMotorType();
+                String motorModel = purchaseList.get(0).getPurchaseMotorModel();
+
+                Integer quality = purchaseList.get(0).getPurchaseMotorQuality();
+                Float totalPrice = purchaseList.get(0).getPurchaseTotalPrice();
+            /* 根据采购单的信息查询库存是否存在同种电机型号电机(supplier,motorType,motorModel)*/
+            Map mapGetStock = new HashMap<>();
+                mapGetStock.put("stockSupplier",supplier);
+                mapGetStock.put("stockMotorType",motorType);
+                mapGetStock.put("stockMotorModel",motorModel);
+            List<Stock> stockList = stockService.getStockByInfo(mapGetStock);
+            /* 没有检索到库存中有此电机的存在
+            *  直接向添加新的库存
+            * */
+            if(stockList.isEmpty()){
+                Map mapAddStock = new HashMap<>();
+                    mapAddStock.put("stockId",String.valueOf(new Date().getTime())+purchase.getPurchaseId());
+                    mapAddStock.put("stockSupplier",supplier);
+                    mapAddStock.put("stockMotorType",motorType);
+                    mapAddStock.put("stockMotorModel",motorModel);
+                    mapAddStock.put("stockMotorQuantity",quality);
+                    mapAddStock.put("stockMotorPriceIn",totalPrice);
+                stockService.addStock(mapAddStock);
+            }else {
+                Map mapUpdateStock = new HashMap<>();
+                System.out.println(stockList);
+                Float stockMotorPriceIn= stockList.get(0).getStockMotorPriceIn();
+                Integer stockMotorQuantity = stockList.get(0).getStockMotorQuantity();
+                System.out.println(stockMotorPriceIn);
+                System.out.println(stockMotorQuantity);
+                    mapUpdateStock.put("stockSupplier",supplier);
+                    mapUpdateStock.put("stockMotorType",motorType);
+                    mapUpdateStock.put("stockMotorModel",motorModel);
+
+                Float newStockMotorPriceIn = stockMotorPriceIn + totalPrice;
+                Integer newStockMotorQuantity = stockMotorQuantity+quality;
+                System.out.println(newStockMotorPriceIn);
+                System.out.println(newStockMotorQuantity);
+                    mapUpdateStock.put("stockMotorPriceIn",newStockMotorPriceIn);
+                    mapUpdateStock.put("stockMotorQuantity",newStockMotorQuantity);
+                stockService.updateStock(mapUpdateStock);
+            }
         }
         if(purchase.getPurchaseStatus().equals("已取消")){
             map.put("purchaseReturnTime",new Date());
@@ -216,6 +282,4 @@ public class PurchaseController {
         purchaseService.updatePurchase(map);
         return mapReturn;
     }
-
-
 }

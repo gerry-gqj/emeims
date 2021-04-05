@@ -1,4 +1,4 @@
-package com.emeims.service.SalesService;
+package com.emeims.service.salesService;
 
 import com.emeims.dao.SalesMapper;
 import com.emeims.entity.Sales;

@@ -2,7 +2,6 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
 <mapper namespace="com.emeims.dao.StockMapper">
 
     <insert id="addStock" parameterType="map">
@@ -14,17 +13,17 @@
                    #{stockMotorQuantity},#{stockMotorPriceIn})
     </insert>
 
-
-
     <resultMap id="StockMap" type="Stock">
         <result property="stockId" column="stock_id"/>
         <result property="stockSupplier" column="stock_supplier"/>
         <result property="stockMotorType" column="stock_motor_type"/>
         <result property="stockMotorModel" column="stock_motor_model"/>
         <result property="stockMotorQuantity" column="stock_motor_quantity"/>
+
+        <result property="stockMotorAvgPrice" column="stock_motor_avg_price"/>
+
         <result property="stockMotorPriceIn" column="stock_motor_price_in"/>
         <result property="stockMotorPriceOut" column="stock_motor_price_out"/>
-
         <result property="stockOperatorUp" column="stock_operator_up"/>
         <result property="stockOperatorDown" column="stock_operator_down"/>
 
@@ -34,14 +33,26 @@
     </resultMap>
 
 
-
     <select id="getAllStock" resultMap="StockMap">
-        select *
+        select stock_id, stock_supplier,
+               stock_motor_type, stock_motor_model,
+               stock_motor_price_in/stock_motor_quantity stock_motor_avg_price,
+               stock_motor_quantity, stock_motor_price_in,
+               stock_motor_price_out, stock_status,
+               stock_operator_up, stock_operator_down,
+               stock_up_time, stock_down_time
         from emcims.stock;
     </select>
 
+
     <select id="getStockByInfo" parameterType="map" resultMap="StockMap">
-        select *
+        select stock_id, stock_supplier,
+               stock_motor_type, stock_motor_model,
+               stock_motor_price_in/stock_motor_quantity stock_motor_avg_price,
+               stock_motor_quantity, stock_motor_price_in,
+               stock_motor_price_out, stock_status,
+               stock_operator_up, stock_operator_down,
+               stock_up_time, stock_down_time
         from emcims.stock
         <where>
             <if test="stockId!=null and stockId!=''">
@@ -76,6 +87,15 @@
     <update id="updateStock" parameterType="map">
         update emcims.stock
         <set>
+            <if test="stockMotorPriceIn!=null and stockMotorPriceIn!=''">
+                stock.stock_motor_price_in=#{stockMotorPriceIn},
+            </if>
+            <if test="stockMotorQuantity!=null and stockMotorQuantity!=''">
+                stock.stock_motor_quantity=#{stockMotorQuantity},
+            </if>
+            <if test="stockMotorPriceOut!=null and stockMotorPriceOut!=''">
+                stock.stock_motor_price_out=#{stockMotorPriceOut},
+            </if>
             <if test="stockStatus!=null and stockStatus!=''">
                 stock.stock_status=#{stockStatus},
             </if>
@@ -85,13 +105,26 @@
             <if test="stockOperatorDown!=null and stockOperatorDown!=''">
                 stock_operator_down=#{stockOperatorDown},
             </if>
-            <if test="stockStartTime!=null">
-                stock_start_time=#{stockStartTime},
+            <if test="stockUpTime!=null">
+                stock_up_time=#{stockUpTime},
             </if>
-            <if test="stockEndTime!=null">
-                stock_end_time=#{stockEndTime},
+            <if test="stockDownTime!=null">
+                stock_down_time=#{stockDownTime},
             </if>
         </set>
-        where stock_id=#{stockId}
+        <where>
+            <if test="stockId!=null and stockId!=''">
+                and stock_id=#{stockId}
+            </if>
+            <if test="stockSupplier!=null and stockSupplier!=''">
+                and stock_supplier=#{stockSupplier}
+            </if>
+            <if test="stockMotorType!=null and stockMotorType!=''">
+                and stock_motor_type=#{stockMotorType}
+            </if>
+            <if test="stockMotorModel!=null and stockMotorModel!=''">
+                and stock_motor_model=#{stockMotorModel}
+            </if>
+        </where>
     </update>
 </mapper>

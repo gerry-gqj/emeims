@@ -1,182 +1,142 @@
-2021-04-04 09:18:52.466  INFO 8744 --- [main] com.emeims.EmeimsApplication             : Starting EmeimsApplication using Java 1.8.0_282 on debian with PID 8744 (/home/d-boy/code/gitRepository/GP/emeims/target/classes started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
-2021-04-04 09:18:52.485  INFO 8744 --- [main] com.emeims.EmeimsApplication             : No active profile set, falling back to default profiles: default
-2021-04-04 09:18:53.511  INFO 8744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2021-04-04 09:18:53.518  INFO 8744 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-04 09:18:53.518  INFO 8744 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2021-04-04 09:18:53.566  INFO 8744 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-04 09:18:53.567  INFO 8744 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1032 ms
-2021-04-04 09:18:54.158  INFO 8744 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-04 09:18:54.217  INFO 8744 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-04 09:18:54.342  INFO 8744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2021-04-04 09:18:54.343  INFO 8744 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-04 09:18:54.356  INFO 8744 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-04 09:18:54.377  INFO 8744 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-04 09:18:54.538  INFO 8744 --- [main] com.emeims.EmeimsApplication             : Started EmeimsApplication in 2.611 seconds (JVM running for 3.622)
-2021-04-04 09:19:10.286  INFO 8744 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-04 09:19:10.286  INFO 8744 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-04-04 09:19:10.287  INFO 8744 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-04-04 09:19:10.334  INFO 8744 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-04-04 09:19:10.473  INFO 8744 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-04-04 09:19:10.480 DEBUG 8744 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-04 09:19:10.499 DEBUG 8744 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: admin@user.com(String)
-2021-04-04 09:19:10.522 DEBUG 8744 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-04 09:19:32.220 DEBUG 8744 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
-2021-04-04 09:19:32.220 DEBUG 8744 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
-2021-04-04 09:19:32.229 DEBUG 8744 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 15
-2021-04-04 09:20:12.091 DEBUG 8744 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-04 09:20:12.091 DEBUG 8744 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters: 
-2021-04-04 09:20:12.102 DEBUG 8744 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
-2021-04-04 09:26:09.006 DEBUG 8744 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-04 09:26:09.006 DEBUG 8744 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: admin@user.com(String)
-2021-04-04 09:26:09.007 DEBUG 8744 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-04 09:26:11.865 DEBUG 8744 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-04 09:26:11.866 DEBUG 8744 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters: 
-2021-04-04 09:26:11.880 DEBUG 8744 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
-2021-04-04 09:26:15.473 DEBUG 8744 --- [http-nio-9090-exec-6] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
-2021-04-04 09:26:15.473 DEBUG 8744 --- [http-nio-9090-exec-6] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
-2021-04-04 09:26:15.485 DEBUG 8744 --- [http-nio-9090-exec-6] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 15
-2021-04-04 09:33:35.316  INFO 9673 --- [main] com.emeims.EmeimsApplicationTests        : Starting EmeimsApplicationTests using Java 1.8.0_282 on debian with PID 9673 (started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
-2021-04-04 09:33:35.319  INFO 9673 --- [main] com.emeims.EmeimsApplicationTests        : No active profile set, falling back to default profiles: default
-2021-04-04 09:33:37.387  INFO 9673 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-04 09:33:37.630  INFO 9673 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-04 09:33:38.111  INFO 9673 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-04 09:33:38.129  INFO 9673 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-04 09:33:38.155  INFO 9673 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-04 09:33:38.376  INFO 9673 --- [main] com.emeims.EmeimsApplicationTests        : Started EmeimsApplicationTests in 3.459 seconds (JVM running for 4.917)
-2021-04-04 09:33:38.650  INFO 9673 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-04 09:34:04.228  INFO 9719 --- [main] com.emeims.EmeimsApplicationTests        : Starting EmeimsApplicationTests using Java 1.8.0_282 on debian with PID 9719 (started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
-2021-04-04 09:34:04.231  INFO 9719 --- [main] com.emeims.EmeimsApplicationTests        : No active profile set, falling back to default profiles: default
-2021-04-04 09:34:06.304  INFO 9719 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-04 09:34:06.518  INFO 9719 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-04 09:34:06.798  INFO 9719 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-04 09:34:06.816  INFO 9719 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-04 09:34:06.842  INFO 9719 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-04 09:34:07.033  INFO 9719 --- [main] com.emeims.EmeimsApplicationTests        : Started EmeimsApplicationTests in 3.214 seconds (JVM running for 4.412)
-2021-04-04 09:34:07.234  INFO 9719 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-04 09:34:40.985  INFO 9763 --- [main] com.emeims.EmeimsApplicationTests        : Starting EmeimsApplicationTests using Java 1.8.0_282 on debian with PID 9763 (started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
-2021-04-04 09:34:40.991  INFO 9763 --- [main] com.emeims.EmeimsApplicationTests        : No active profile set, falling back to default profiles: default
-2021-04-04 09:34:42.913  INFO 9763 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-04 09:34:43.137  INFO 9763 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-04 09:34:43.413  INFO 9763 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-04 09:34:43.431  INFO 9763 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-04 09:34:43.457  INFO 9763 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-04 09:34:43.650  INFO 9763 --- [main] com.emeims.EmeimsApplicationTests        : Started EmeimsApplicationTests in 3.074 seconds (JVM running for 4.236)
-2021-04-04 09:34:43.837  INFO 9763 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-04 09:40:17.041  INFO 9965 --- [main] com.emeims.EmeimsApplicationTests        : Starting EmeimsApplicationTests using Java 1.8.0_282 on debian with PID 9965 (started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
-2021-04-04 09:40:17.043  INFO 9965 --- [main] com.emeims.EmeimsApplicationTests        : No active profile set, falling back to default profiles: default
-2021-04-04 09:40:18.953  INFO 9965 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-04 09:40:19.154  INFO 9965 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-04 09:40:19.407  INFO 9965 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-04 09:40:19.424  INFO 9965 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-04 09:40:19.451  INFO 9965 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-04 09:40:19.642  INFO 9965 --- [main] com.emeims.EmeimsApplicationTests        : Started EmeimsApplicationTests in 2.93 seconds (JVM running for 4.1)
-2021-04-04 09:40:19.837  INFO 9965 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-04 09:49:14.446  INFO 10343 --- [main] com.emeims.EmeimsApplicationTests        : Starting EmeimsApplicationTests using Java 1.8.0_282 on debian with PID 10343 (started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
-2021-04-04 09:49:14.449  INFO 10343 --- [main] com.emeims.EmeimsApplicationTests        : No active profile set, falling back to default profiles: default
-2021-04-04 09:49:16.493  INFO 10343 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-04 09:49:16.702  INFO 10343 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-04 09:49:16.989  INFO 10343 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-04 09:49:17.007  INFO 10343 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-04 09:49:17.032  INFO 10343 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-04 09:49:17.219  INFO 10343 --- [main] com.emeims.EmeimsApplicationTests        : Started EmeimsApplicationTests in 3.145 seconds (JVM running for 4.394)
-2021-04-04 09:49:17.411  INFO 10343 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-04 11:31:18.548 DEBUG 8744 --- [http-nio-9090-exec-7] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
-2021-04-04 11:31:18.548 DEBUG 8744 --- [http-nio-9090-exec-7] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
-2021-04-04 11:31:18.552 DEBUG 8744 --- [http-nio-9090-exec-7] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 15
-2021-04-04 11:31:31.733  INFO 11481 --- [main] com.emeims.EmeimsApplicationTests        : Starting EmeimsApplicationTests using Java 1.8.0_282 on debian with PID 11481 (started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
-2021-04-04 11:31:31.750  INFO 11481 --- [main] com.emeims.EmeimsApplicationTests        : No active profile set, falling back to default profiles: default
-2021-04-04 11:31:33.715  INFO 11481 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-04 11:31:33.920  INFO 11481 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-04 11:31:34.178  INFO 11481 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-04 11:31:34.198  INFO 11481 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-04 11:31:34.224  INFO 11481 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-04 11:31:34.401  INFO 11481 --- [main] com.emeims.EmeimsApplicationTests        : Started EmeimsApplicationTests in 3.145 seconds (JVM running for 4.299)
-2021-04-04 11:31:34.579  INFO 11481 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-04 11:31:42.427  INFO 8744 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-04 11:31:42.430  INFO 8744 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-04-04 11:31:42.442  INFO 8744 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-04-04 11:31:44.460  INFO 11527 --- [main] com.emeims.EmeimsApplication             : Starting EmeimsApplication using Java 1.8.0_282 on debian with PID 11527 (/home/d-boy/code/gitRepository/GP/emeims/target/classes started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
-2021-04-04 11:31:44.462  INFO 11527 --- [main] com.emeims.EmeimsApplication             : No active profile set, falling back to default profiles: default
-2021-04-04 11:31:45.546  INFO 11527 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2021-04-04 11:31:45.553  INFO 11527 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-04 11:31:45.553  INFO 11527 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2021-04-04 11:31:45.594  INFO 11527 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-04 11:31:45.594  INFO 11527 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1099 ms
-2021-04-04 11:31:46.132  INFO 11527 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-04 11:31:46.190  INFO 11527 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-04 11:31:46.311  INFO 11527 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2021-04-04 11:31:46.312  INFO 11527 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-04 11:31:46.321  INFO 11527 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-04 11:31:46.343  INFO 11527 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-04 11:31:46.499  INFO 11527 --- [main] com.emeims.EmeimsApplication             : Started EmeimsApplication in 2.355 seconds (JVM running for 2.832)
-2021-04-04 11:32:52.123  INFO 11527 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-04 11:32:52.123  INFO 11527 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-04-04 11:32:52.124  INFO 11527 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-04-04 11:32:59.616  INFO 11527 --- [http-nio-9090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-04-04 11:32:59.741  INFO 11527 --- [http-nio-9090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-04-04 11:32:59.749 DEBUG 11527 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_id=?
-2021-04-04 11:32:59.769 DEBUG 11527 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 202104041132521(String)
-2021-04-04 11:32:59.786 DEBUG 11527 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 0
-2021-04-04 11:32:59.789 DEBUG 11527 --- [http-nio-9090-exec-2] c.emeims.dao.PurchaseMapper.addPurchase  : ==>  Preparing: insert into emcims.purchase (purchase_id, purchase_supplier, purchase_motor_type, purchase_motor_model, purchase_motor_quantity, purchase_motor_price, purchase_total_price, purchase_operator_submit, purchase_start_time) value (?, ?, ?, ?, ?, ?, ?, ?, ?)
-2021-04-04 11:32:59.791 DEBUG 11527 --- [http-nio-9090-exec-2] c.emeims.dao.PurchaseMapper.addPurchase  : ==> Parameters: 202104041132521(String), sup(String), 直流电机(String), zl001(String), 300(Integer), 120.0(Float), 36000.0(Float), admin(String), 2021-04-04 11:32:59.789(Timestamp)
-2021-04-04 11:32:59.800 DEBUG 11527 --- [http-nio-9090-exec-2] c.emeims.dao.PurchaseMapper.addPurchase  : <==    Updates: 1
-2021-04-04 11:33:24.511 DEBUG 11527 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_id=?
-2021-04-04 11:33:24.511 DEBUG 11527 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 202104041132521(String)
-2021-04-04 11:33:24.516 DEBUG 11527 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 1
-2021-04-04 11:36:01.615 DEBUG 11527 --- [http-nio-9090-exec-4] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
-2021-04-04 11:36:01.616 DEBUG 11527 --- [http-nio-9090-exec-4] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
-2021-04-04 11:36:01.633 DEBUG 11527 --- [http-nio-9090-exec-4] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 16
-2021-04-04 11:37:29.003 DEBUG 11527 --- [http-nio-9090-exec-5] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=?
-2021-04-04 11:37:29.006 DEBUG 11527 --- [http-nio-9090-exec-5] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已提交(String)
-2021-04-04 11:37:29.014 DEBUG 11527 --- [http-nio-9090-exec-5] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 16
-2021-04-04 11:37:31.713 DEBUG 11527 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=?
-2021-04-04 11:37:31.714 DEBUG 11527 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已完成(String)
-2021-04-04 11:37:31.715 DEBUG 11527 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 0
-2021-04-04 11:37:35.278 DEBUG 11527 --- [http-nio-9090-exec-7] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=?
-2021-04-04 11:37:35.279 DEBUG 11527 --- [http-nio-9090-exec-7] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已取消(String)
-2021-04-04 11:37:35.281 DEBUG 11527 --- [http-nio-9090-exec-7] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 0
-2021-04-04 11:37:37.865 DEBUG 11527 --- [http-nio-9090-exec-8] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=?
-2021-04-04 11:37:37.866 DEBUG 11527 --- [http-nio-9090-exec-8] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已提交(String)
-2021-04-04 11:37:37.880 DEBUG 11527 --- [http-nio-9090-exec-8] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 16
-2021-04-04 11:37:42.211 DEBUG 11527 --- [http-nio-9090-exec-9] c.e.dao.PurchaseMapper.updatePurchase    : ==>  Preparing: update emcims.purchase SET purchase.purchase_status=?, and purchase_operator_cancel=? purchase_return_time=? where purchase_id=?
-2021-04-04 11:37:42.212 DEBUG 11527 --- [http-nio-9090-exec-9] c.e.dao.PurchaseMapper.updatePurchase    : ==> Parameters: 已取消(String), admin(String), 2021-04-04 11:37:42.21(Timestamp), 1(String)
-2021-04-04 11:37:42.282 ERROR 11527 --- [http-nio-9090-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
-### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_cancel='admin'
-                
-                
-         ' at line 6
-### The error may exist in file [/home/d-boy/code/gitRepository/GP/emeims/target/classes/mybatis/mapper/PurchaseMapper.xml]
-### The error may involve com.emeims.dao.PurchaseMapper.updatePurchase-Inline
-### The error occurred while setting parameters
-### SQL: update emcims.purchase              SET purchase.purchase_status=?,                                                                        and purchase_operator_cancel=?                                                                                         purchase_return_time=?          where purchase_id=?
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_cancel='admin'
-                
-                
-         ' at line 6
-; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_cancel='admin'
-                
-                
-         ' at line 6] with root cause
+2021-04-05 12:51:53.519  INFO 7010 --- [main] com.emeims.EmeimsApplication             : Starting EmeimsApplication using Java 1.8.0_282 on debian with PID 7010 (/home/d-boy/code/gitRepository/GP/emeims/target/classes started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
+2021-04-05 12:51:53.531  INFO 7010 --- [main] com.emeims.EmeimsApplication             : No active profile set, falling back to default profiles: default
+2021-04-05 12:51:54.851  INFO 7010 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2021-04-05 12:51:54.858  INFO 7010 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-05 12:51:54.859  INFO 7010 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-05 12:51:54.905  INFO 7010 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-05 12:51:54.905  INFO 7010 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1293 ms
+2021-04-05 12:51:55.627  INFO 7010 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-05 12:51:55.683  INFO 7010 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-05 12:51:55.804  INFO 7010 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2021-04-05 12:51:55.805  INFO 7010 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-05 12:51:55.816  INFO 7010 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-05 12:51:55.837  INFO 7010 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-05 12:51:55.998  INFO 7010 --- [main] com.emeims.EmeimsApplication             : Started EmeimsApplication in 3.509 seconds (JVM running for 4.258)
+2021-04-05 16:59:22.187  INFO 8571 --- [main] com.emeims.EmeimsApplicationTests        : Starting EmeimsApplicationTests using Java 1.8.0_282 on debian with PID 8571 (started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
+2021-04-05 16:59:22.190  INFO 8571 --- [main] com.emeims.EmeimsApplicationTests        : No active profile set, falling back to default profiles: default
+2021-04-05 16:59:24.295  INFO 8571 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-05 16:59:24.507  INFO 8571 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-05 16:59:24.770  INFO 8571 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-05 16:59:24.788  INFO 8571 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-05 16:59:24.813  INFO 8571 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-05 16:59:25.001  INFO 8571 --- [main] com.emeims.EmeimsApplicationTests        : Started EmeimsApplicationTests in 3.129 seconds (JVM running for 4.577)
+2021-04-05 16:59:25.256  INFO 8571 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-05 19:49:49.711  INFO 7010 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-05 19:49:53.022  INFO 10766 --- [main] com.emeims.EmeimsApplication             : Starting EmeimsApplication using Java 1.8.0_282 on debian with PID 10766 (/home/d-boy/code/gitRepository/GP/emeims/target/classes started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
+2021-04-05 19:49:53.025  INFO 10766 --- [main] com.emeims.EmeimsApplication             : No active profile set, falling back to default profiles: default
+2021-04-05 19:49:54.068  INFO 10766 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2021-04-05 19:49:54.074  INFO 10766 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-05 19:49:54.075  INFO 10766 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-05 19:49:54.115  INFO 10766 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-05 19:49:54.116  INFO 10766 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1026 ms
+2021-04-05 19:49:54.682  INFO 10766 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-05 19:49:54.739  INFO 10766 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-05 19:49:54.860  INFO 10766 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2021-04-05 19:49:54.861  INFO 10766 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-05 19:49:54.870  INFO 10766 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-05 19:49:54.892  INFO 10766 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-05 19:49:55.045  INFO 10766 --- [main] com.emeims.EmeimsApplication             : Started EmeimsApplication in 2.343 seconds (JVM running for 2.761)
+2021-04-05 19:50:05.720  INFO 10766 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-05 19:50:05.720  INFO 10766 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-05 19:50:05.721  INFO 10766 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-05 19:50:05.767  INFO 10766 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-05 19:50:05.904  INFO 10766 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-05 19:50:05.910 DEBUG 10766 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
+2021-04-05 19:50:05.929 DEBUG 10766 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: admin@user.com(String)
+2021-04-05 19:50:05.953 DEBUG 10766 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-05 19:50:11.783 DEBUG 10766 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
+2021-04-05 19:50:11.784 DEBUG 10766 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
+2021-04-05 19:50:11.789 DEBUG 10766 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 7
+2021-04-05 19:50:22.625 DEBUG 10766 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_id=?
+2021-04-05 19:50:22.626 DEBUG 10766 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 202104021824231(String)
+2021-04-05 19:50:22.629 DEBUG 10766 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 1
+2021-04-05 19:50:22.632 DEBUG 10766 --- [http-nio-9090-exec-3] c.emeims.dao.StockMapper.getStockByInfo  : ==>  Preparing: select stock_id, stock_supplier, stock_motor_type, stock_motor_model, stock_motor_price_in/stock_motor_quantity, stock_motor_quantity, stock_motor_price_in, stock_motor_price_out, stock_status, stock_operator_up, stock_operator_down, stock_up_time, stock_down_time from emcims.stock WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=?
+2021-04-05 19:50:22.632 DEBUG 10766 --- [http-nio-9090-exec-3] c.emeims.dao.StockMapper.getStockByInfo  : ==> Parameters: sup4(String), 直流电机(String), zl234(String)
+2021-04-05 19:50:22.639 DEBUG 10766 --- [http-nio-9090-exec-3] c.emeims.dao.StockMapper.getStockByInfo  : <==      Total: 0
+2021-04-05 19:50:22.640 DEBUG 10766 --- [http-nio-9090-exec-3] com.emeims.dao.StockMapper.addStock      : ==>  Preparing: insert into emcims.stock (stock_id,stock_supplier, stock_motor_type,stock_motor_model, stock_motor_quantity,stock_motor_price_in) value (?,?, ?,?, ?,?)
+2021-04-05 19:50:22.641 DEBUG 10766 --- [http-nio-9090-exec-3] com.emeims.dao.StockMapper.addStock      : ==> Parameters: 1617623422640202104021824231(String), sup4(String), 直流电机(String), zl234(String), 150(Integer), 30000.0(Float)
+2021-04-05 19:50:22.645 DEBUG 10766 --- [http-nio-9090-exec-3] com.emeims.dao.StockMapper.addStock      : <==    Updates: 1
+2021-04-05 19:50:22.646 DEBUG 10766 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.updatePurchase    : ==>  Preparing: update emcims.purchase SET purchase.purchase_status=?, purchase_operator_confirm=?, purchase_end_time=? where purchase_id=?
+2021-04-05 19:50:22.649 DEBUG 10766 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.updatePurchase    : ==> Parameters: 已完成(String), admin(String), 2021-04-05 19:50:22.62(Timestamp), 202104021824231(String)
+2021-04-05 19:50:22.653 DEBUG 10766 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.updatePurchase    : <==    Updates: 1
+2021-04-05 19:50:22.708 DEBUG 10766 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase
+2021-04-05 19:50:22.709 DEBUG 10766 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 
+2021-04-05 19:50:22.715 DEBUG 10766 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 7
+2021-04-05 19:52:08.268 DEBUG 10766 --- [http-nio-9090-exec-5] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_id=?
+2021-04-05 19:52:08.268 DEBUG 10766 --- [http-nio-9090-exec-5] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 202104022054131(String)
+2021-04-05 19:52:08.271 DEBUG 10766 --- [http-nio-9090-exec-5] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 1
+2021-04-05 19:52:08.272 DEBUG 10766 --- [http-nio-9090-exec-5] c.emeims.dao.StockMapper.getStockByInfo  : ==>  Preparing: select stock_id, stock_supplier, stock_motor_type, stock_motor_model, stock_motor_price_in/stock_motor_quantity, stock_motor_quantity, stock_motor_price_in, stock_motor_price_out, stock_status, stock_operator_up, stock_operator_down, stock_up_time, stock_down_time from emcims.stock WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=?
+2021-04-05 19:52:08.272 DEBUG 10766 --- [http-nio-9090-exec-5] c.emeims.dao.StockMapper.getStockByInfo  : ==> Parameters: sup(String), 交流电机(String), jl123(String)
+2021-04-05 19:52:08.273 DEBUG 10766 --- [http-nio-9090-exec-5] c.emeims.dao.StockMapper.getStockByInfo  : <==      Total: 0
+2021-04-05 19:52:08.273 DEBUG 10766 --- [http-nio-9090-exec-5] com.emeims.dao.StockMapper.addStock      : ==>  Preparing: insert into emcims.stock (stock_id,stock_supplier, stock_motor_type,stock_motor_model, stock_motor_quantity,stock_motor_price_in) value (?,?, ?,?, ?,?)
+2021-04-05 19:52:08.274 DEBUG 10766 --- [http-nio-9090-exec-5] com.emeims.dao.StockMapper.addStock      : ==> Parameters: 1617623528273202104022054131(String), sup(String), 交流电机(String), jl123(String), 300(Integer), 45000.0(Float)
+2021-04-05 19:52:08.283 DEBUG 10766 --- [http-nio-9090-exec-5] com.emeims.dao.StockMapper.addStock      : <==    Updates: 1
+2021-04-05 19:52:08.284 DEBUG 10766 --- [http-nio-9090-exec-5] c.e.dao.PurchaseMapper.updatePurchase    : ==>  Preparing: update emcims.purchase SET purchase.purchase_status=?, purchase_operator_confirm=?, purchase_end_time=? where purchase_id=?
+2021-04-05 19:52:08.284 DEBUG 10766 --- [http-nio-9090-exec-5] c.e.dao.PurchaseMapper.updatePurchase    : ==> Parameters: 已完成(String), admin(String), 2021-04-05 19:52:08.267(Timestamp), 202104022054131(String)
+2021-04-05 19:52:08.287 DEBUG 10766 --- [http-nio-9090-exec-5] c.e.dao.PurchaseMapper.updatePurchase    : <==    Updates: 1
+2021-04-05 19:52:08.322 DEBUG 10766 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase
+2021-04-05 19:52:08.323 DEBUG 10766 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 
+2021-04-05 19:52:08.325 DEBUG 10766 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 7
+2021-04-05 19:53:09.493 DEBUG 10766 --- [http-nio-9090-exec-8] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_id=?
+2021-04-05 19:53:09.494 DEBUG 10766 --- [http-nio-9090-exec-8] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 202104051953061(String)
+2021-04-05 19:53:09.496 DEBUG 10766 --- [http-nio-9090-exec-8] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 0
+2021-04-05 19:53:09.498 DEBUG 10766 --- [http-nio-9090-exec-8] c.emeims.dao.PurchaseMapper.addPurchase  : ==>  Preparing: insert into emcims.purchase (purchase_id, purchase_supplier, purchase_motor_type, purchase_motor_model, purchase_motor_quantity, purchase_motor_price, purchase_total_price, purchase_operator_submit, purchase_start_time) value (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2021-04-05 19:53:09.500 DEBUG 10766 --- [http-nio-9090-exec-8] c.emeims.dao.PurchaseMapper.addPurchase  : ==> Parameters: 202104051953061(String), sup(String), 直流电机(String), zl003(String), 100(Integer), 150.0(Float), 15000.0(Float), admin(String), 2021-04-05 19:53:09.497(Timestamp)
+2021-04-05 19:53:09.508 DEBUG 10766 --- [http-nio-9090-exec-8] c.emeims.dao.PurchaseMapper.addPurchase  : <==    Updates: 1
+2021-04-05 19:53:13.970 DEBUG 10766 --- [http-nio-9090-exec-10] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_id=?
+2021-04-05 19:53:13.970 DEBUG 10766 --- [http-nio-9090-exec-10] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 202104051953101(String)
+2021-04-05 19:53:13.971 DEBUG 10766 --- [http-nio-9090-exec-10] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 0
+2021-04-05 19:53:13.972 DEBUG 10766 --- [http-nio-9090-exec-10] c.emeims.dao.PurchaseMapper.addPurchase  : ==>  Preparing: insert into emcims.purchase (purchase_id, purchase_supplier, purchase_motor_type, purchase_motor_model, purchase_motor_quantity, purchase_motor_price, purchase_total_price, purchase_operator_submit, purchase_start_time) value (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2021-04-05 19:53:13.973 DEBUG 10766 --- [http-nio-9090-exec-10] c.emeims.dao.PurchaseMapper.addPurchase  : ==> Parameters: 202104051953101(String), sup(String), 直流电机(String), zl003(String), 100(Integer), 150.0(Float), 15000.0(Float), admin(String), 2021-04-05 19:53:13.972(Timestamp)
+2021-04-05 19:53:13.982 DEBUG 10766 --- [http-nio-9090-exec-10] c.emeims.dao.PurchaseMapper.addPurchase  : <==    Updates: 1
+2021-04-05 19:53:32.112 DEBUG 10766 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_start_time >= ?
+2021-04-05 19:53:32.114 DEBUG 10766 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 2021-04-05 00:00:00.0(Timestamp)
+2021-04-05 19:53:32.119 DEBUG 10766 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 2
+2021-04-05 19:53:35.567 DEBUG 10766 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_id=?
+2021-04-05 19:53:35.568 DEBUG 10766 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 202104051953061(String)
+2021-04-05 19:53:35.570 DEBUG 10766 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 1
+2021-04-05 19:53:35.570 DEBUG 10766 --- [http-nio-9090-exec-2] c.emeims.dao.StockMapper.getStockByInfo  : ==>  Preparing: select stock_id, stock_supplier, stock_motor_type, stock_motor_model, stock_motor_price_in/stock_motor_quantity, stock_motor_quantity, stock_motor_price_in, stock_motor_price_out, stock_status, stock_operator_up, stock_operator_down, stock_up_time, stock_down_time from emcims.stock WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=?
+2021-04-05 19:53:35.571 DEBUG 10766 --- [http-nio-9090-exec-2] c.emeims.dao.StockMapper.getStockByInfo  : ==> Parameters: sup(String), 直流电机(String), zl003(String)
+2021-04-05 19:53:35.574 DEBUG 10766 --- [http-nio-9090-exec-2] c.emeims.dao.StockMapper.getStockByInfo  : <==      Total: 0
+2021-04-05 19:53:35.574 DEBUG 10766 --- [http-nio-9090-exec-2] com.emeims.dao.StockMapper.addStock      : ==>  Preparing: insert into emcims.stock (stock_id,stock_supplier, stock_motor_type,stock_motor_model, stock_motor_quantity,stock_motor_price_in) value (?,?, ?,?, ?,?)
+2021-04-05 19:53:35.575 DEBUG 10766 --- [http-nio-9090-exec-2] com.emeims.dao.StockMapper.addStock      : ==> Parameters: 1617623615574202104051953061(String), sup(String), 直流电机(String), zl003(String), 100(Integer), 15000.0(Float)
+2021-04-05 19:53:35.583 DEBUG 10766 --- [http-nio-9090-exec-2] com.emeims.dao.StockMapper.addStock      : <==    Updates: 1
+2021-04-05 19:53:35.584 DEBUG 10766 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.updatePurchase    : ==>  Preparing: update emcims.purchase SET purchase.purchase_status=?, purchase_operator_confirm=?, purchase_end_time=? where purchase_id=?
+2021-04-05 19:53:35.585 DEBUG 10766 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.updatePurchase    : ==> Parameters: 已完成(String), admin(String), 2021-04-05 19:53:35.566(Timestamp), 202104051953061(String)
+2021-04-05 19:53:35.589 DEBUG 10766 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.updatePurchase    : <==    Updates: 1
+2021-04-05 19:53:35.624 DEBUG 10766 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_start_time >= ?
+2021-04-05 19:53:35.624 DEBUG 10766 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 2021-04-05 00:00:00.0(Timestamp)
+2021-04-05 19:53:35.625 DEBUG 10766 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 2
+2021-04-05 19:53:40.921 DEBUG 10766 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_id=?
+2021-04-05 19:53:40.921 DEBUG 10766 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 202104051953101(String)
+2021-04-05 19:53:40.923 DEBUG 10766 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 1
+2021-04-05 19:53:40.924 DEBUG 10766 --- [http-nio-9090-exec-4] c.emeims.dao.StockMapper.getStockByInfo  : ==>  Preparing: select stock_id, stock_supplier, stock_motor_type, stock_motor_model, stock_motor_price_in/stock_motor_quantity, stock_motor_quantity, stock_motor_price_in, stock_motor_price_out, stock_status, stock_operator_up, stock_operator_down, stock_up_time, stock_down_time from emcims.stock WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=?
+2021-04-05 19:53:40.924 DEBUG 10766 --- [http-nio-9090-exec-4] c.emeims.dao.StockMapper.getStockByInfo  : ==> Parameters: sup(String), 直流电机(String), zl003(String)
+2021-04-05 19:53:40.925 DEBUG 10766 --- [http-nio-9090-exec-4] c.emeims.dao.StockMapper.getStockByInfo  : <==      Total: 1
+2021-04-05 19:53:40.928 DEBUG 10766 --- [http-nio-9090-exec-4] com.emeims.dao.StockMapper.updateStock   : ==>  Preparing: update emcims.stock SET stock.stock_motor_price_in=?, stock.stock_motor_quantity=? WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=? # where stock_id=?
+2021-04-05 19:53:40.943 ERROR 10766 --- [http-nio-9090-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='stockId', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting null for parameter #6 with JdbcType OTHER . Try setting a different JdbcType for this parameter or a different jdbcTypeForNull configuration property. Cause: java.sql.SQLException: Parameter index out of range (6 > number of parameters, which is 5).] with root cause
 
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_cancel='admin'
-                
-                
-         ' at line 6
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.5.jar:na]
+java.sql.SQLException: Parameter index out of range (6 > number of parameters, which is 5).
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.checkBounds(ClientPreparedStatement.java:1372) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.getCoreParameterIndex(ClientPreparedStatement.java:1385) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.setNull(ClientPreparedStatement.java:1650) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setNull(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.5.jar:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_282]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_282]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_282]
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_282]
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59) ~[mybatis-3.5.6.jar:3.5.6]
-	at com.sun.proxy.$Proxy93.execute(Unknown Source) ~[na:na]
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47) ~[mybatis-3.5.6.jar:3.5.6]
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74) ~[mybatis-3.5.6.jar:3.5.6]
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:67) ~[mybatis-3.5.6.jar:3.5.6]
+	at com.sun.proxy.$Proxy93.setNull(Unknown Source) ~[na:na]
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:65) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.6.jar:3.5.6]
@@ -190,7 +150,7 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85) ~[mybatis-3.5.6.jar:3.5.6]
-	at com.sun.proxy.$Proxy64.updatePurchase(Unknown Source) ~[na:na]
+	at com.sun.proxy.$Proxy67.updateStock(Unknown Source) ~[na:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_282]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_282]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_282]
@@ -201,9 +161,9 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.4.jar:5.3.4]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
-	at com.sun.proxy.$Proxy65.updatePurchase(Unknown Source) ~[na:na]
-	at com.emeims.service.purchaseService.PurchaseServiceImpl.updatePurchase(PurchaseServiceImpl.java:38) ~[classes/:na]
-	at com.emeims.controller.PurchaseController.updatePurchase(PurchaseController.java:232) ~[classes/:na]
+	at com.sun.proxy.$Proxy68.updateStock(Unknown Source) ~[na:na]
+	at com.emeims.service.stockService.StockServiceImpl.updateStock(StockServiceImpl.java:38) ~[classes/:na]
+	at com.emeims.controller.PurchaseController.updatePurchase(PurchaseController.java:265) ~[classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_282]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_282]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_282]
@@ -255,45 +215,58 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.43.jar:9.0.43]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_282]
 
-2021-04-04 11:38:04.635 DEBUG 11527 --- [http-nio-9090-exec-10] c.e.dao.PurchaseMapper.updatePurchase    : ==>  Preparing: update emcims.purchase SET purchase.purchase_status=?, and purchase_operator_confirm=? purchase_end_time=? where purchase_id=?
-2021-04-04 11:38:04.637 DEBUG 11527 --- [http-nio-9090-exec-10] c.e.dao.PurchaseMapper.updatePurchase    : ==> Parameters: 已完成(String), admin(String), 2021-04-04 11:38:04.634(Timestamp), 1(String)
-2021-04-04 11:38:04.645 ERROR 11527 --- [http-nio-9090-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
-### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_confirm='admin'
-                
-                
-        ' at line 5
-### The error may exist in file [/home/d-boy/code/gitRepository/GP/emeims/target/classes/mybatis/mapper/PurchaseMapper.xml]
-### The error may involve com.emeims.dao.PurchaseMapper.updatePurchase-Inline
-### The error occurred while setting parameters
-### SQL: update emcims.purchase              SET purchase.purchase_status=?,                                                       and purchase_operator_confirm=?                                                                                         purchase_end_time=?          where purchase_id=?
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_confirm='admin'
-                
-                
-        ' at line 5
-; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_confirm='admin'
-                
-                
-        ' at line 5] with root cause
+2021-04-05 19:59:22.098  INFO 10766 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-05 19:59:22.100  INFO 10766 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-05 19:59:22.111  INFO 10766 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-05 19:59:25.598  INFO 11118 --- [main] com.emeims.EmeimsApplication             : Starting EmeimsApplication using Java 1.8.0_282 on debian with PID 11118 (/home/d-boy/code/gitRepository/GP/emeims/target/classes started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
+2021-04-05 19:59:25.601  INFO 11118 --- [main] com.emeims.EmeimsApplication             : No active profile set, falling back to default profiles: default
+2021-04-05 19:59:26.570  INFO 11118 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2021-04-05 19:59:26.576  INFO 11118 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-05 19:59:26.576  INFO 11118 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-05 19:59:26.616  INFO 11118 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-05 19:59:26.617  INFO 11118 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 981 ms
+2021-04-05 19:59:27.176  INFO 11118 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-05 19:59:27.233  INFO 11118 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-05 19:59:27.355  INFO 11118 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2021-04-05 19:59:27.356  INFO 11118 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-05 19:59:27.366  INFO 11118 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-05 19:59:27.386  INFO 11118 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-05 19:59:27.541  INFO 11118 --- [main] com.emeims.EmeimsApplication             : Started EmeimsApplication in 2.277 seconds (JVM running for 2.762)
+2021-04-05 19:59:43.424  INFO 11118 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-05 19:59:43.425  INFO 11118 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-05 19:59:43.426  INFO 11118 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-05 19:59:43.488  INFO 11118 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-05 19:59:43.615  INFO 11118 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-05 19:59:43.624 DEBUG 11118 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_id=?
+2021-04-05 19:59:43.646 DEBUG 11118 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 202104051953101(String)
+2021-04-05 19:59:43.665 DEBUG 11118 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 1
+2021-04-05 19:59:43.672 DEBUG 11118 --- [http-nio-9090-exec-1] c.emeims.dao.StockMapper.getStockByInfo  : ==>  Preparing: select stock_id, stock_supplier, stock_motor_type, stock_motor_model, stock_motor_price_in/stock_motor_quantity, stock_motor_quantity, stock_motor_price_in, stock_motor_price_out, stock_status, stock_operator_up, stock_operator_down, stock_up_time, stock_down_time from emcims.stock WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=?
+2021-04-05 19:59:43.672 DEBUG 11118 --- [http-nio-9090-exec-1] c.emeims.dao.StockMapper.getStockByInfo  : ==> Parameters: sup(String), 直流电机(String), zl003(String)
+2021-04-05 19:59:43.674 DEBUG 11118 --- [http-nio-9090-exec-1] c.emeims.dao.StockMapper.getStockByInfo  : <==      Total: 1
+2021-04-05 19:59:43.676 DEBUG 11118 --- [http-nio-9090-exec-1] com.emeims.dao.StockMapper.updateStock   : ==>  Preparing: update emcims.stock SET stock.stock_motor_price_in=?, stock.stock_motor_quantity=? WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=? # where stock_id=?
+2021-04-05 19:59:43.688 ERROR 11118 --- [http-nio-9090-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='stockId', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting null for parameter #6 with JdbcType OTHER . Try setting a different JdbcType for this parameter or a different jdbcTypeForNull configuration property. Cause: java.sql.SQLException: Parameter index out of range (6 > number of parameters, which is 5).] with root cause
 
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_confirm='admin'
-                
-                
-        ' at line 5
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.5.jar:na]
+java.sql.SQLException: Parameter index out of range (6 > number of parameters, which is 5).
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.checkBounds(ClientPreparedStatement.java:1372) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.getCoreParameterIndex(ClientPreparedStatement.java:1385) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.setNull(ClientPreparedStatement.java:1650) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setNull(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.5.jar:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_282]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_282]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_282]
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_282]
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59) ~[mybatis-3.5.6.jar:3.5.6]
-	at com.sun.proxy.$Proxy93.execute(Unknown Source) ~[na:na]
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47) ~[mybatis-3.5.6.jar:3.5.6]
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74) ~[mybatis-3.5.6.jar:3.5.6]
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:67) ~[mybatis-3.5.6.jar:3.5.6]
+	at com.sun.proxy.$Proxy93.setNull(Unknown Source) ~[na:na]
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:65) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.6.jar:3.5.6]
@@ -307,7 +280,7 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85) ~[mybatis-3.5.6.jar:3.5.6]
-	at com.sun.proxy.$Proxy64.updatePurchase(Unknown Source) ~[na:na]
+	at com.sun.proxy.$Proxy67.updateStock(Unknown Source) ~[na:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_282]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_282]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_282]
@@ -318,9 +291,9 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.4.jar:5.3.4]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
-	at com.sun.proxy.$Proxy65.updatePurchase(Unknown Source) ~[na:na]
-	at com.emeims.service.purchaseService.PurchaseServiceImpl.updatePurchase(PurchaseServiceImpl.java:38) ~[classes/:na]
-	at com.emeims.controller.PurchaseController.updatePurchase(PurchaseController.java:232) ~[classes/:na]
+	at com.sun.proxy.$Proxy68.updateStock(Unknown Source) ~[na:na]
+	at com.emeims.service.stockService.StockServiceImpl.updateStock(StockServiceImpl.java:38) ~[classes/:na]
+	at com.emeims.controller.PurchaseController.updatePurchase(PurchaseController.java:268) ~[classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_282]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_282]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_282]
@@ -372,97 +345,58 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.43.jar:9.0.43]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_282]
 
-2021-04-04 11:39:34.930 DEBUG 11527 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=?
-2021-04-04 11:39:34.930 DEBUG 11527 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已完成(String)
-2021-04-04 11:39:34.931 DEBUG 11527 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 0
-2021-04-04 11:39:37.748 DEBUG 11527 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=?
-2021-04-04 11:39:37.749 DEBUG 11527 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已取消(String)
-2021-04-04 11:39:37.751 DEBUG 11527 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 0
-2021-04-04 11:39:40.614 DEBUG 11527 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=? and purchase_return_time >= ?
-2021-04-04 11:39:40.615 DEBUG 11527 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已取消(String), 2021-04-01 00:00:00.0(Timestamp)
-2021-04-04 11:39:40.617 DEBUG 11527 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 0
-2021-04-04 11:39:45.351 DEBUG 11527 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_start_time >= ?
-2021-04-04 11:39:45.358 DEBUG 11527 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 2021-04-01 00:00:00.0(Timestamp)
-2021-04-04 11:39:45.365 DEBUG 11527 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 7
-2021-04-04 11:40:15.042  INFO 11527 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-04 11:40:15.044  INFO 11527 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-04-04 11:40:15.056  INFO 11527 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-04-04 11:40:17.315  INFO 11732 --- [main] com.emeims.EmeimsApplication             : Starting EmeimsApplication using Java 1.8.0_282 on debian with PID 11732 (/home/d-boy/code/gitRepository/GP/emeims/target/classes started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
-2021-04-04 11:40:17.317  INFO 11732 --- [main] com.emeims.EmeimsApplication             : No active profile set, falling back to default profiles: default
-2021-04-04 11:40:18.253  INFO 11732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2021-04-04 11:40:18.260  INFO 11732 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-04 11:40:18.260  INFO 11732 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2021-04-04 11:40:18.299  INFO 11732 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-04 11:40:18.300  INFO 11732 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 944 ms
-2021-04-04 11:40:18.841  INFO 11732 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-04 11:40:18.898  INFO 11732 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-04 11:40:19.015  INFO 11732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2021-04-04 11:40:19.017  INFO 11732 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-04 11:40:19.026  INFO 11732 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-04 11:40:19.046  INFO 11732 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-04 11:40:19.195  INFO 11732 --- [main] com.emeims.EmeimsApplication             : Started EmeimsApplication in 2.27 seconds (JVM running for 2.77)
-2021-04-04 11:41:24.657  INFO 11732 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-04 11:41:26.125  INFO 11838 --- [main] com.emeims.EmeimsApplication             : Starting EmeimsApplication using Java 1.8.0_282 on debian with PID 11838 (/home/d-boy/code/gitRepository/GP/emeims/target/classes started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
-2021-04-04 11:41:26.128  INFO 11838 --- [main] com.emeims.EmeimsApplication             : No active profile set, falling back to default profiles: default
-2021-04-04 11:41:27.093  INFO 11838 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2021-04-04 11:41:27.100  INFO 11838 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-04 11:41:27.100  INFO 11838 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2021-04-04 11:41:27.141  INFO 11838 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-04 11:41:27.142  INFO 11838 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 961 ms
-2021-04-04 11:41:27.674  INFO 11838 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-04 11:41:27.731  INFO 11838 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-04 11:41:27.847  INFO 11838 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2021-04-04 11:41:27.848  INFO 11838 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-04 11:41:27.858  INFO 11838 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-04 11:41:27.877  INFO 11838 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-04 11:41:28.026  INFO 11838 --- [main] com.emeims.EmeimsApplication             : Started EmeimsApplication in 2.252 seconds (JVM running for 2.754)
-2021-04-04 11:41:47.508  INFO 11838 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-04 11:41:47.509  INFO 11838 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-04-04 11:41:47.510  INFO 11838 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-04-04 11:41:47.545  INFO 11838 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-04-04 11:41:47.671  INFO 11838 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-04-04 11:41:47.679 DEBUG 11838 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
-2021-04-04 11:41:47.700 DEBUG 11838 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
-2021-04-04 11:41:47.725 DEBUG 11838 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 16
-2021-04-04 11:43:40.331 DEBUG 11838 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.updatePurchase    : ==>  Preparing: update emcims.purchase SET purchase.purchase_status=?, and purchase_operator_confirm=?, purchase_end_time=? where purchase_id=?
-2021-04-04 11:43:40.333 DEBUG 11838 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.updatePurchase    : ==> Parameters: 已完成(String), admin(String), 2021-04-04 11:43:40.31(Timestamp), 1(String)
-2021-04-04 11:43:40.404 ERROR 11838 --- [http-nio-9090-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
-### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_confirm='admin',
-                
-                
-       ' at line 5
-### The error may exist in file [/home/d-boy/code/gitRepository/GP/emeims/target/classes/mybatis/mapper/PurchaseMapper.xml]
-### The error may involve com.emeims.dao.PurchaseMapper.updatePurchase-Inline
-### The error occurred while setting parameters
-### SQL: update emcims.purchase              SET purchase.purchase_status=?,                                                       and purchase_operator_confirm=?,                                                                                         purchase_end_time=?          where purchase_id=?
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_confirm='admin',
-                
-                
-       ' at line 5
-; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_confirm='admin',
-                
-                
-       ' at line 5] with root cause
+2021-04-05 20:12:48.678  INFO 11118 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:12:48.685  INFO 11118 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-05 20:12:48.707  INFO 11118 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-05 20:12:52.034  INFO 11513 --- [main] com.emeims.EmeimsApplication             : Starting EmeimsApplication using Java 1.8.0_282 on debian with PID 11513 (/home/d-boy/code/gitRepository/GP/emeims/target/classes started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
+2021-04-05 20:12:52.036  INFO 11513 --- [main] com.emeims.EmeimsApplication             : No active profile set, falling back to default profiles: default
+2021-04-05 20:12:53.006  INFO 11513 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2021-04-05 20:12:53.013  INFO 11513 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-05 20:12:53.013  INFO 11513 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-05 20:12:53.056  INFO 11513 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-05 20:12:53.056  INFO 11513 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 987 ms
+2021-04-05 20:12:53.614  INFO 11513 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-05 20:12:53.672  INFO 11513 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:12:53.793  INFO 11513 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2021-04-05 20:12:53.794  INFO 11513 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-05 20:12:53.804  INFO 11513 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-05 20:12:53.825  INFO 11513 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-05 20:12:53.977  INFO 11513 --- [main] com.emeims.EmeimsApplication             : Started EmeimsApplication in 2.268 seconds (JVM running for 2.672)
+2021-04-05 20:13:14.867  INFO 11513 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-05 20:13:14.868  INFO 11513 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-05 20:13:14.869  INFO 11513 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-05 20:13:14.932  INFO 11513 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-05 20:13:15.058  INFO 11513 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-05 20:13:15.065 DEBUG 11513 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_id=?
+2021-04-05 20:13:15.087 DEBUG 11513 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 202104051953101(String)
+2021-04-05 20:13:15.106 DEBUG 11513 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 1
+2021-04-05 20:13:15.110 DEBUG 11513 --- [http-nio-9090-exec-1] c.emeims.dao.StockMapper.getStockByInfo  : ==>  Preparing: select stock_id, stock_supplier, stock_motor_type, stock_motor_model, stock_motor_price_in/stock_motor_quantity, stock_motor_quantity, stock_motor_price_in, stock_motor_price_out, stock_status, stock_operator_up, stock_operator_down, stock_up_time, stock_down_time from emcims.stock WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=?
+2021-04-05 20:13:15.111 DEBUG 11513 --- [http-nio-9090-exec-1] c.emeims.dao.StockMapper.getStockByInfo  : ==> Parameters: sup(String), 直流电机(String), zl003(String)
+2021-04-05 20:13:15.113 DEBUG 11513 --- [http-nio-9090-exec-1] c.emeims.dao.StockMapper.getStockByInfo  : <==      Total: 1
+2021-04-05 20:13:15.114 DEBUG 11513 --- [http-nio-9090-exec-1] com.emeims.dao.StockMapper.updateStock   : ==>  Preparing: update emcims.stock SET stock.stock_motor_price_in=?, stock.stock_motor_quantity=? WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=? # where stock_id=?
+2021-04-05 20:13:15.128 ERROR 11513 --- [http-nio-9090-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='stockId', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting null for parameter #6 with JdbcType OTHER . Try setting a different JdbcType for this parameter or a different jdbcTypeForNull configuration property. Cause: java.sql.SQLException: Parameter index out of range (6 > number of parameters, which is 5).] with root cause
 
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_confirm='admin',
-                
-                
-       ' at line 5
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.5.jar:na]
+java.sql.SQLException: Parameter index out of range (6 > number of parameters, which is 5).
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.checkBounds(ClientPreparedStatement.java:1372) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.getCoreParameterIndex(ClientPreparedStatement.java:1385) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.setNull(ClientPreparedStatement.java:1650) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setNull(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.5.jar:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_282]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_282]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_282]
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_282]
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59) ~[mybatis-3.5.6.jar:3.5.6]
-	at com.sun.proxy.$Proxy93.execute(Unknown Source) ~[na:na]
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47) ~[mybatis-3.5.6.jar:3.5.6]
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74) ~[mybatis-3.5.6.jar:3.5.6]
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:67) ~[mybatis-3.5.6.jar:3.5.6]
+	at com.sun.proxy.$Proxy93.setNull(Unknown Source) ~[na:na]
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:65) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.6.jar:3.5.6]
@@ -476,7 +410,7 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85) ~[mybatis-3.5.6.jar:3.5.6]
-	at com.sun.proxy.$Proxy64.updatePurchase(Unknown Source) ~[na:na]
+	at com.sun.proxy.$Proxy67.updateStock(Unknown Source) ~[na:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_282]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_282]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_282]
@@ -487,9 +421,9 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.4.jar:5.3.4]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
-	at com.sun.proxy.$Proxy65.updatePurchase(Unknown Source) ~[na:na]
-	at com.emeims.service.purchaseService.PurchaseServiceImpl.updatePurchase(PurchaseServiceImpl.java:38) ~[classes/:na]
-	at com.emeims.controller.PurchaseController.updatePurchase(PurchaseController.java:232) ~[classes/:na]
+	at com.sun.proxy.$Proxy68.updateStock(Unknown Source) ~[na:na]
+	at com.emeims.service.stockService.StockServiceImpl.updateStock(StockServiceImpl.java:38) ~[classes/:na]
+	at com.emeims.controller.PurchaseController.updatePurchase(PurchaseController.java:271) ~[classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_282]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_282]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_282]
@@ -541,45 +475,58 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.43.jar:9.0.43]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_282]
 
-2021-04-04 11:44:12.123 DEBUG 11838 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.updatePurchase    : ==>  Preparing: update emcims.purchase SET purchase.purchase_status=?, and purchase_operator_cancel=?, purchase_return_time=? where purchase_id=?
-2021-04-04 11:44:12.124 DEBUG 11838 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.updatePurchase    : ==> Parameters: 已取消(String), admin(String), 2021-04-04 11:44:12.122(Timestamp), 1(String)
-2021-04-04 11:44:12.126 ERROR 11838 --- [http-nio-9090-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
-### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_cancel='admin',
-                
-                
-        ' at line 6
-### The error may exist in file [/home/d-boy/code/gitRepository/GP/emeims/target/classes/mybatis/mapper/PurchaseMapper.xml]
-### The error may involve com.emeims.dao.PurchaseMapper.updatePurchase-Inline
-### The error occurred while setting parameters
-### SQL: update emcims.purchase              SET purchase.purchase_status=?,                                                                        and purchase_operator_cancel=?,                                                                                         purchase_return_time=?          where purchase_id=?
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_cancel='admin',
-                
-                
-        ' at line 6
-; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_cancel='admin',
-                
-                
-        ' at line 6] with root cause
+2021-04-05 20:15:02.133  INFO 11513 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:15:02.136  INFO 11513 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-05 20:15:02.145  INFO 11513 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-05 20:15:05.583  INFO 11632 --- [main] com.emeims.EmeimsApplication             : Starting EmeimsApplication using Java 1.8.0_282 on debian with PID 11632 (/home/d-boy/code/gitRepository/GP/emeims/target/classes started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
+2021-04-05 20:15:05.586  INFO 11632 --- [main] com.emeims.EmeimsApplication             : No active profile set, falling back to default profiles: default
+2021-04-05 20:15:06.687  INFO 11632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2021-04-05 20:15:06.694  INFO 11632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-05 20:15:06.695  INFO 11632 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-05 20:15:06.736  INFO 11632 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-05 20:15:06.736  INFO 11632 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1117 ms
+2021-04-05 20:15:07.305  INFO 11632 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-05 20:15:07.363  INFO 11632 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:15:07.486  INFO 11632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2021-04-05 20:15:07.487  INFO 11632 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-05 20:15:07.497  INFO 11632 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-05 20:15:07.518  INFO 11632 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-05 20:15:07.675  INFO 11632 --- [main] com.emeims.EmeimsApplication             : Started EmeimsApplication in 2.435 seconds (JVM running for 2.903)
+2021-04-05 20:15:11.429  INFO 11632 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-05 20:15:11.429  INFO 11632 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-05 20:15:11.430  INFO 11632 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-05 20:15:11.494  INFO 11632 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-05 20:15:11.623  INFO 11632 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-05 20:15:11.629 DEBUG 11632 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_id=?
+2021-04-05 20:15:11.652 DEBUG 11632 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 202104051953101(String)
+2021-04-05 20:15:11.669 DEBUG 11632 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 1
+2021-04-05 20:15:11.675 DEBUG 11632 --- [http-nio-9090-exec-1] c.emeims.dao.StockMapper.getStockByInfo  : ==>  Preparing: select stock_id, stock_supplier, stock_motor_type, stock_motor_model, stock_motor_price_in/stock_motor_quantity, stock_motor_quantity, stock_motor_price_in, stock_motor_price_out, stock_status, stock_operator_up, stock_operator_down, stock_up_time, stock_down_time from emcims.stock WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=?
+2021-04-05 20:15:11.675 DEBUG 11632 --- [http-nio-9090-exec-1] c.emeims.dao.StockMapper.getStockByInfo  : ==> Parameters: sup(String), 直流电机(String), zl003(String)
+2021-04-05 20:15:11.677 DEBUG 11632 --- [http-nio-9090-exec-1] c.emeims.dao.StockMapper.getStockByInfo  : <==      Total: 1
+2021-04-05 20:15:11.678 DEBUG 11632 --- [http-nio-9090-exec-1] com.emeims.dao.StockMapper.updateStock   : ==>  Preparing: update emcims.stock SET stock.stock_motor_price_in=?, stock.stock_motor_quantity=? WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=? # where stock_id=?
+2021-04-05 20:15:11.691 ERROR 11632 --- [http-nio-9090-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='stockId', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting null for parameter #6 with JdbcType OTHER . Try setting a different JdbcType for this parameter or a different jdbcTypeForNull configuration property. Cause: java.sql.SQLException: Parameter index out of range (6 > number of parameters, which is 5).] with root cause
 
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and purchase_operator_cancel='admin',
-                
-                
-        ' at line 6
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370) ~[mysql-connector-java-8.0.23.jar:8.0.23]
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.5.jar:na]
+java.sql.SQLException: Parameter index out of range (6 > number of parameters, which is 5).
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.checkBounds(ClientPreparedStatement.java:1372) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.getCoreParameterIndex(ClientPreparedStatement.java:1385) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.setNull(ClientPreparedStatement.java:1650) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setNull(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.5.jar:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_282]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_282]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_282]
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_282]
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59) ~[mybatis-3.5.6.jar:3.5.6]
-	at com.sun.proxy.$Proxy93.execute(Unknown Source) ~[na:na]
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47) ~[mybatis-3.5.6.jar:3.5.6]
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74) ~[mybatis-3.5.6.jar:3.5.6]
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:67) ~[mybatis-3.5.6.jar:3.5.6]
+	at com.sun.proxy.$Proxy93.setNull(Unknown Source) ~[na:na]
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:65) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:87) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.6.jar:3.5.6]
@@ -593,7 +540,7 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152) ~[mybatis-3.5.6.jar:3.5.6]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85) ~[mybatis-3.5.6.jar:3.5.6]
-	at com.sun.proxy.$Proxy64.updatePurchase(Unknown Source) ~[na:na]
+	at com.sun.proxy.$Proxy64.updateStock(Unknown Source) ~[na:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_282]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_282]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_282]
@@ -604,9 +551,9 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.4.jar:5.3.4]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
-	at com.sun.proxy.$Proxy65.updatePurchase(Unknown Source) ~[na:na]
-	at com.emeims.service.purchaseService.PurchaseServiceImpl.updatePurchase(PurchaseServiceImpl.java:38) ~[classes/:na]
-	at com.emeims.controller.PurchaseController.updatePurchase(PurchaseController.java:232) ~[classes/:na]
+	at com.sun.proxy.$Proxy65.updateStock(Unknown Source) ~[na:na]
+	at com.emeims.service.stockService.StockServiceImpl.updateStock(StockServiceImpl.java:38) ~[classes/:na]
+	at com.emeims.controller.PurchaseController.updatePurchase(PurchaseController.java:273) ~[classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_282]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_282]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_282]
@@ -658,293 +605,169 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.43.jar:9.0.43]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_282]
 
-2021-04-04 11:44:34.369  INFO 11838 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-04 11:44:34.371  INFO 11838 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-04-04 11:44:34.377  INFO 11838 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-04-04 11:44:36.467  INFO 11963 --- [main] com.emeims.EmeimsApplication             : Starting EmeimsApplication using Java 1.8.0_282 on debian with PID 11963 (/home/d-boy/code/gitRepository/GP/emeims/target/classes started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
-2021-04-04 11:44:36.470  INFO 11963 --- [main] com.emeims.EmeimsApplication             : No active profile set, falling back to default profiles: default
-2021-04-04 11:44:37.588  INFO 11963 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2021-04-04 11:44:37.595  INFO 11963 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-04 11:44:37.595  INFO 11963 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2021-04-04 11:44:37.635  INFO 11963 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-04 11:44:37.635  INFO 11963 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1106 ms
-2021-04-04 11:44:38.216  INFO 11963 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-04 11:44:38.276  INFO 11963 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-04 11:44:38.400  INFO 11963 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2021-04-04 11:44:38.401  INFO 11963 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-04 11:44:38.411  INFO 11963 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-04 11:44:38.432  INFO 11963 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-04 11:44:38.582  INFO 11963 --- [main] com.emeims.EmeimsApplication             : Started EmeimsApplication in 2.434 seconds (JVM running for 2.9)
-2021-04-04 11:44:43.464  INFO 11963 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-04 11:44:43.465  INFO 11963 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-04-04 11:44:43.467  INFO 11963 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-04-04 11:44:43.527  INFO 11963 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-04-04 11:44:43.653  INFO 11963 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-04-04 11:44:43.659 DEBUG 11963 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.updatePurchase    : ==>  Preparing: update emcims.purchase SET purchase.purchase_status=?, purchase_operator_confirm=?, purchase_end_time=? where purchase_id=?
-2021-04-04 11:44:43.682 DEBUG 11963 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.updatePurchase    : ==> Parameters: 已完成(String), admin(String), 2021-04-04 11:44:43.499(Timestamp), 1(String)
-2021-04-04 11:44:43.686 DEBUG 11963 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.updatePurchase    : <==    Updates: 1
-2021-04-04 11:44:43.737 DEBUG 11963 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase
-2021-04-04 11:44:43.738 DEBUG 11963 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 
-2021-04-04 11:44:43.786 DEBUG 11963 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 16
-2021-04-04 11:44:52.439 DEBUG 11963 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.updatePurchase    : ==>  Preparing: update emcims.purchase SET purchase.purchase_status=?, purchase_operator_cancel=?, purchase_return_time=? where purchase_id=?
-2021-04-04 11:44:52.440 DEBUG 11963 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.updatePurchase    : ==> Parameters: 已取消(String), admin(String), 2021-04-04 11:44:52.437(Timestamp), 1(String)
-2021-04-04 11:44:52.448 DEBUG 11963 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.updatePurchase    : <==    Updates: 1
-2021-04-04 11:44:52.505 DEBUG 11963 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase
-2021-04-04 11:44:52.506 DEBUG 11963 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 
-2021-04-04 11:44:52.512 DEBUG 11963 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 16
-2021-04-04 11:44:56.806 DEBUG 11963 --- [http-nio-9090-exec-5] c.e.dao.PurchaseMapper.updatePurchase    : ==>  Preparing: update emcims.purchase SET purchase.purchase_status=?, purchase_operator_confirm=?, purchase_end_time=? where purchase_id=?
-2021-04-04 11:44:56.807 DEBUG 11963 --- [http-nio-9090-exec-5] c.e.dao.PurchaseMapper.updatePurchase    : ==> Parameters: 已完成(String), admin(String), 2021-04-04 11:44:56.805(Timestamp), 10(String)
-2021-04-04 11:44:56.815 DEBUG 11963 --- [http-nio-9090-exec-5] c.e.dao.PurchaseMapper.updatePurchase    : <==    Updates: 1
-2021-04-04 11:44:56.881 DEBUG 11963 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase
-2021-04-04 11:44:56.881 DEBUG 11963 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 
-2021-04-04 11:44:56.890 DEBUG 11963 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 16
-2021-04-04 11:45:01.418 DEBUG 11963 --- [http-nio-9090-exec-7] c.e.dao.PurchaseMapper.updatePurchase    : ==>  Preparing: update emcims.purchase SET purchase.purchase_status=?, purchase_operator_cancel=?, purchase_return_time=? where purchase_id=?
-2021-04-04 11:45:01.419 DEBUG 11963 --- [http-nio-9090-exec-7] c.e.dao.PurchaseMapper.updatePurchase    : ==> Parameters: 已取消(String), admin(String), 2021-04-04 11:45:01.417(Timestamp), 10(String)
-2021-04-04 11:45:01.428 DEBUG 11963 --- [http-nio-9090-exec-7] c.e.dao.PurchaseMapper.updatePurchase    : <==    Updates: 1
-2021-04-04 11:45:01.445 DEBUG 11963 --- [http-nio-9090-exec-8] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase
-2021-04-04 11:45:01.445 DEBUG 11963 --- [http-nio-9090-exec-8] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 
-2021-04-04 11:45:01.451 DEBUG 11963 --- [http-nio-9090-exec-8] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 16
-2021-04-04 11:45:11.104 DEBUG 11963 --- [http-nio-9090-exec-9] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=?
-2021-04-04 11:45:11.105 DEBUG 11963 --- [http-nio-9090-exec-9] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已完成(String)
-2021-04-04 11:45:11.107 DEBUG 11963 --- [http-nio-9090-exec-9] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 0
-2021-04-04 11:45:13.462 DEBUG 11963 --- [http-nio-9090-exec-10] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=?
-2021-04-04 11:45:13.463 DEBUG 11963 --- [http-nio-9090-exec-10] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已提交(String)
-2021-04-04 11:45:13.474 DEBUG 11963 --- [http-nio-9090-exec-10] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 14
-2021-04-04 11:45:15.479 DEBUG 11963 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=?
-2021-04-04 11:45:15.480 DEBUG 11963 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已取消(String)
-2021-04-04 11:45:15.482 DEBUG 11963 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 2
-2021-04-04 11:45:33.941 DEBUG 11963 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_start_time >= ?
-2021-04-04 11:45:33.942 DEBUG 11963 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 2021-04-04 00:00:00.0(Timestamp)
-2021-04-04 11:45:33.945 DEBUG 11963 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 1
-2021-04-04 11:45:38.344 DEBUG 11963 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.updatePurchase    : ==>  Preparing: update emcims.purchase SET purchase.purchase_status=?, purchase_operator_confirm=?, purchase_end_time=? where purchase_id=?
-2021-04-04 11:45:38.346 DEBUG 11963 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.updatePurchase    : ==> Parameters: 已完成(String), admin(String), 2021-04-04 11:45:38.343(Timestamp), 202104041132521(String)
-2021-04-04 11:45:38.355 DEBUG 11963 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.updatePurchase    : <==    Updates: 1
-2021-04-04 11:45:38.410 DEBUG 11963 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_start_time >= ?
-2021-04-04 11:45:38.412 DEBUG 11963 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 2021-04-04 00:00:00.0(Timestamp)
-2021-04-04 11:45:38.414 DEBUG 11963 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 1
-2021-04-04 11:45:41.564 DEBUG 11963 --- [http-nio-9090-exec-5] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=? and purchase_start_time >= ?
-2021-04-04 11:45:41.565 DEBUG 11963 --- [http-nio-9090-exec-5] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已完成(String), 2021-04-04 00:00:00.0(Timestamp)
-2021-04-04 11:45:41.567 DEBUG 11963 --- [http-nio-9090-exec-5] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 1
-2021-04-04 11:45:46.326 DEBUG 11963 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=? and purchase_start_time >= ?
-2021-04-04 11:45:46.329 DEBUG 11963 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已提交(String), 2021-04-04 00:00:00.0(Timestamp)
-2021-04-04 11:45:46.342 DEBUG 11963 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 0
-2021-04-04 11:45:48.206 DEBUG 11963 --- [http-nio-9090-exec-7] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=? and purchase_start_time >= ?
-2021-04-04 11:45:48.207 DEBUG 11963 --- [http-nio-9090-exec-7] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已完成(String), 2021-04-04 00:00:00.0(Timestamp)
-2021-04-04 11:45:48.210 DEBUG 11963 --- [http-nio-9090-exec-7] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 1
-2021-04-04 11:46:02.051 DEBUG 11963 --- [http-nio-9090-exec-8] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase
-2021-04-04 11:46:02.052 DEBUG 11963 --- [http-nio-9090-exec-8] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 
-2021-04-04 11:46:02.062 DEBUG 11963 --- [http-nio-9090-exec-8] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 16
-2021-04-04 11:49:25.242 DEBUG 11963 --- [http-nio-9090-exec-9] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
-2021-04-04 11:49:25.243 DEBUG 11963 --- [http-nio-9090-exec-9] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
-2021-04-04 11:49:25.246 DEBUG 11963 --- [http-nio-9090-exec-9] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 16
-2021-04-04 16:12:17.044 DEBUG 11963 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-04 16:12:17.045 DEBUG 11963 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: admin@user.com(String)
-2021-04-04 16:12:17.046 DEBUG 11963 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-04 16:12:20.167 DEBUG 11963 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
-2021-04-04 16:12:20.167 DEBUG 11963 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
-2021-04-04 16:12:20.169 DEBUG 11963 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 5
-2021-04-04 16:12:22.919 DEBUG 11963 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-04 16:12:22.919 DEBUG 11963 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters: 
-2021-04-04 16:12:22.923 DEBUG 11963 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
-2021-04-04 16:12:58.907 DEBUG 11963 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_id=?
-2021-04-04 16:12:58.908 DEBUG 11963 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 202104041612551(String)
-2021-04-04 16:12:58.909 DEBUG 11963 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 0
-2021-04-04 16:12:58.909 DEBUG 11963 --- [http-nio-9090-exec-4] c.emeims.dao.PurchaseMapper.addPurchase  : ==>  Preparing: insert into emcims.purchase (purchase_id, purchase_supplier, purchase_motor_type, purchase_motor_model, purchase_motor_quantity, purchase_motor_price, purchase_total_price, purchase_operator_submit, purchase_start_time) value (?, ?, ?, ?, ?, ?, ?, ?, ?)
-2021-04-04 16:12:58.911 DEBUG 11963 --- [http-nio-9090-exec-4] c.emeims.dao.PurchaseMapper.addPurchase  : ==> Parameters: 202104041612551(String), ghj(String), uuuu(String), bjkbkj(String), 878(Integer), 79877.88(Float), 7.0132784E7(Float), admin(String), 2021-04-04 16:12:58.909(Timestamp)
-2021-04-04 16:12:58.920 DEBUG 11963 --- [http-nio-9090-exec-4] c.emeims.dao.PurchaseMapper.addPurchase  : <==    Updates: 1
-2021-04-04 16:13:15.539 DEBUG 11963 --- [http-nio-9090-exec-5] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_start_time >= ?
-2021-04-04 16:13:15.540 DEBUG 11963 --- [http-nio-9090-exec-5] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 2021-04-04 00:00:00.0(Timestamp)
-2021-04-04 16:13:15.549 DEBUG 11963 --- [http-nio-9090-exec-5] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 2
-2021-04-04 16:13:21.972 DEBUG 11963 --- [http-nio-9090-exec-6] c.e.dao.PurchaseMapper.updatePurchase    : ==>  Preparing: update emcims.purchase SET purchase.purchase_status=?, purchase_operator_confirm=?, purchase_end_time=? where purchase_id=?
-2021-04-04 16:13:21.974 DEBUG 11963 --- [http-nio-9090-exec-6] c.e.dao.PurchaseMapper.updatePurchase    : ==> Parameters: 已完成(String), admin(String), 2021-04-04 16:13:21.971(Timestamp), 202104041612551(String)
-2021-04-04 16:13:21.984 DEBUG 11963 --- [http-nio-9090-exec-6] c.e.dao.PurchaseMapper.updatePurchase    : <==    Updates: 1
-2021-04-04 16:13:22.039 DEBUG 11963 --- [http-nio-9090-exec-7] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_start_time >= ?
-2021-04-04 16:13:22.040 DEBUG 11963 --- [http-nio-9090-exec-7] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 2021-04-04 00:00:00.0(Timestamp)
-2021-04-04 16:13:22.041 DEBUG 11963 --- [http-nio-9090-exec-7] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 2
-2021-04-04 16:14:24.598 DEBUG 11963 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-04 16:14:24.599 DEBUG 11963 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
-2021-04-04 16:14:24.602 DEBUG 11963 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-04 16:14:27.973 DEBUG 11963 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-04 16:14:27.975 DEBUG 11963 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 2(Integer)
-2021-04-04 16:14:27.979 DEBUG 11963 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 2
-2021-04-04 16:14:38.993 DEBUG 11963 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
-2021-04-04 16:14:38.994 DEBUG 11963 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 
-2021-04-04 16:14:39.009 DEBUG 11963 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 10
-2021-04-04 16:14:48.697 DEBUG 11963 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
-2021-04-04 16:14:48.698 DEBUG 11963 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 
-2021-04-04 16:14:48.704 DEBUG 11963 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 10
-2021-04-04 16:14:55.756 DEBUG 11963 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-04 16:14:55.757 DEBUG 11963 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer)
-2021-04-04 16:14:55.762 DEBUG 11963 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 7
-2021-04-04 16:15:03.568 DEBUG 11963 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
-2021-04-04 16:15:03.569 DEBUG 11963 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 
-2021-04-04 16:15:03.576 DEBUG 11963 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 10
-2021-04-04 16:15:18.407 DEBUG 11963 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_gender = ?
-2021-04-04 16:15:18.408 DEBUG 11963 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 男(String)
-2021-04-04 16:15:18.411 DEBUG 11963 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 5
-2021-04-04 16:15:26.894 DEBUG 11963 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=?
-2021-04-04 16:15:26.895 DEBUG 11963 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
-2021-04-04 16:15:26.896 DEBUG 11963 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-04 16:15:33.742 DEBUG 11963 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-04 16:15:33.742 DEBUG 11963 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: admin@user.com(String)
-2021-04-04 16:15:33.743 DEBUG 11963 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-04 16:16:26.225 DEBUG 11963 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-04 16:16:26.225 DEBUG 11963 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: admin@user.com(String)
-2021-04-04 16:16:26.226 DEBUG 11963 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-04 16:16:32.672 DEBUG 11963 --- [http-nio-9090-exec-8] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
-2021-04-04 16:16:32.672 DEBUG 11963 --- [http-nio-9090-exec-8] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
-2021-04-04 16:16:32.673 DEBUG 11963 --- [http-nio-9090-exec-8] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 6
-2021-04-04 16:28:42.263 DEBUG 11963 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-04 16:28:42.264 DEBUG 11963 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters: 
-2021-04-04 16:28:42.265 DEBUG 11963 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
-2021-04-04 18:31:45.792  INFO 11963 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-04 18:31:45.795  INFO 11963 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-04-04 18:31:45.800  INFO 11963 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-04-04 18:31:50.006  INFO 15237 --- [main] com.emeims.EmeimsApplication             : Starting EmeimsApplication using Java 1.8.0_282 on debian with PID 15237 (/home/d-boy/code/gitRepository/GP/emeims/target/classes started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
-2021-04-04 18:31:50.015  INFO 15237 --- [main] com.emeims.EmeimsApplication             : No active profile set, falling back to default profiles: default
-2021-04-04 18:31:51.485  INFO 15237 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2021-04-04 18:31:51.493  INFO 15237 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-04 18:31:51.493  INFO 15237 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2021-04-04 18:31:51.538  INFO 15237 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-04 18:31:51.538  INFO 15237 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1453 ms
-2021-04-04 18:31:52.200  INFO 15237 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-04 18:31:52.269  INFO 15237 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-04 18:31:52.417  INFO 15237 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2021-04-04 18:31:52.418  INFO 15237 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-04 18:31:52.429  INFO 15237 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-04 18:31:52.449  INFO 15237 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-04 18:31:52.601  INFO 15237 --- [main] com.emeims.EmeimsApplication             : Started EmeimsApplication in 3.049 seconds (JVM running for 3.473)
-2021-04-04 18:32:56.954  INFO 15237 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-04 18:32:56.954  INFO 15237 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-04-04 18:32:56.955  INFO 15237 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-04-04 18:32:57.015  INFO 15237 --- [http-nio-9090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-04-04 18:32:57.124  INFO 15237 --- [http-nio-9090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-04-04 18:32:57.131 DEBUG 15237 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=?
-2021-04-04 18:32:57.149 DEBUG 15237 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已提交(String)
-2021-04-04 18:32:57.168 DEBUG 15237 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 4
-2021-04-04 18:32:59.170 DEBUG 15237 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=?
-2021-04-04 18:32:59.171 DEBUG 15237 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已完成(String)
-2021-04-04 18:32:59.178 DEBUG 15237 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 2
-2021-04-04 18:33:01.446 DEBUG 15237 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=?
-2021-04-04 18:33:01.447 DEBUG 15237 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已取消(String)
-2021-04-04 18:33:01.449 DEBUG 15237 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 0
-2021-04-04 18:33:04.158 DEBUG 15237 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=?
-2021-04-04 18:33:04.159 DEBUG 15237 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已完成(String)
-2021-04-04 18:33:04.165 DEBUG 15237 --- [http-nio-9090-exec-4] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 2
-2021-04-04 18:33:15.368 DEBUG 15237 --- [http-nio-9090-exec-5] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=? and purchase_start_time >= ?
-2021-04-04 18:33:15.369 DEBUG 15237 --- [http-nio-9090-exec-5] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已完成(String), 2021-04-04 00:00:00.0(Timestamp)
-2021-04-04 18:33:15.371 DEBUG 15237 --- [http-nio-9090-exec-5] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 2
-2021-04-04 18:33:18.981 DEBUG 15237 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_status=? and purchase_start_time >= ?
-2021-04-04 18:33:18.983 DEBUG 15237 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 已完成(String), 2021-04-05 00:00:00.0(Timestamp)
-2021-04-04 18:33:18.989 DEBUG 15237 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 0
-2021-04-04 18:34:25.526 DEBUG 15237 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=?
-2021-04-04 18:34:25.527 DEBUG 15237 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
-2021-04-04 18:34:25.529 DEBUG 15237 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-04 18:34:54.111 DEBUG 15237 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-04 18:34:54.112 DEBUG 15237 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: admin@user.com(String)
-2021-04-04 18:34:54.114 DEBUG 15237 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-04 18:35:02.591 DEBUG 15237 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-04 18:35:02.591 DEBUG 15237 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: admin@user.com(String)
-2021-04-04 18:35:02.592 DEBUG 15237 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-04 18:35:06.801 DEBUG 15237 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-04 18:35:06.801 DEBUG 15237 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: admin@user.com(String)
-2021-04-04 18:35:06.803 DEBUG 15237 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-04 18:39:08.709 DEBUG 15237 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-04 18:39:08.709 DEBUG 15237 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: admin@user.com(String)
-2021-04-04 18:39:08.711 DEBUG 15237 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-04 18:39:46.472 DEBUG 15237 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-04 18:39:46.473 DEBUG 15237 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: admin@user.com(String)
-2021-04-04 18:39:46.474 DEBUG 15237 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-04 18:39:54.308 DEBUG 15237 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-04 18:39:54.308 DEBUG 15237 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: admin@user.com(String)
-2021-04-04 18:39:54.310 DEBUG 15237 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-04 18:40:03.355 DEBUG 15237 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=?
-2021-04-04 18:40:03.355 DEBUG 15237 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
-2021-04-04 18:40:03.357 DEBUG 15237 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-04 19:29:01.321 DEBUG 15237 --- [http-nio-9090-exec-1] com.emeims.dao.SalesMapper.getAllSales   : ==>  Preparing: select * from emcims.sales;
-2021-04-04 19:29:01.321 DEBUG 15237 --- [http-nio-9090-exec-1] com.emeims.dao.SalesMapper.getAllSales   : ==> Parameters: 
-2021-04-04 19:29:01.324 DEBUG 15237 --- [http-nio-9090-exec-1] com.emeims.dao.SalesMapper.getAllSales   : <==      Total: 4
-2021-04-04 19:29:05.794 DEBUG 15237 --- [http-nio-9090-exec-3] com.emeims.dao.SalesMapper.updateSales   : ==>  Preparing: update emcims.sales SET sales_status=?, sales_operator_confirm=?, sales_end_time=? where sales_id=?
-2021-04-04 19:29:05.795 DEBUG 15237 --- [http-nio-9090-exec-3] com.emeims.dao.SalesMapper.updateSales   : ==> Parameters: 已完成(String), admin(String), 2021-04-04 19:29:05.792(Timestamp), 102101001(String)
-2021-04-04 19:29:05.805 DEBUG 15237 --- [http-nio-9090-exec-3] com.emeims.dao.SalesMapper.updateSales   : <==    Updates: 1
-2021-04-04 19:29:05.874 DEBUG 15237 --- [http-nio-9090-exec-4] c.emeims.dao.SalesMapper.getSalesByInfo  : ==>  Preparing: select * from emcims.sales ;
-2021-04-04 19:29:05.875 DEBUG 15237 --- [http-nio-9090-exec-4] c.emeims.dao.SalesMapper.getSalesByInfo  : ==> Parameters: 
-2021-04-04 19:29:05.878 DEBUG 15237 --- [http-nio-9090-exec-4] c.emeims.dao.SalesMapper.getSalesByInfo  : <==      Total: 4
-2021-04-04 19:29:10.040 DEBUG 15237 --- [http-nio-9090-exec-5] com.emeims.dao.SalesMapper.updateSales   : ==>  Preparing: update emcims.sales SET sales_status=?, sales_operator_cancel=?, sales_return_time=? where sales_id=?
-2021-04-04 19:29:10.041 DEBUG 15237 --- [http-nio-9090-exec-5] com.emeims.dao.SalesMapper.updateSales   : ==> Parameters: 已取消(String), admin(String), 2021-04-04 19:29:10.039(Timestamp), 102101001(String)
-2021-04-04 19:29:10.050 DEBUG 15237 --- [http-nio-9090-exec-5] com.emeims.dao.SalesMapper.updateSales   : <==    Updates: 1
-2021-04-04 19:29:10.115 DEBUG 15237 --- [http-nio-9090-exec-6] c.emeims.dao.SalesMapper.getSalesByInfo  : ==>  Preparing: select * from emcims.sales ;
-2021-04-04 19:29:10.116 DEBUG 15237 --- [http-nio-9090-exec-6] c.emeims.dao.SalesMapper.getSalesByInfo  : ==> Parameters: 
-2021-04-04 19:29:10.121 DEBUG 15237 --- [http-nio-9090-exec-6] c.emeims.dao.SalesMapper.getSalesByInfo  : <==      Total: 4
-2021-04-04 19:29:14.716 DEBUG 15237 --- [http-nio-9090-exec-8] c.emeims.dao.SalesMapper.getSalesByInfo  : ==>  Preparing: select * from emcims.sales WHERE sales_status=? ;
-2021-04-04 19:29:14.717 DEBUG 15237 --- [http-nio-9090-exec-8] c.emeims.dao.SalesMapper.getSalesByInfo  : ==> Parameters: 已提交(String)
-2021-04-04 19:29:14.723 DEBUG 15237 --- [http-nio-9090-exec-8] c.emeims.dao.SalesMapper.getSalesByInfo  : <==      Total: 3
-2021-04-04 19:29:18.290 DEBUG 15237 --- [http-nio-9090-exec-7] c.emeims.dao.SalesMapper.getSalesByInfo  : ==>  Preparing: select * from emcims.sales WHERE sales_status=? ;
-2021-04-04 19:29:18.291 DEBUG 15237 --- [http-nio-9090-exec-7] c.emeims.dao.SalesMapper.getSalesByInfo  : ==> Parameters: 已完成(String)
-2021-04-04 19:29:18.293 DEBUG 15237 --- [http-nio-9090-exec-7] c.emeims.dao.SalesMapper.getSalesByInfo  : <==      Total: 0
-2021-04-04 19:29:21.490 DEBUG 15237 --- [http-nio-9090-exec-9] c.emeims.dao.SalesMapper.getSalesByInfo  : ==>  Preparing: select * from emcims.sales WHERE sales_start_time >= ? ;
-2021-04-04 19:29:21.491 DEBUG 15237 --- [http-nio-9090-exec-9] c.emeims.dao.SalesMapper.getSalesByInfo  : ==> Parameters: 2021-04-01 00:00:00.0(Timestamp)
-2021-04-04 19:29:21.493 DEBUG 15237 --- [http-nio-9090-exec-9] c.emeims.dao.SalesMapper.getSalesByInfo  : <==      Total: 0
-2021-04-04 19:29:25.368 DEBUG 15237 --- [http-nio-9090-exec-10] c.emeims.dao.SalesMapper.getSalesByInfo  : ==>  Preparing: select * from emcims.sales WHERE sales_start_time <= ? ;
-2021-04-04 19:29:25.370 DEBUG 15237 --- [http-nio-9090-exec-10] c.emeims.dao.SalesMapper.getSalesByInfo  : ==> Parameters: 2021-04-01 00:00:00.0(Timestamp)
-2021-04-04 19:29:25.378 DEBUG 15237 --- [http-nio-9090-exec-10] c.emeims.dao.SalesMapper.getSalesByInfo  : <==      Total: 4
-2021-04-04 19:29:43.763 DEBUG 15237 --- [http-nio-9090-exec-2] c.emeims.dao.SalesMapper.getSalesByInfo  : ==>  Preparing: select * from emcims.sales WHERE sales_status=? ;
-2021-04-04 19:29:43.764 DEBUG 15237 --- [http-nio-9090-exec-2] c.emeims.dao.SalesMapper.getSalesByInfo  : ==> Parameters: 已取消(String)
-2021-04-04 19:29:43.767 DEBUG 15237 --- [http-nio-9090-exec-2] c.emeims.dao.SalesMapper.getSalesByInfo  : <==      Total: 1
-2021-04-04 19:36:18.036 DEBUG 15237 --- [http-nio-9090-exec-4] c.emeims.dao.SalesMapper.getSalesByInfo  : ==>  Preparing: select * from emcims.sales WHERE sales_id=? ;
-2021-04-04 19:36:18.037 DEBUG 15237 --- [http-nio-9090-exec-4] c.emeims.dao.SalesMapper.getSalesByInfo  : ==> Parameters: 202104041936151(String)
-2021-04-04 19:36:18.041 DEBUG 15237 --- [http-nio-9090-exec-4] c.emeims.dao.SalesMapper.getSalesByInfo  : <==      Total: 0
-2021-04-04 19:36:18.042 DEBUG 15237 --- [http-nio-9090-exec-4] com.emeims.dao.SalesMapper.addSales      : ==>  Preparing: insert into emcims.sales (sales_id, sales_client, sales_motor_type, sales_motor_model, sales_motor_quantity, sales_motor_price, sales_total_price, sales_operator_submit, sales_start_time) value (?, ?, ?, ?, ?, ?, ?, ?, ?)
-2021-04-04 19:36:18.045 DEBUG 15237 --- [http-nio-9090-exec-4] com.emeims.dao.SalesMapper.addSales      : ==> Parameters: 202104041936151(String), 张三(String), 直流电机(String), zl123(String), 127(Integer), 100.5(Float), 12763.5(Float), admin(String), 2021-04-04 19:36:18.041(Timestamp)
-2021-04-04 19:36:18.054 DEBUG 15237 --- [http-nio-9090-exec-4] com.emeims.dao.SalesMapper.addSales      : <==    Updates: 1
-2021-04-04 19:39:10.832 DEBUG 15237 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_id=?
-2021-04-04 19:39:10.833 DEBUG 15237 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 202104041939051(String)
-2021-04-04 19:39:10.835 DEBUG 15237 --- [http-nio-9090-exec-6] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 0
-2021-04-04 19:39:10.837 DEBUG 15237 --- [http-nio-9090-exec-6] c.emeims.dao.PurchaseMapper.addPurchase  : ==>  Preparing: insert into emcims.purchase (purchase_id, purchase_supplier, purchase_motor_type, purchase_motor_model, purchase_motor_quantity, purchase_motor_price, purchase_total_price, purchase_operator_submit, purchase_start_time) value (?, ?, ?, ?, ?, ?, ?, ?, ?)
-2021-04-04 19:39:10.840 DEBUG 15237 --- [http-nio-9090-exec-6] c.emeims.dao.PurchaseMapper.addPurchase  : ==> Parameters: 202104041939051(String), 张三(String), 直流电机(String), zl002(String), 200(Integer), 100.0(Float), 20000.0(Float), admin(String), 2021-04-04 19:39:10.836(Timestamp)
-2021-04-04 19:39:10.850 DEBUG 15237 --- [http-nio-9090-exec-6] c.emeims.dao.PurchaseMapper.addPurchase  : <==    Updates: 1
-2021-04-04 19:39:48.318 DEBUG 15237 --- [http-nio-9090-exec-7] c.emeims.dao.SalesMapper.getSalesByInfo  : ==>  Preparing: select * from emcims.sales WHERE sales_id=? ;
-2021-04-04 19:39:48.319 DEBUG 15237 --- [http-nio-9090-exec-7] c.emeims.dao.SalesMapper.getSalesByInfo  : ==> Parameters: 202104041939431(String)
-2021-04-04 19:39:48.320 DEBUG 15237 --- [http-nio-9090-exec-7] c.emeims.dao.SalesMapper.getSalesByInfo  : <==      Total: 0
-2021-04-04 19:39:48.320 DEBUG 15237 --- [http-nio-9090-exec-7] com.emeims.dao.SalesMapper.addSales      : ==>  Preparing: insert into emcims.sales (sales_id, sales_client, sales_motor_type, sales_motor_model, sales_motor_quantity, sales_motor_price, sales_total_price, sales_operator_submit, sales_start_time) value (?, ?, ?, ?, ?, ?, ?, ?, ?)
-2021-04-04 19:39:48.321 DEBUG 15237 --- [http-nio-9090-exec-7] com.emeims.dao.SalesMapper.addSales      : ==> Parameters: 202104041939431(String), 张三(String), 交流电机(String), zl001(String), 300(Integer), 100.2(Float), 30060.0(Float), admin(String), 2021-04-04 19:39:48.32(Timestamp)
-2021-04-04 19:39:48.330 DEBUG 15237 --- [http-nio-9090-exec-7] com.emeims.dao.SalesMapper.addSales      : <==    Updates: 1
-2021-04-04 19:39:56.481 DEBUG 15237 --- [http-nio-9090-exec-9] com.emeims.dao.SalesMapper.getAllSales   : ==>  Preparing: select * from emcims.sales;
-2021-04-04 19:39:56.482 DEBUG 15237 --- [http-nio-9090-exec-9] com.emeims.dao.SalesMapper.getAllSales   : ==> Parameters: 
-2021-04-04 19:39:56.483 DEBUG 15237 --- [http-nio-9090-exec-9] com.emeims.dao.SalesMapper.getAllSales   : <==      Total: 6
-2021-04-04 19:40:01.034 DEBUG 15237 --- [http-nio-9090-exec-10] c.emeims.dao.SalesMapper.getSalesByInfo  : ==>  Preparing: select * from emcims.sales WHERE sales_start_time >= ? ;
-2021-04-04 19:40:01.035 DEBUG 15237 --- [http-nio-9090-exec-10] c.emeims.dao.SalesMapper.getSalesByInfo  : ==> Parameters: 2021-04-04 00:00:00.0(Timestamp)
-2021-04-04 19:40:01.036 DEBUG 15237 --- [http-nio-9090-exec-10] c.emeims.dao.SalesMapper.getSalesByInfo  : <==      Total: 2
-2021-04-04 19:40:08.596 DEBUG 15237 --- [http-nio-9090-exec-2] com.emeims.dao.SalesMapper.updateSales   : ==>  Preparing: update emcims.sales SET sales_status=?, sales_operator_confirm=?, sales_end_time=? where sales_id=?
-2021-04-04 19:40:08.596 DEBUG 15237 --- [http-nio-9090-exec-2] com.emeims.dao.SalesMapper.updateSales   : ==> Parameters: 已完成(String), admin(String), 2021-04-04 19:40:08.595(Timestamp), 202104041936151(String)
-2021-04-04 19:40:08.605 DEBUG 15237 --- [http-nio-9090-exec-2] com.emeims.dao.SalesMapper.updateSales   : <==    Updates: 1
-2021-04-04 19:40:08.653 DEBUG 15237 --- [http-nio-9090-exec-1] c.emeims.dao.SalesMapper.getSalesByInfo  : ==>  Preparing: select * from emcims.sales WHERE sales_start_time >= ? ;
-2021-04-04 19:40:08.653 DEBUG 15237 --- [http-nio-9090-exec-1] c.emeims.dao.SalesMapper.getSalesByInfo  : ==> Parameters: 2021-04-04 00:00:00.0(Timestamp)
-2021-04-04 19:40:08.654 DEBUG 15237 --- [http-nio-9090-exec-1] c.emeims.dao.SalesMapper.getSalesByInfo  : <==      Total: 2
-2021-04-04 19:40:25.857 DEBUG 15237 --- [http-nio-9090-exec-3] c.emeims.dao.SalesMapper.getSalesByInfo  : ==>  Preparing: select * from emcims.sales WHERE sales_end_time >= ? ;
-2021-04-04 19:40:25.858 DEBUG 15237 --- [http-nio-9090-exec-3] c.emeims.dao.SalesMapper.getSalesByInfo  : ==> Parameters: 2021-04-02 00:00:00.0(Timestamp)
-2021-04-04 19:40:25.866 DEBUG 15237 --- [http-nio-9090-exec-3] c.emeims.dao.SalesMapper.getSalesByInfo  : <==      Total: 2
-2021-04-04 19:40:38.969 DEBUG 15237 --- [http-nio-9090-exec-4] c.emeims.dao.SalesMapper.getSalesByInfo  : ==>  Preparing: select * from emcims.sales WHERE sales_status=? and sales_end_time >= ? ;
-2021-04-04 19:40:38.971 DEBUG 15237 --- [http-nio-9090-exec-4] c.emeims.dao.SalesMapper.getSalesByInfo  : ==> Parameters: 已提交(String), 2021-04-02 00:00:00.0(Timestamp)
-2021-04-04 19:40:38.973 DEBUG 15237 --- [http-nio-9090-exec-4] c.emeims.dao.SalesMapper.getSalesByInfo  : <==      Total: 0
-2021-04-04 19:40:44.988 DEBUG 15237 --- [http-nio-9090-exec-5] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
-2021-04-04 19:40:44.988 DEBUG 15237 --- [http-nio-9090-exec-5] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
-2021-04-04 19:40:44.991 DEBUG 15237 --- [http-nio-9090-exec-5] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 7
-2021-04-04 19:40:56.914 DEBUG 15237 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-04 19:40:56.914 DEBUG 15237 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters: 
-2021-04-04 19:40:56.919 DEBUG 15237 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
-2021-04-04 19:57:00.886  INFO 16295 --- [main] com.emeims.EmeimsApplication             : Starting EmeimsApplication using Java 1.8.0_282 on debian with PID 16295 (/home/d-boy/code/gitRepository/GP/emeims/target/classes started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
-2021-04-04 19:57:00.888  INFO 16295 --- [main] com.emeims.EmeimsApplication             : No active profile set, falling back to default profiles: default
-2021-04-04 19:57:01.826  INFO 16295 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2021-04-04 19:57:01.833  INFO 16295 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-04 19:57:01.833  INFO 16295 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2021-04-04 19:57:01.874  INFO 16295 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-04 19:57:01.875  INFO 16295 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 949 ms
-2021-04-04 19:57:02.404  INFO 16295 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-04 19:57:02.460  INFO 16295 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-04 19:57:02.575  INFO 16295 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2021-04-04 19:57:02.576  INFO 16295 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-04 19:57:02.586  INFO 16295 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-04 19:57:02.604  INFO 16295 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-04 19:57:02.755  INFO 16295 --- [main] com.emeims.EmeimsApplication             : Started EmeimsApplication in 2.186 seconds (JVM running for 2.615)
-2021-04-04 20:26:51.874  INFO 16295 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:21:54.908  INFO 11787 --- [main] com.emeims.EmeimsApplicationTests        : Starting EmeimsApplicationTests using Java 1.8.0_282 on debian with PID 11787 (started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
+2021-04-05 20:21:54.922  INFO 11787 --- [main] com.emeims.EmeimsApplicationTests        : No active profile set, falling back to default profiles: default
+2021-04-05 20:21:56.932  INFO 11787 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-05 20:21:57.147  INFO 11787 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:21:57.428  INFO 11787 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-05 20:21:57.446  INFO 11787 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-05 20:21:57.472  INFO 11787 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-05 20:21:57.669  INFO 11787 --- [main] com.emeims.EmeimsApplicationTests        : Started EmeimsApplicationTests in 3.289 seconds (JVM running for 4.465)
+2021-04-05 20:21:57.886  INFO 11787 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-05 20:21:58.073  INFO 11787 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-05 20:21:58.081 DEBUG 11787 --- [main] com.emeims.dao.StockMapper.updateStock   : ==>  Preparing: update emcims.stock SET stock.stock_motor_price_in=?, stock.stock_motor_quantity=? WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=? # where stock_id=?
+2021-04-05 20:21:58.151  INFO 11787 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:21:58.156  INFO 11787 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-05 20:21:58.171  INFO 11787 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-05 20:24:22.961  INFO 11864 --- [main] com.emeims.EmeimsApplicationTests        : Starting EmeimsApplicationTests using Java 1.8.0_282 on debian with PID 11864 (started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
+2021-04-05 20:24:22.965  INFO 11864 --- [main] com.emeims.EmeimsApplicationTests        : No active profile set, falling back to default profiles: default
+2021-04-05 20:24:24.868  INFO 11864 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-05 20:24:25.081  INFO 11864 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:24:25.356  INFO 11864 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-05 20:24:25.373  INFO 11864 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-05 20:24:25.398  INFO 11864 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-05 20:24:25.584  INFO 11864 --- [main] com.emeims.EmeimsApplicationTests        : Started EmeimsApplicationTests in 2.953 seconds (JVM running for 4.047)
+2021-04-05 20:24:25.785  INFO 11864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-05 20:24:25.958  INFO 11864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-05 20:24:25.965 DEBUG 11864 --- [main] com.emeims.dao.StockMapper.updateStock   : ==>  Preparing: update emcims.stock SET stock.stock_motor_price_in=?, stock.stock_motor_quantity=? where and stock_supplier=? and stock_motor_type=? and stock_motor_model=? # where stock_id=?
+2021-04-05 20:24:26.030  INFO 11864 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:24:26.032  INFO 11864 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-05 20:24:26.045  INFO 11864 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-05 20:25:27.933  INFO 11928 --- [main] com.emeims.EmeimsApplicationTests        : Starting EmeimsApplicationTests using Java 1.8.0_282 on debian with PID 11928 (started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
+2021-04-05 20:25:27.943  INFO 11928 --- [main] com.emeims.EmeimsApplicationTests        : No active profile set, falling back to default profiles: default
+2021-04-05 20:25:29.915  INFO 11928 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-05 20:25:30.152  INFO 11928 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:25:30.432  INFO 11928 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-05 20:25:30.450  INFO 11928 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-05 20:25:30.475  INFO 11928 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-05 20:25:30.674  INFO 11928 --- [main] com.emeims.EmeimsApplicationTests        : Started EmeimsApplicationTests in 3.078 seconds (JVM running for 4.221)
+2021-04-05 20:25:30.881  INFO 11928 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-05 20:25:31.089  INFO 11928 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-05 20:25:31.098 DEBUG 11928 --- [main] com.emeims.dao.StockMapper.updateStock   : ==>  Preparing: update emcims.stock SET stock.stock_motor_price_in=?, stock.stock_motor_quantity=? where and stock_supplier=? and stock_motor_type=? and stock_motor_model=? # where stock_id=?
+2021-04-05 20:25:31.162  INFO 11928 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:25:31.165  INFO 11928 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-05 20:25:31.178  INFO 11928 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-05 20:26:01.603  INFO 11984 --- [main] com.emeims.EmeimsApplicationTests        : Starting EmeimsApplicationTests using Java 1.8.0_282 on debian with PID 11984 (started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
+2021-04-05 20:26:01.612  INFO 11984 --- [main] com.emeims.EmeimsApplicationTests        : No active profile set, falling back to default profiles: default
+2021-04-05 20:26:03.594  INFO 11984 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-05 20:26:03.811  INFO 11984 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:26:04.089  INFO 11984 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-05 20:26:04.107  INFO 11984 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-05 20:26:04.133  INFO 11984 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-05 20:26:04.334  INFO 11984 --- [main] com.emeims.EmeimsApplicationTests        : Started EmeimsApplicationTests in 3.117 seconds (JVM running for 4.238)
+2021-04-05 20:26:04.543  INFO 11984 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-05 20:26:04.717  INFO 11984 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-05 20:26:04.725 DEBUG 11984 --- [main] com.emeims.dao.StockMapper.updateStock   : ==>  Preparing: update emcims.stock SET stock.stock_motor_price_in=?, stock.stock_motor_quantity=? where and stock_supplier=? and stock_motor_type=? and stock_motor_model=?
+2021-04-05 20:26:04.753 DEBUG 11984 --- [main] com.emeims.dao.StockMapper.updateStock   : ==> Parameters: 500(Integer), 10000(Integer), sup(String), 交流电机(String), jl123(String)
+2021-04-05 20:26:04.858  INFO 11984 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:26:04.867  INFO 11984 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-05 20:26:04.878  INFO 11984 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-05 20:29:59.029  INFO 12067 --- [main] com.emeims.EmeimsApplicationTests        : Starting EmeimsApplicationTests using Java 1.8.0_282 on debian with PID 12067 (started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
+2021-04-05 20:29:59.032  INFO 12067 --- [main] com.emeims.EmeimsApplicationTests        : No active profile set, falling back to default profiles: default
+2021-04-05 20:30:01.035  INFO 12067 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-05 20:30:01.241  INFO 12067 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:30:01.505  INFO 12067 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-05 20:30:01.524  INFO 12067 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-05 20:30:01.551  INFO 12067 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-05 20:30:01.745  INFO 12067 --- [main] com.emeims.EmeimsApplicationTests        : Started EmeimsApplicationTests in 3.132 seconds (JVM running for 4.103)
+2021-04-05 20:30:01.952  INFO 12067 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-05 20:30:02.141  INFO 12067 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-05 20:30:02.148 DEBUG 12067 --- [main] com.emeims.dao.StockMapper.updateStock   : ==>  Preparing: update emcims.stock SET stock.stock_motor_price_in=?, stock.stock_motor_quantity=? WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=?
+2021-04-05 20:30:02.177 DEBUG 12067 --- [main] com.emeims.dao.StockMapper.updateStock   : ==> Parameters: 500(Integer), 10000(Integer), sup(String), 交流电机(String), jl123(String)
+2021-04-05 20:30:02.186 DEBUG 12067 --- [main] com.emeims.dao.StockMapper.updateStock   : <==    Updates: 1
+2021-04-05 20:30:02.208  INFO 12067 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:30:02.211  INFO 12067 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-05 20:30:02.224  INFO 12067 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-05 20:34:44.592  INFO 11632 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:34:44.598  INFO 11632 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-05 20:34:44.615  INFO 11632 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-05 20:34:47.967  INFO 12197 --- [main] com.emeims.EmeimsApplication             : Starting EmeimsApplication using Java 1.8.0_282 on debian with PID 12197 (/home/d-boy/code/gitRepository/GP/emeims/target/classes started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
+2021-04-05 20:34:47.977  INFO 12197 --- [main] com.emeims.EmeimsApplication             : No active profile set, falling back to default profiles: default
+2021-04-05 20:34:49.050  INFO 12197 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2021-04-05 20:34:49.057  INFO 12197 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-05 20:34:49.057  INFO 12197 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-05 20:34:49.098  INFO 12197 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-05 20:34:49.098  INFO 12197 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1064 ms
+2021-04-05 20:34:49.711  INFO 12197 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-05 20:34:49.769  INFO 12197 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:34:49.893  INFO 12197 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2021-04-05 20:34:49.894  INFO 12197 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-05 20:34:49.904  INFO 12197 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-05 20:34:49.924  INFO 12197 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-05 20:34:50.080  INFO 12197 --- [main] com.emeims.EmeimsApplication             : Started EmeimsApplication in 2.452 seconds (JVM running for 2.894)
+2021-04-05 20:35:18.057  INFO 12197 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-05 20:35:18.057  INFO 12197 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-05 20:35:18.058  INFO 12197 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-04-05 20:35:18.127  INFO 12197 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-05 20:35:18.255  INFO 12197 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-05 20:35:18.262 DEBUG 12197 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_id=?
+2021-04-05 20:35:18.283 DEBUG 12197 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 202104051953101(String)
+2021-04-05 20:35:18.302 DEBUG 12197 --- [http-nio-9090-exec-1] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 1
+2021-04-05 20:35:18.307 DEBUG 12197 --- [http-nio-9090-exec-1] c.emeims.dao.StockMapper.getStockByInfo  : ==>  Preparing: select stock_id, stock_supplier, stock_motor_type, stock_motor_model, stock_motor_price_in/stock_motor_quantity, stock_motor_quantity, stock_motor_price_in, stock_motor_price_out, stock_status, stock_operator_up, stock_operator_down, stock_up_time, stock_down_time from emcims.stock WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=?
+2021-04-05 20:35:18.307 DEBUG 12197 --- [http-nio-9090-exec-1] c.emeims.dao.StockMapper.getStockByInfo  : ==> Parameters: sup(String), 直流电机(String), zl003(String)
+2021-04-05 20:35:18.309 DEBUG 12197 --- [http-nio-9090-exec-1] c.emeims.dao.StockMapper.getStockByInfo  : <==      Total: 1
+2021-04-05 20:35:18.311 DEBUG 12197 --- [http-nio-9090-exec-1] com.emeims.dao.StockMapper.updateStock   : ==>  Preparing: update emcims.stock SET stock.stock_motor_price_in=?, stock.stock_motor_quantity=? WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=?
+2021-04-05 20:35:18.311 DEBUG 12197 --- [http-nio-9090-exec-1] com.emeims.dao.StockMapper.updateStock   : ==> Parameters: 30000.0(Float), 200(Integer), sup(String), 直流电机(String), zl003(String)
+2021-04-05 20:35:18.320 DEBUG 12197 --- [http-nio-9090-exec-1] com.emeims.dao.StockMapper.updateStock   : <==    Updates: 1
+2021-04-05 20:35:18.321 DEBUG 12197 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.updatePurchase    : ==>  Preparing: update emcims.purchase SET purchase.purchase_status=?, purchase_operator_confirm=?, purchase_end_time=? where purchase_id=?
+2021-04-05 20:35:18.322 DEBUG 12197 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.updatePurchase    : ==> Parameters: 已完成(String), admin(String), 2021-04-05 20:35:18.095(Timestamp), 202104051953101(String)
+2021-04-05 20:35:18.325 DEBUG 12197 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.updatePurchase    : <==    Updates: 1
+2021-04-05 20:35:18.371 DEBUG 12197 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_start_time >= ?
+2021-04-05 20:35:18.375 DEBUG 12197 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 2021-04-05 00:00:00.0(Timestamp)
+2021-04-05 20:35:18.378 DEBUG 12197 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 2
+2021-04-05 20:40:32.443  INFO 12197 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:40:32.452  INFO 12197 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-05 20:40:32.470  INFO 12197 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-05 20:40:34.621  INFO 12461 --- [main] com.emeims.EmeimsApplication             : Starting EmeimsApplication using Java 1.8.0_282 on debian with PID 12461 (/home/d-boy/code/gitRepository/GP/emeims/target/classes started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
+2021-04-05 20:40:34.626  INFO 12461 --- [main] com.emeims.EmeimsApplication             : No active profile set, falling back to default profiles: default
+2021-04-05 20:40:35.536  INFO 12461 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2021-04-05 20:40:35.542  INFO 12461 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-05 20:40:35.543  INFO 12461 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-05 20:40:35.583  INFO 12461 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-05 20:40:35.583  INFO 12461 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 924 ms
+2021-04-05 20:40:36.164  INFO 12461 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-05 20:40:36.222  INFO 12461 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:40:36.342  INFO 12461 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2021-04-05 20:40:36.343  INFO 12461 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-05 20:40:36.352  INFO 12461 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-05 20:40:36.374  INFO 12461 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-05 20:40:36.531  INFO 12461 --- [main] com.emeims.EmeimsApplication             : Started EmeimsApplication in 2.259 seconds (JVM running for 2.71)
+2021-04-05 20:41:14.735  INFO 12461 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-05 20:41:14.736  INFO 12461 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-05 20:41:14.737  INFO 12461 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-05 20:41:14.769  INFO 12461 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-05 20:41:14.886  INFO 12461 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-05 20:41:14.893 DEBUG 12461 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
+2021-04-05 20:41:14.912 DEBUG 12461 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
+2021-04-05 20:41:14.931 DEBUG 12461 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 9
+2021-04-05 20:41:28.631 DEBUG 12461 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase WHERE purchase_id=?
+2021-04-05 20:41:28.631 DEBUG 12461 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 202104051953101(String)
+2021-04-05 20:41:28.632 DEBUG 12461 --- [http-nio-9090-exec-2] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 1
+2021-04-05 20:41:28.634 DEBUG 12461 --- [http-nio-9090-exec-2] c.emeims.dao.StockMapper.getStockByInfo  : ==>  Preparing: select stock_id, stock_supplier, stock_motor_type, stock_motor_model, stock_motor_price_in/stock_motor_quantity, stock_motor_quantity, stock_motor_price_in, stock_motor_price_out, stock_status, stock_operator_up, stock_operator_down, stock_up_time, stock_down_time from emcims.stock WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=?
+2021-04-05 20:41:28.635 DEBUG 12461 --- [http-nio-9090-exec-2] c.emeims.dao.StockMapper.getStockByInfo  : ==> Parameters: sup(String), 直流电机(String), zl003(String)
+2021-04-05 20:41:28.636 DEBUG 12461 --- [http-nio-9090-exec-2] c.emeims.dao.StockMapper.getStockByInfo  : <==      Total: 1
+2021-04-05 20:41:28.641 DEBUG 12461 --- [http-nio-9090-exec-2] com.emeims.dao.StockMapper.updateStock   : ==>  Preparing: update emcims.stock SET stock.stock_motor_price_in=?, stock.stock_motor_quantity=? WHERE stock_supplier=? and stock_motor_type=? and stock_motor_model=?
+2021-04-05 20:41:28.642 DEBUG 12461 --- [http-nio-9090-exec-2] com.emeims.dao.StockMapper.updateStock   : ==> Parameters: 45000.0(Float), 300(Integer), sup(String), 直流电机(String), zl003(String)
+2021-04-05 20:41:28.650 DEBUG 12461 --- [http-nio-9090-exec-2] com.emeims.dao.StockMapper.updateStock   : <==    Updates: 1
+2021-04-05 20:41:28.652 DEBUG 12461 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.updatePurchase    : ==>  Preparing: update emcims.purchase SET purchase.purchase_status=?, purchase_operator_confirm=?, purchase_end_time=? where purchase_id=?
+2021-04-05 20:41:28.655 DEBUG 12461 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.updatePurchase    : ==> Parameters: 已完成(String), admin(String), 2021-04-05 20:41:28.614(Timestamp), 202104051953101(String)
+2021-04-05 20:41:28.658 DEBUG 12461 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.updatePurchase    : <==    Updates: 1
+2021-04-05 20:41:28.682 DEBUG 12461 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==>  Preparing: select * from emcims.purchase
+2021-04-05 20:41:28.682 DEBUG 12461 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : ==> Parameters: 
+2021-04-05 20:41:28.689 DEBUG 12461 --- [http-nio-9090-exec-3] c.e.d.PurchaseMapper.getPurchaseByInfo   : <==      Total: 9
+2021-04-05 20:55:41.424  INFO 12709 --- [main] com.emeims.EmeimsApplicationTests        : Starting EmeimsApplicationTests using Java 1.8.0_282 on debian with PID 12709 (started by d-boy in /home/d-boy/code/gitRepository/GP/emeims)
+2021-04-05 20:55:41.437  INFO 12709 --- [main] com.emeims.EmeimsApplicationTests        : No active profile set, falling back to default profiles: default
+2021-04-05 20:55:43.472  INFO 12709 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-05 20:55:43.725  INFO 12709 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:55:44.003  INFO 12709 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-05 20:55:44.025  INFO 12709 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-05 20:55:44.053  INFO 12709 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-05 20:55:44.268  INFO 12709 --- [main] com.emeims.EmeimsApplicationTests        : Started EmeimsApplicationTests in 3.245 seconds (JVM running for 4.304)
+2021-04-05 20:55:44.460  INFO 12709 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-05 20:55:44.653  INFO 12709 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-05 20:55:44.661 DEBUG 12709 --- [main] com.emeims.dao.StockMapper.getAllStock   : ==>  Preparing: select stock_id, stock_supplier, stock_motor_type, stock_motor_model, stock_motor_price_in/stock_motor_quantity stock_motor_avg_price, stock_motor_quantity, stock_motor_price_in, stock_motor_price_out, stock_status, stock_operator_up, stock_operator_down, stock_up_time, stock_down_time from emcims.stock;
+2021-04-05 20:55:44.689 DEBUG 12709 --- [main] com.emeims.dao.StockMapper.getAllStock   : ==> Parameters: 
+2021-04-05 20:55:44.711 DEBUG 12709 --- [main] com.emeims.dao.StockMapper.getAllStock   : <==      Total: 3
+2021-04-05 20:55:44.737  INFO 12709 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-05 20:55:44.742  INFO 12709 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-05 20:55:44.754  INFO 12709 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

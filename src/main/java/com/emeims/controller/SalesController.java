@@ -1,7 +1,7 @@
 package com.emeims.controller;
 
 import com.emeims.entity.Sales;
-import com.emeims.service.SalesService.SalesServiceImpl;
+import com.emeims.service.salesService.SalesServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

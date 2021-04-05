@@ -24,17 +24,22 @@ public class Stock {
     private Integer stockMotorQuantity;
     @ApiModelProperty("电机库存价值")
     private Float stockMotorPriceIn;
+
+    @ApiModelProperty("电机库存平均单价")
+    private Float stockMotorAvgPrice;
+
+
     @ApiModelProperty("电机销售价格")
     private Float stockMotorPriceOut;
     @ApiModelProperty("订单状态")
     private String stockStatus;
-    @ApiModelProperty("操作员_入库")
+    @ApiModelProperty("操作员_上架")
     private String stockOperatorUp;
-    @ApiModelProperty("操作员_出库")
+    @ApiModelProperty("操作员_下架")
     private String stockOperatorDown;
-    @ApiModelProperty("入库时间")
+    @ApiModelProperty("上架时间")
     private String stockUpTime;
-    @ApiModelProperty("出库时间")
+    @ApiModelProperty("下架时间")
     private String stockDownTime;
 
 }

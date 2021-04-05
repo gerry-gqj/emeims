@@ -17,6 +17,8 @@ spring:
 mybatis:
   type-aliases-package: com.emeims.entity
   mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:
+    cache-enabled: true
 
 
 logging:

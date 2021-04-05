@@ -5,6 +5,7 @@
 
 <mapper namespace="com.emeims.dao.SalesMapper">
 
+
     <insert id="addSales" parameterType="map">
         insert into emcims.sales (sales_id,
                                   sales_client,

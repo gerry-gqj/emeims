@@ -1,4 +1,4 @@
-package com.emeims.service.SalesService;
+package com.emeims.service.salesService;
 
 import com.emeims.entity.Sales;
 import org.springframework.stereotype.Service;
