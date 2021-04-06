@@ -87,10 +87,10 @@
     <update id="updateStock" parameterType="map">
         update emcims.stock
         <set>
-            <if test="stockMotorPriceIn!=null and stockMotorPriceIn!=''">
+            <if test="stockMotorPriceIn!=null">
                 stock.stock_motor_price_in=#{stockMotorPriceIn},
             </if>
-            <if test="stockMotorQuantity!=null and stockMotorQuantity!=''">
+            <if test="stockMotorQuantity!=null">
                 stock.stock_motor_quantity=#{stockMotorQuantity},
             </if>
             <if test="stockMotorPriceOut!=null and stockMotorPriceOut!=''">

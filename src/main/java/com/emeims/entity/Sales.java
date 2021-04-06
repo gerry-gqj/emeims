@@ -56,4 +56,6 @@ public class Sales {
     @ApiModelProperty("订单取消时间")
     private Date salesReturnTime;
 
+    @ApiModelProperty("电机供应商")
+    private String salesMotorSupplier;
 }

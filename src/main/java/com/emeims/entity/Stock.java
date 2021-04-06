@@ -28,7 +28,6 @@ public class Stock {
     @ApiModelProperty("电机库存平均单价")
     private Float stockMotorAvgPrice;
 
-
     @ApiModelProperty("电机销售价格")
     private Float stockMotorPriceOut;
     @ApiModelProperty("订单状态")

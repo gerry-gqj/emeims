@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -92,8 +91,6 @@ public class StockController {
 //        return returnMap;
 //    }
 //
-
-
     /* ********************[Method:No.1]: allStock()**********************/
     /**
      * [Method:No.1]: allStock()
@@ -101,7 +98,7 @@ public class StockController {
      * [URL]: (Post) http://localhost:9090/stock/allStock
      * @return list List(Stock)
      * */
-    @ApiOperation("Description: 查询所有销售订单入口")
+    @ApiOperation("Description: 查询所有库存入口")
     @RequestMapping(value = "/allStock",method = RequestMethod.GET)
     public List<Stock> allStock(){
         return stockService.getAllStock();
@@ -124,9 +121,11 @@ public class StockController {
     @ApiOperation("Description: 获取库存信息入口")
     @RequestMapping(value = "/getStockByInfo",method = RequestMethod.POST)
     public List<Stock> getStockByInfo(Stock stock){
+        System.out.println(stock);
         Map map = new HashMap<>();
         map.put("stockId",stock.getStockId());
         map.put("stockSupplier",stock.getStockSupplier());
+        map.put("stockStatus",stock.getStockStatus());
         map.put("stockMotorType",stock.getStockMotorType());
         map.put("stockMotorModel",stock.getStockMotorModel());
         return stockService.getStockByInfo(map);
@@ -142,10 +141,9 @@ public class StockController {
      *              stockStatus;
      *              stockOperatorConfirm or stockOperatorCancel
      *              ]
-     *
      * @return map(stockId) (Map)
      * */
-    @ApiOperation("Description: 更新销售订单信息入口")
+    @ApiOperation("Description: 更新库存入口")
     @RequestMapping(value = "/updateStock", method = RequestMethod.POST)
     public Map updateStock(Stock stock){
 
@@ -157,6 +155,7 @@ public class StockController {
             map.put("stockUpTime",new Date());
             map.put("stockStatus",stock.getStockStatus());
             map.put("stockOperatorUp",stock.getStockOperatorUp());
+            map.put("stockMotorPriceOut",stock.getStockMotorPriceOut());
             mapReturn.put("status","up success");
         }else if(stock.getStockStatus().equals("已下架")){
             map.put("stockDownTime",new Date());
@@ -169,6 +168,4 @@ public class StockController {
         stockService.updateStock(map);
         return mapReturn;
     }
-
-
 }

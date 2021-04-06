@@ -146,7 +146,6 @@ class EmeimsApplicationTests {
         String purchaseId = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss")
                 .format(new Date()).toString()
                 .replaceAll("-","")+1;
-
     }
 
 

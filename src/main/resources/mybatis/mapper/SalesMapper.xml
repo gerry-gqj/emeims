@@ -9,6 +9,7 @@
     <insert id="addSales" parameterType="map">
         insert into emcims.sales (sales_id,
                                   sales_client,
+                                  sales_motor_supplier,
                                   sales_motor_type,
                                   sales_motor_model,
                                   sales_motor_quantity,
@@ -18,6 +19,7 @@
                                   sales_start_time)
             value (#{salesId},
                    #{salesClient},
+                   #{salesMotorSupplier},
                    #{salesMotorType},
                    #{salesMotorModel},
                    #{salesMotorQuality},
@@ -29,7 +31,7 @@
 
     <resultMap id="SalesMap" type="Sales">
         <result property="salesId" column="sales_id"/>
-        <result property="salesClient" column="client"/>
+        <result property="salesClient" column="sales_client"/>
         <result property="salesMotorType" column="sales_motor_type"/>
         <result property="salesMotorModel" column="sales_motor_model"/>
         <result property="salesMotorQuality" column="sales_motor_quantity"/>
@@ -44,6 +46,8 @@
         <result property="salesStartTime" column="sales_start_time"/>
         <result property="salesEndTime" column="sales_end_time"/>
         <result property="salesReturnTime" column="sales_return_time"/>
+
+        <result property="salesMotorSupplier" column="sales_motor_supplier"/>
     </resultMap>
 
 
@@ -60,7 +64,10 @@
                 and sales_id=#{salesId}
             </if>
             <if test="salesClient!=null and salesClient!=''">
-                and supplier=#{salesClient}
+                and sales_client=#{salesClient}
+            </if>
+            <if test="salesMotorSupplier!=null and salesMotorSupplier!=''">
+                and sales_motor_supplier=#{salesMotorSupplier}
             </if>
             <if test="salesMotorType!=null and salesMotorType!=''">
                 and sales_motort_ype=#{salesMotorType}
@@ -113,6 +120,9 @@
     <update id="updateSales" parameterType="map">
         update emcims.sales
         <set>
+            <if test="salesStatus!=null and salesStatus!=''">
+                sales_status=#{salesStatus},
+            </if>
             <if test="salesStatus!=null and salesStatus!=''">
                 sales_status=#{salesStatus},
             </if>
