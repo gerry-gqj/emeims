@@ -1,6 +1,6 @@
 package com.emeims.service.userService;
 
-import com.emeims.entity.User;
+import com.emeims.entity.base.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

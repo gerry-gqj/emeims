@@ -1,6 +1,5 @@
-package com.emeims.dao;
+package com.emeims.entity.base;
 
-import com.emeims.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 

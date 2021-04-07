@@ -1,4 +1,4 @@
-package com.emeims.entity;
+package com.emeims.entity.base;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

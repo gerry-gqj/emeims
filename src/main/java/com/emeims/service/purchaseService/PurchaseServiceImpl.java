@@ -1,7 +1,7 @@
 package com.emeims.service.purchaseService;
 
 import com.emeims.dao.PurchaseMapper;
-import com.emeims.entity.Purchase;
+import com.emeims.entity.base.Purchase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

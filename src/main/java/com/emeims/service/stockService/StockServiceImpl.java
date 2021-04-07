@@ -1,7 +1,7 @@
 package com.emeims.service.stockService;
 
 import com.emeims.dao.StockMapper;
-import com.emeims.entity.Stock;
+import com.emeims.entity.base.Stock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

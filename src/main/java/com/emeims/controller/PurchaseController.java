@@ -1,7 +1,7 @@
 package com.emeims.controller;
 
-import com.emeims.entity.Purchase;
-import com.emeims.entity.Stock;
+import com.emeims.entity.base.Purchase;
+import com.emeims.entity.base.Stock;
 import com.emeims.service.purchaseService.PurchaseServiceImpl;
 import com.emeims.service.stockService.StockServiceImpl;
 import io.swagger.annotations.ApiOperation;

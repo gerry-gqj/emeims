@@ -1,4 +1,4 @@
-package com.emeims.entity;
+package com.emeims.entity.base;
 
 
 import io.swagger.annotations.ApiModel;
@@ -18,5 +18,4 @@ public class Company {
     private String companyAddress;
     @ApiModelProperty("公司邮箱地址")
     private String companyEmail;
-
 }

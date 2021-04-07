@@ -134,4 +134,11 @@
             </set>
         where purchase_id=#{purchaseId}
     </update>
+
+
+
+
+
+
+
 </mapper>

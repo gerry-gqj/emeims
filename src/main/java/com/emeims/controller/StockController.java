@@ -1,6 +1,6 @@
 package com.emeims.controller;
 
-import com.emeims.entity.Stock;
+import com.emeims.entity.base.Stock;
 import com.emeims.service.stockService.StockServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

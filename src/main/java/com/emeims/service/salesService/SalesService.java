@@ -1,6 +1,6 @@
 package com.emeims.service.salesService;
 
-import com.emeims.entity.Sales;
+import com.emeims.entity.base.Sales;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

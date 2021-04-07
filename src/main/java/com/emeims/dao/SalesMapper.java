@@ -1,6 +1,6 @@
 package com.emeims.dao;
 
-import com.emeims.entity.Sales;
+import com.emeims.entity.base.Sales;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 

@@ -1,9 +1,9 @@
 package com.emeims;
 
 import com.emeims.dao.PositionMapper;
-import com.emeims.dao.UserMapper;
-import com.emeims.entity.Stock;
-import com.emeims.entity.User;
+import com.emeims.entity.base.UserMapper;
+import com.emeims.entity.base.Stock;
+import com.emeims.entity.base.User;
 import com.emeims.service.stockService.StockServiceImpl;
 import com.emeims.service.userService.UserServiceImpl;
 import org.junit.jupiter.api.Test;

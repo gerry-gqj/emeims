@@ -1,7 +1,7 @@
 package com.emeims.service.userService;
 
-import com.emeims.dao.UserMapper;
-import com.emeims.entity.User;
+import com.emeims.entity.base.UserMapper;
+import com.emeims.entity.base.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

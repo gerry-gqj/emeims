@@ -1,6 +1,6 @@
 package com.emeims.controller;
 
-import com.emeims.entity.User;
+import com.emeims.entity.base.User;
 import com.emeims.service.userService.UserServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

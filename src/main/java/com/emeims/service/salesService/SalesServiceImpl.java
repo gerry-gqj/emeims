@@ -1,7 +1,7 @@
 package com.emeims.service.salesService;
 
 import com.emeims.dao.SalesMapper;
-import com.emeims.entity.Sales;
+import com.emeims.entity.base.Sales;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

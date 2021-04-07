@@ -1,6 +1,6 @@
 package com.emeims.service.purchaseService;
 
-import com.emeims.entity.Purchase;
+import com.emeims.entity.base.Purchase;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

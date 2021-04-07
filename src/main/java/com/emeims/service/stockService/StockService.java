@@ -1,6 +1,6 @@
 package com.emeims.service.stockService;
 
-import com.emeims.entity.Stock;
+import com.emeims.entity.base.Stock;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
