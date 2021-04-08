@@ -7,5 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Purchase {
+public class StockCount {
+    private String stockMotorType;
+    private Integer stockMotorNumber;
 }

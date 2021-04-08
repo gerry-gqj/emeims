@@ -1,63 +1,63 @@
-2021-04-01 00:00:06.113 DEBUG 4711 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 00:00:06.116 DEBUG 4711 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 00:00:06.118 DEBUG 4711 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 00:00:06.155 DEBUG 4711 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 00:00:06.157 DEBUG 4711 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 00:00:06.160 DEBUG 4711 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 00:00:13.496 DEBUG 4711 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ? and user.user_name = ? and user.user_gender = ? and user.user_status =?
-2021-04-01 00:00:13.497 DEBUG 4711 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: (String), admin(String), (String), (String)
-2021-04-01 00:00:13.498 DEBUG 4711 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 0
-2021-04-01 00:01:12.329 DEBUG 4711 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.user_email = ? and user.user_name = ? and user.user_gender = ? and user.user_status =?
-2021-04-01 00:01:12.330 DEBUG 4711 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), (String), (String), (String), (String)
-2021-04-01 00:01:12.332 DEBUG 4711 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 0
-2021-04-01 00:01:40.644 DEBUG 4711 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 00:01:40.644 DEBUG 4711 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 00:01:40.646 DEBUG 4711 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 00:01:40.684 DEBUG 4711 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 00:01:40.685 DEBUG 4711 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 00:01:40.690 DEBUG 4711 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 00:01:48.670 DEBUG 4711 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=?
-2021-04-01 00:01:48.671 DEBUG 4711 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
-2021-04-01 00:01:48.673 DEBUG 4711 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 00:01:51.536 DEBUG 4711 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.position_id=?
-2021-04-01 00:01:51.537 DEBUG 4711 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 1(Integer)
-2021-04-01 00:01:51.540 DEBUG 4711 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 00:01:53.937 DEBUG 4711 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.position_id=?
-2021-04-01 00:01:53.939 DEBUG 4711 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 2(Integer)
-2021-04-01 00:01:53.941 DEBUG 4711 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 0
-2021-04-01 00:02:00.349 DEBUG 4711 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-01 00:02:00.350 DEBUG 4711 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer)
-2021-04-01 00:02:00.356 DEBUG 4711 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 7
-2021-04-01 00:02:42.972 DEBUG 4711 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-01 00:02:42.974 DEBUG 4711 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer)
-2021-04-01 00:02:42.979 DEBUG 4711 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 7
-2021-04-01 00:02:53.961 DEBUG 4711 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 00:02:53.961 DEBUG 4711 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 00:02:53.963 DEBUG 4711 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 00:02:54.014 DEBUG 4711 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 00:02:54.014 DEBUG 4711 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 00:02:54.016 DEBUG 4711 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 00:02:56.379 DEBUG 4711 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
-2021-04-01 00:02:56.379 DEBUG 4711 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 已激活(String)
-2021-04-01 00:02:56.381 DEBUG 4711 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 5
-2021-04-01 00:02:59.014 DEBUG 4711 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
-2021-04-01 00:02:59.015 DEBUG 4711 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 已注销(String)
-2021-04-01 00:02:59.018 DEBUG 4711 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 00:03:03.296 DEBUG 4711 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.user_status =?
-2021-04-01 00:03:03.297 DEBUG 4711 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), (String)
-2021-04-01 00:03:03.298 DEBUG 4711 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 0
-2021-04-01 00:03:52.453 DEBUG 4711 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.user_status =?
-2021-04-01 00:03:52.455 DEBUG 4711 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 已注销(String)
-2021-04-01 00:03:52.457 DEBUG 4711 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 0
-2021-04-01 00:03:55.041 DEBUG 4711 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.user_status =?
-2021-04-01 00:03:55.042 DEBUG 4711 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 已激活(String)
-2021-04-01 00:03:55.045 DEBUG 4711 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 00:04:05.039 DEBUG 4711 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.user_status =?
-2021-04-01 00:04:05.040 DEBUG 4711 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 已激活(String)
-2021-04-01 00:04:05.043 DEBUG 4711 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 00:04:41.077 DEBUG 4711 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.user_status =?
-2021-04-01 00:04:41.078 DEBUG 4711 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 已激活(String)
-2021-04-01 00:04:41.084 DEBUG 4711 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 00:00:06.113 DEBUG 4711 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 00:00:06.116 DEBUG 4711 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 00:00:06.118 DEBUG 4711 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 00:00:06.155 DEBUG 4711 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 00:00:06.157 DEBUG 4711 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 00:00:06.160 DEBUG 4711 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 00:00:13.496 DEBUG 4711 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ? and user.user_name = ? and user.user_gender = ? and user.user_status =?
+2021-04-01 00:00:13.497 DEBUG 4711 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: (String), admin(String), (String), (String)
+2021-04-01 00:00:13.498 DEBUG 4711 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 0
+2021-04-01 00:01:12.329 DEBUG 4711 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.user_email = ? and user.user_name = ? and user.user_gender = ? and user.user_status =?
+2021-04-01 00:01:12.330 DEBUG 4711 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), (String), (String), (String), (String)
+2021-04-01 00:01:12.332 DEBUG 4711 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 0
+2021-04-01 00:01:40.644 DEBUG 4711 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 00:01:40.644 DEBUG 4711 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 00:01:40.646 DEBUG 4711 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 00:01:40.684 DEBUG 4711 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 00:01:40.685 DEBUG 4711 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 00:01:40.690 DEBUG 4711 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 00:01:48.670 DEBUG 4711 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=?
+2021-04-01 00:01:48.671 DEBUG 4711 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
+2021-04-01 00:01:48.673 DEBUG 4711 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 00:01:51.536 DEBUG 4711 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.position_id=?
+2021-04-01 00:01:51.537 DEBUG 4711 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 1(Integer)
+2021-04-01 00:01:51.540 DEBUG 4711 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 00:01:53.937 DEBUG 4711 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.position_id=?
+2021-04-01 00:01:53.939 DEBUG 4711 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 2(Integer)
+2021-04-01 00:01:53.941 DEBUG 4711 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 0
+2021-04-01 00:02:00.349 DEBUG 4711 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
+2021-04-01 00:02:00.350 DEBUG 4711 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer)
+2021-04-01 00:02:00.356 DEBUG 4711 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 7
+2021-04-01 00:02:42.972 DEBUG 4711 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
+2021-04-01 00:02:42.974 DEBUG 4711 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer)
+2021-04-01 00:02:42.979 DEBUG 4711 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 7
+2021-04-01 00:02:53.961 DEBUG 4711 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 00:02:53.961 DEBUG 4711 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 00:02:53.963 DEBUG 4711 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 00:02:54.014 DEBUG 4711 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 00:02:54.014 DEBUG 4711 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 00:02:54.016 DEBUG 4711 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 00:02:56.379 DEBUG 4711 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
+2021-04-01 00:02:56.379 DEBUG 4711 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 已激活(String)
+2021-04-01 00:02:56.381 DEBUG 4711 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 5
+2021-04-01 00:02:59.014 DEBUG 4711 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
+2021-04-01 00:02:59.015 DEBUG 4711 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 已注销(String)
+2021-04-01 00:02:59.018 DEBUG 4711 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 00:03:03.296 DEBUG 4711 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.user_status =?
+2021-04-01 00:03:03.297 DEBUG 4711 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), (String)
+2021-04-01 00:03:03.298 DEBUG 4711 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 0
+2021-04-01 00:03:52.453 DEBUG 4711 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.user_status =?
+2021-04-01 00:03:52.455 DEBUG 4711 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 已注销(String)
+2021-04-01 00:03:52.457 DEBUG 4711 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 0
+2021-04-01 00:03:55.041 DEBUG 4711 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.user_status =?
+2021-04-01 00:03:55.042 DEBUG 4711 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 已激活(String)
+2021-04-01 00:03:55.045 DEBUG 4711 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 00:04:05.039 DEBUG 4711 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.user_status =?
+2021-04-01 00:04:05.040 DEBUG 4711 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 已激活(String)
+2021-04-01 00:04:05.043 DEBUG 4711 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 00:04:41.077 DEBUG 4711 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.user_status =?
+2021-04-01 00:04:41.078 DEBUG 4711 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 已激活(String)
+2021-04-01 00:04:41.084 DEBUG 4711 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
 2021-04-01 00:06:35.684  INFO 4711 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2021-04-01 00:06:35.685  INFO 4711 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-04-01 00:06:35.690  INFO 4711 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -939,15 +939,15 @@ Was expecting one of:
 2021-04-01 00:09:43.722  INFO 5281 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2021-04-01 00:09:43.778  INFO 5281 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2021-04-01 00:09:43.887  INFO 5281 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-04-01 00:09:43.893 DEBUG 5281 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.position_id=? and user.user_status =?
-2021-04-01 00:09:43.912 DEBUG 5281 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 3(Integer), 已激活(String)
-2021-04-01 00:09:43.927 DEBUG 5281 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 0
-2021-04-01 00:09:49.986 DEBUG 5281 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.position_id=? and user.user_status =?
-2021-04-01 00:09:49.988 DEBUG 5281 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 3(Integer), 已激活(String)
-2021-04-01 00:09:49.991 DEBUG 5281 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 0
-2021-04-01 00:09:52.473 DEBUG 5281 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.position_id=? and user.user_status =?
-2021-04-01 00:09:52.475 DEBUG 5281 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 1(Integer), 已激活(String)
-2021-04-01 00:09:52.489 DEBUG 5281 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 00:09:43.893 DEBUG 5281 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.position_id=? and user.user_status =?
+2021-04-01 00:09:43.912 DEBUG 5281 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 3(Integer), 已激活(String)
+2021-04-01 00:09:43.927 DEBUG 5281 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 0
+2021-04-01 00:09:49.986 DEBUG 5281 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.position_id=? and user.user_status =?
+2021-04-01 00:09:49.988 DEBUG 5281 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 3(Integer), 已激活(String)
+2021-04-01 00:09:49.991 DEBUG 5281 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 0
+2021-04-01 00:09:52.473 DEBUG 5281 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=? and user.position_id=? and user.user_status =?
+2021-04-01 00:09:52.475 DEBUG 5281 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 1(Integer), 已激活(String)
+2021-04-01 00:09:52.489 DEBUG 5281 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
 2021-04-01 00:12:11.185  INFO 5281 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2021-04-01 00:12:11.187  INFO 5281 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-04-01 00:12:11.194  INFO 5281 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -970,24 +970,24 @@ Was expecting one of:
 2021-04-01 00:12:34.203  INFO 5408 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2021-04-01 00:12:34.236  INFO 5408 --- [http-nio-9090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2021-04-01 00:12:34.337  INFO 5408 --- [http-nio-9090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-04-01 00:12:34.344 DEBUG 5408 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 00:12:34.344 DEBUG 5408 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 00:12:34.363 DEBUG 5408 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 00:12:34.374 DEBUG 5408 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 00:12:34.386 DEBUG 5408 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 00:12:34.386 DEBUG 5408 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 00:12:49.221 DEBUG 5408 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 00:12:49.221 DEBUG 5408 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 00:12:49.225 DEBUG 5408 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 00:12:49.298 DEBUG 5408 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 00:12:49.298 DEBUG 5408 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 00:12:49.302 DEBUG 5408 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 00:12:51.186 DEBUG 5408 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
-2021-04-01 00:12:51.187 DEBUG 5408 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: (String)
-2021-04-01 00:12:51.188 DEBUG 5408 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 0
-2021-04-01 00:13:03.460 DEBUG 5408 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_gender = ? and user.user_status =?
-2021-04-01 00:13:03.461 DEBUG 5408 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 男(String), (String)
-2021-04-01 00:13:03.465 DEBUG 5408 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 0
+2021-04-01 00:12:34.344 DEBUG 5408 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 00:12:34.344 DEBUG 5408 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 00:12:34.363 DEBUG 5408 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 00:12:34.374 DEBUG 5408 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 00:12:34.386 DEBUG 5408 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 00:12:34.386 DEBUG 5408 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 00:12:49.221 DEBUG 5408 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 00:12:49.221 DEBUG 5408 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 00:12:49.225 DEBUG 5408 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 00:12:49.298 DEBUG 5408 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 00:12:49.298 DEBUG 5408 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 00:12:49.302 DEBUG 5408 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 00:12:51.186 DEBUG 5408 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
+2021-04-01 00:12:51.187 DEBUG 5408 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: (String)
+2021-04-01 00:12:51.188 DEBUG 5408 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 0
+2021-04-01 00:13:03.460 DEBUG 5408 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_gender = ? and user.user_status =?
+2021-04-01 00:13:03.461 DEBUG 5408 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 男(String), (String)
+2021-04-01 00:13:03.465 DEBUG 5408 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 0
 2021-04-01 00:18:18.676  INFO 5408 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2021-04-01 00:18:18.682  INFO 5408 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-04-01 00:18:18.699  INFO 5408 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -1010,86 +1010,86 @@ Was expecting one of:
 2021-04-01 00:18:52.856  INFO 5747 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2021-04-01 00:18:52.887  INFO 5747 --- [http-nio-9090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2021-04-01 00:18:53.007  INFO 5747 --- [http-nio-9090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-04-01 00:18:53.014 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 00:18:53.022 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 00:18:53.041 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 00:18:53.041 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 00:18:53.068 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 00:18:53.068 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 00:18:56.088 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=?
-2021-04-01 00:18:56.089 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
-2021-04-01 00:18:56.090 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 00:18:53.014 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 00:18:53.022 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 00:18:53.041 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 00:18:53.041 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 00:18:53.068 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 00:18:53.068 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 00:18:56.088 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=?
+2021-04-01 00:18:56.089 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
+2021-04-01 00:18:56.090 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
 2021-04-01 00:19:03.538  WARN 5747 --- [http-nio-9090-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
 Field error in object 'user' on field 'userId': rejected value [admin]; codes [typeMismatch.user.userId,typeMismatch.userId,typeMismatch.java.lang.Integer,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.userId,userId]; arguments []; default message [userId]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Integer' for property 'userId'; nested exception is java.lang.NumberFormatException: For input string: "admin"]]
-2021-04-01 00:19:08.451 DEBUG 5747 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
-2021-04-01 00:19:08.453 DEBUG 5747 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 未激活(String)
-2021-04-01 00:19:08.464 DEBUG 5747 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 4
-2021-04-01 00:19:32.034 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-01 00:19:32.035 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 9393939@user.com(String)
-2021-04-01 00:19:32.039 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 00:19:55.743 DEBUG 5747 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-01 00:19:55.744 DEBUG 5747 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 9393939@user.com(String)
-2021-04-01 00:19:55.749 DEBUG 5747 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 00:20:02.407 DEBUG 5747 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-01 00:20:02.409 DEBUG 5747 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 2(Integer)
-2021-04-01 00:20:02.414 DEBUG 5747 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 2
-2021-04-01 00:20:04.876 DEBUG 5747 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-01 00:20:04.881 DEBUG 5747 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer)
-2021-04-01 00:20:04.890 DEBUG 5747 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 7
-2021-04-01 00:20:07.376 DEBUG 5747 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=? and user.user_status =?
-2021-04-01 00:20:07.377 DEBUG 5747 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer), 已注销(String)
-2021-04-01 00:20:07.380 DEBUG 5747 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 00:20:10.426 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=? and user.user_status =?
-2021-04-01 00:20:10.428 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer), 未激活(String)
-2021-04-01 00:20:10.435 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 4
-2021-04-01 00:20:12.598 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=? and user.user_status =?
-2021-04-01 00:20:12.599 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer), 已激活(String)
-2021-04-01 00:20:12.603 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 2
-2021-04-01 00:20:27.683 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 00:20:27.683 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 00:20:27.686 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 11:01:44.457 DEBUG 5747 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 11:01:44.457 DEBUG 5747 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 11:01:44.459 DEBUG 5747 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 00:19:08.451 DEBUG 5747 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
+2021-04-01 00:19:08.453 DEBUG 5747 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 未激活(String)
+2021-04-01 00:19:08.464 DEBUG 5747 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 4
+2021-04-01 00:19:32.034 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
+2021-04-01 00:19:32.035 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 9393939@user.com(String)
+2021-04-01 00:19:32.039 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 00:19:55.743 DEBUG 5747 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
+2021-04-01 00:19:55.744 DEBUG 5747 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 9393939@user.com(String)
+2021-04-01 00:19:55.749 DEBUG 5747 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 00:20:02.407 DEBUG 5747 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
+2021-04-01 00:20:02.409 DEBUG 5747 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 2(Integer)
+2021-04-01 00:20:02.414 DEBUG 5747 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 2
+2021-04-01 00:20:04.876 DEBUG 5747 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
+2021-04-01 00:20:04.881 DEBUG 5747 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer)
+2021-04-01 00:20:04.890 DEBUG 5747 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 7
+2021-04-01 00:20:07.376 DEBUG 5747 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=? and user.user_status =?
+2021-04-01 00:20:07.377 DEBUG 5747 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer), 已注销(String)
+2021-04-01 00:20:07.380 DEBUG 5747 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 00:20:10.426 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=? and user.user_status =?
+2021-04-01 00:20:10.428 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer), 未激活(String)
+2021-04-01 00:20:10.435 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 4
+2021-04-01 00:20:12.598 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=? and user.user_status =?
+2021-04-01 00:20:12.599 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer), 已激活(String)
+2021-04-01 00:20:12.603 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 2
+2021-04-01 00:20:27.683 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 00:20:27.683 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 00:20:27.686 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 11:01:44.457 DEBUG 5747 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 11:01:44.457 DEBUG 5747 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 11:01:44.459 DEBUG 5747 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
 2021-04-01 11:01:46.196 DEBUG 5747 --- [http-nio-9090-exec-5] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
 2021-04-01 11:01:46.197 DEBUG 5747 --- [http-nio-9090-exec-5] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
 2021-04-01 11:01:46.200 DEBUG 5747 --- [http-nio-9090-exec-5] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 9
-2021-04-01 11:01:49.410 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 11:01:49.410 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 11:01:49.412 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 11:01:49.410 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 11:01:49.410 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 11:01:49.412 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
 2021-04-01 11:01:58.976 DEBUG 5747 --- [http-nio-9090-exec-7] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
 2021-04-01 11:01:58.977 DEBUG 5747 --- [http-nio-9090-exec-7] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
 2021-04-01 11:01:58.981 DEBUG 5747 --- [http-nio-9090-exec-7] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 9
-2021-04-01 11:02:43.312 DEBUG 5747 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 11:02:43.313 DEBUG 5747 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 11:02:43.315 DEBUG 5747 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 11:11:57.881 DEBUG 5747 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
-2021-04-01 11:11:57.882 DEBUG 5747 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters:
-2021-04-01 11:11:57.889 DEBUG 5747 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 10
-2021-04-01 11:12:01.887 DEBUG 5747 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=?
-2021-04-01 11:12:01.888 DEBUG 5747 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
-2021-04-01 11:12:01.890 DEBUG 5747 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 11:12:26.742 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
-2021-04-01 11:12:26.743 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters:
-2021-04-01 11:12:26.753 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 10
-2021-04-01 11:12:40.778 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.updateUser     : ==>  Preparing: update emcims.user SET user.position_id=? where user_id=?
-2021-04-01 11:12:40.778 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.updateUser     : ==> Parameters: 2(Integer), 3(Integer)
-2021-04-01 11:12:40.786 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.updateUser     : <==    Updates: 1
-2021-04-01 11:12:48.024 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 11:12:48.025 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 11:12:48.026 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 11:12:56.228 DEBUG 5747 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.updateUser     : ==>  Preparing: update emcims.user SET user.user_status=? where user_id=?
-2021-04-01 11:12:56.228 DEBUG 5747 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.updateUser     : ==> Parameters: 已激活(String), 11(Integer)
-2021-04-01 11:12:56.237 DEBUG 5747 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.updateUser     : <==    Updates: 1
-2021-04-01 11:13:01.674 DEBUG 5747 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 11:13:01.675 DEBUG 5747 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 11:13:01.676 DEBUG 5747 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 11:17:54.408 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 11:17:54.408 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 11:17:54.410 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 11:17:54.484 DEBUG 5747 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 11:17:54.484 DEBUG 5747 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 11:17:54.485 DEBUG 5747 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 11:02:43.312 DEBUG 5747 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 11:02:43.313 DEBUG 5747 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 11:02:43.315 DEBUG 5747 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 11:11:57.881 DEBUG 5747 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
+2021-04-01 11:11:57.882 DEBUG 5747 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters:
+2021-04-01 11:11:57.889 DEBUG 5747 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 10
+2021-04-01 11:12:01.887 DEBUG 5747 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=?
+2021-04-01 11:12:01.888 DEBUG 5747 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
+2021-04-01 11:12:01.890 DEBUG 5747 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 11:12:26.742 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
+2021-04-01 11:12:26.743 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters:
+2021-04-01 11:12:26.753 DEBUG 5747 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 10
+2021-04-01 11:12:40.778 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.updateUser     : ==>  Preparing: update emcims.user SET user.position_id=? where user_id=?
+2021-04-01 11:12:40.778 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.updateUser     : ==> Parameters: 2(Integer), 3(Integer)
+2021-04-01 11:12:40.786 DEBUG 5747 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.updateUser     : <==    Updates: 1
+2021-04-01 11:12:48.024 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 11:12:48.025 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 11:12:48.026 DEBUG 5747 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 11:12:56.228 DEBUG 5747 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.updateUser     : ==>  Preparing: update emcims.user SET user.user_status=? where user_id=?
+2021-04-01 11:12:56.228 DEBUG 5747 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.updateUser     : ==> Parameters: 已激活(String), 11(Integer)
+2021-04-01 11:12:56.237 DEBUG 5747 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.updateUser     : <==    Updates: 1
+2021-04-01 11:13:01.674 DEBUG 5747 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 11:13:01.675 DEBUG 5747 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 11:13:01.676 DEBUG 5747 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 11:17:54.408 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 11:17:54.408 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 11:17:54.410 DEBUG 5747 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 11:17:54.484 DEBUG 5747 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 11:17:54.484 DEBUG 5747 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 11:17:54.485 DEBUG 5747 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
 2021-04-01 11:20:16.935  INFO 5747 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2021-04-01 11:20:16.938  INFO 5747 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-04-01 11:20:16.941  INFO 5747 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -1127,81 +1127,81 @@ Field error in object 'user' on field 'userId': rejected value [admin]; codes [t
 2021-04-01 12:08:37.906  INFO 8111 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2021-04-01 12:08:45.232  INFO 8111 --- [http-nio-9090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2021-04-01 12:08:45.361  INFO 8111 --- [http-nio-9090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-04-01 12:08:45.369 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:08:45.389 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:08:45.411 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:09:02.775 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.updateUser     : ==>  Preparing: update emcims.user SET user.user_status=? where user_id=?
-2021-04-01 12:09:02.776 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.updateUser     : ==> Parameters: 已注销(String), 3(Integer)
-2021-04-01 12:09:02.785 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.updateUser     : <==    Updates: 1
-2021-04-01 12:09:12.832 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:09:12.833 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:09:12.840 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:09:24.410 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:09:24.411 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:09:24.414 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:09:37.818 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:09:37.819 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:09:37.822 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:10:54.920 DEBUG 8111 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:10:54.920 DEBUG 8111 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:10:54.923 DEBUG 8111 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:10:54.993 DEBUG 8111 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:10:54.994 DEBUG 8111 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:10:54.996 DEBUG 8111 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:11:01.612 DEBUG 8111 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.updateUser     : ==>  Preparing: update emcims.user SET user.position_id=? where user_id=?
-2021-04-01 12:11:01.613 DEBUG 8111 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.updateUser     : ==> Parameters: 3(Integer), 3(Integer)
-2021-04-01 12:11:01.621 DEBUG 8111 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.updateUser     : <==    Updates: 1
-2021-04-01 12:11:17.779 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:11:17.779 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:11:17.781 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:12:55.150 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:12:55.151 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:12:55.158 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:13:17.322 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:13:17.322 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:13:17.324 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:13:46.486 DEBUG 8111 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:13:46.486 DEBUG 8111 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:13:46.488 DEBUG 8111 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:14:46.997 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:14:46.998 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:14:47.000 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:15:10.226 DEBUG 8111 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:15:10.226 DEBUG 8111 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:15:10.228 DEBUG 8111 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:15:24.795 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:15:24.796 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:15:24.798 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:16:13.574 DEBUG 8111 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:16:13.575 DEBUG 8111 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:16:13.577 DEBUG 8111 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:16:42.726 DEBUG 8111 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:16:42.726 DEBUG 8111 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:16:42.728 DEBUG 8111 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:17:47.618 DEBUG 8111 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 12:17:47.618 DEBUG 8111 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 12:17:47.621 DEBUG 8111 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 12:18:38.419 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=?
-2021-04-01 12:18:38.420 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
-2021-04-01 12:18:38.422 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 12:18:45.640 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-01 12:18:45.641 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: admin(String)
-2021-04-01 12:18:45.645 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 12:18:48.890 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-01 12:18:48.892 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 2(Integer)
-2021-04-01 12:18:48.896 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 2
-2021-04-01 12:18:52.985 DEBUG 8111 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
-2021-04-01 12:18:52.986 DEBUG 8111 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters:
-2021-04-01 12:18:52.992 DEBUG 8111 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 10
-2021-04-01 12:19:10.589 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
-2021-04-01 12:19:10.590 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters:
-2021-04-01 12:19:10.598 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 10
-2021-04-01 12:19:14.653 DEBUG 8111 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
-2021-04-01 12:19:14.654 DEBUG 8111 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters:
-2021-04-01 12:19:14.660 DEBUG 8111 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 10
-2021-04-01 12:19:16.804 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_gender = ?
-2021-04-01 12:19:16.805 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 男(String)
-2021-04-01 12:19:16.808 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 4
+2021-04-01 12:08:45.369 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:08:45.389 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:08:45.411 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:09:02.775 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.updateUser     : ==>  Preparing: update emcims.user SET user.user_status=? where user_id=?
+2021-04-01 12:09:02.776 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.updateUser     : ==> Parameters: 已注销(String), 3(Integer)
+2021-04-01 12:09:02.785 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.updateUser     : <==    Updates: 1
+2021-04-01 12:09:12.832 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:09:12.833 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:09:12.840 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:09:24.410 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:09:24.411 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:09:24.414 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:09:37.818 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:09:37.819 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:09:37.822 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:10:54.920 DEBUG 8111 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:10:54.920 DEBUG 8111 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:10:54.923 DEBUG 8111 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:10:54.993 DEBUG 8111 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:10:54.994 DEBUG 8111 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:10:54.996 DEBUG 8111 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:11:01.612 DEBUG 8111 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.updateUser     : ==>  Preparing: update emcims.user SET user.position_id=? where user_id=?
+2021-04-01 12:11:01.613 DEBUG 8111 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.updateUser     : ==> Parameters: 3(Integer), 3(Integer)
+2021-04-01 12:11:01.621 DEBUG 8111 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.updateUser     : <==    Updates: 1
+2021-04-01 12:11:17.779 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:11:17.779 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:11:17.781 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:12:55.150 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:12:55.151 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:12:55.158 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:13:17.322 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:13:17.322 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:13:17.324 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:13:46.486 DEBUG 8111 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:13:46.486 DEBUG 8111 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:13:46.488 DEBUG 8111 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:14:46.997 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:14:46.998 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:14:47.000 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:15:10.226 DEBUG 8111 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:15:10.226 DEBUG 8111 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:15:10.228 DEBUG 8111 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:15:24.795 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:15:24.796 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:15:24.798 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:16:13.574 DEBUG 8111 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:16:13.575 DEBUG 8111 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:16:13.577 DEBUG 8111 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:16:42.726 DEBUG 8111 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:16:42.726 DEBUG 8111 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:16:42.728 DEBUG 8111 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:17:47.618 DEBUG 8111 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 12:17:47.618 DEBUG 8111 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 12:17:47.621 DEBUG 8111 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 12:18:38.419 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=?
+2021-04-01 12:18:38.420 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
+2021-04-01 12:18:38.422 DEBUG 8111 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 12:18:45.640 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
+2021-04-01 12:18:45.641 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: admin(String)
+2021-04-01 12:18:45.645 DEBUG 8111 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 12:18:48.890 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
+2021-04-01 12:18:48.892 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 2(Integer)
+2021-04-01 12:18:48.896 DEBUG 8111 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 2
+2021-04-01 12:18:52.985 DEBUG 8111 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
+2021-04-01 12:18:52.986 DEBUG 8111 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters:
+2021-04-01 12:18:52.992 DEBUG 8111 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 10
+2021-04-01 12:19:10.589 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
+2021-04-01 12:19:10.590 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters:
+2021-04-01 12:19:10.598 DEBUG 8111 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 10
+2021-04-01 12:19:14.653 DEBUG 8111 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
+2021-04-01 12:19:14.654 DEBUG 8111 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters:
+2021-04-01 12:19:14.660 DEBUG 8111 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 10
+2021-04-01 12:19:16.804 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_gender = ?
+2021-04-01 12:19:16.805 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 男(String)
+2021-04-01 12:19:16.808 DEBUG 8111 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 4
 2021-04-01 12:20:26.736  INFO 8111 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2021-04-01 12:20:26.738  INFO 8111 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-04-01 12:20:26.753  INFO 8111 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -1224,39 +1224,39 @@ Field error in object 'user' on field 'userId': rejected value [admin]; codes [t
 2021-04-01 12:20:44.629  INFO 8470 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
 2021-04-01 12:20:44.686  INFO 8470 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2021-04-01 12:20:44.809  INFO 8470 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-04-01 12:20:44.818 DEBUG 8470 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_gender = ?
-2021-04-01 12:20:44.841 DEBUG 8470 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 男(String)
-2021-04-01 12:20:44.866 DEBUG 8470 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 4
-2021-04-01 12:20:48.940 DEBUG 8470 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_gender = ?
-2021-04-01 12:20:48.942 DEBUG 8470 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 女(String)
-2021-04-01 12:20:48.950 DEBUG 8470 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 12:20:52.524 DEBUG 8470 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
-2021-04-01 12:20:52.526 DEBUG 8470 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters:
-2021-04-01 12:20:52.547 DEBUG 8470 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 10
-2021-04-01 12:21:06.445 DEBUG 8470 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-01 12:21:06.446 DEBUG 8470 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 2(Integer)
-2021-04-01 12:21:06.464 DEBUG 8470 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 2
-2021-04-01 12:21:09.456 DEBUG 8470 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-01 12:21:09.458 DEBUG 8470 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer)
-2021-04-01 12:21:09.468 DEBUG 8470 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 7
-2021-04-01 12:21:14.076 DEBUG 8470 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-01 12:21:14.077 DEBUG 8470 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
-2021-04-01 12:21:14.081 DEBUG 8470 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 12:21:16.355 DEBUG 8470 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-01 12:21:16.356 DEBUG 8470 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
-2021-04-01 12:21:16.360 DEBUG 8470 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 12:21:18.750 DEBUG 8470 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-01 12:21:18.751 DEBUG 8470 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
-2021-04-01 12:21:18.754 DEBUG 8470 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 12:21:22.243 DEBUG 8470 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
-2021-04-01 12:21:22.244 DEBUG 8470 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters:
-2021-04-01 12:21:22.255 DEBUG 8470 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 10
-2021-04-01 12:21:41.761 DEBUG 8470 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
-2021-04-01 12:21:41.763 DEBUG 8470 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters:
-2021-04-01 12:21:41.776 DEBUG 8470 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 10
-2021-04-01 12:21:50.587 DEBUG 8470 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
-2021-04-01 12:21:50.588 DEBUG 8470 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters:
-2021-04-01 12:21:50.602 DEBUG 8470 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 10
+2021-04-01 12:20:44.818 DEBUG 8470 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_gender = ?
+2021-04-01 12:20:44.841 DEBUG 8470 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 男(String)
+2021-04-01 12:20:44.866 DEBUG 8470 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 4
+2021-04-01 12:20:48.940 DEBUG 8470 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_gender = ?
+2021-04-01 12:20:48.942 DEBUG 8470 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 女(String)
+2021-04-01 12:20:48.950 DEBUG 8470 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 12:20:52.524 DEBUG 8470 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
+2021-04-01 12:20:52.526 DEBUG 8470 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters:
+2021-04-01 12:20:52.547 DEBUG 8470 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 10
+2021-04-01 12:21:06.445 DEBUG 8470 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
+2021-04-01 12:21:06.446 DEBUG 8470 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 2(Integer)
+2021-04-01 12:21:06.464 DEBUG 8470 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 2
+2021-04-01 12:21:09.456 DEBUG 8470 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
+2021-04-01 12:21:09.458 DEBUG 8470 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer)
+2021-04-01 12:21:09.468 DEBUG 8470 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 7
+2021-04-01 12:21:14.076 DEBUG 8470 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
+2021-04-01 12:21:14.077 DEBUG 8470 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
+2021-04-01 12:21:14.081 DEBUG 8470 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 12:21:16.355 DEBUG 8470 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
+2021-04-01 12:21:16.356 DEBUG 8470 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
+2021-04-01 12:21:16.360 DEBUG 8470 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 12:21:18.750 DEBUG 8470 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
+2021-04-01 12:21:18.751 DEBUG 8470 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
+2021-04-01 12:21:18.754 DEBUG 8470 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 12:21:22.243 DEBUG 8470 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
+2021-04-01 12:21:22.244 DEBUG 8470 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters:
+2021-04-01 12:21:22.255 DEBUG 8470 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 10
+2021-04-01 12:21:41.761 DEBUG 8470 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
+2021-04-01 12:21:41.763 DEBUG 8470 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters:
+2021-04-01 12:21:41.776 DEBUG 8470 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 10
+2021-04-01 12:21:50.587 DEBUG 8470 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
+2021-04-01 12:21:50.588 DEBUG 8470 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters:
+2021-04-01 12:21:50.602 DEBUG 8470 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 10
 2021-04-01 12:22:49.725  INFO 8470 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2021-04-01 12:22:49.732  INFO 8470 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-04-01 12:22:49.749  INFO 8470 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -1279,12 +1279,12 @@ Field error in object 'user' on field 'userId': rejected value [admin]; codes [t
 2021-04-01 12:23:07.657  INFO 8585 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
 2021-04-01 12:23:07.737  INFO 8585 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2021-04-01 12:23:07.838  INFO 8585 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-04-01 12:23:07.843 DEBUG 8585 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
-2021-04-01 12:23:07.861 DEBUG 8585 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters:
-2021-04-01 12:23:07.882 DEBUG 8585 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 10
-2021-04-01 12:23:20.870 DEBUG 8585 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_gender = ?
-2021-04-01 12:23:20.872 DEBUG 8585 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 男(String)
-2021-04-01 12:23:20.882 DEBUG 8585 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 4
+2021-04-01 12:23:07.843 DEBUG 8585 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
+2021-04-01 12:23:07.861 DEBUG 8585 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters:
+2021-04-01 12:23:07.882 DEBUG 8585 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 10
+2021-04-01 12:23:20.870 DEBUG 8585 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_gender = ?
+2021-04-01 12:23:20.872 DEBUG 8585 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 男(String)
+2021-04-01 12:23:20.882 DEBUG 8585 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 4
 2021-04-01 12:25:08.984  INFO 8585 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2021-04-01 12:25:08.986  INFO 8585 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-04-01 12:25:08.993  INFO 8585 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -1307,30 +1307,30 @@ Field error in object 'user' on field 'userId': rejected value [admin]; codes [t
 2021-04-01 12:25:17.911  INFO 8703 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2021-04-01 12:25:17.979  INFO 8703 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2021-04-01 12:25:18.081  INFO 8703 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-04-01 12:25:18.087 DEBUG 8703 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
-2021-04-01 12:25:18.104 DEBUG 8703 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 未激活(String)
-2021-04-01 12:25:18.122 DEBUG 8703 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 4
-2021-04-01 12:25:20.891 DEBUG 8703 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
-2021-04-01 12:25:20.893 DEBUG 8703 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 已注销(String)
-2021-04-01 12:25:20.898 DEBUG 8703 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 12:25:23.603 DEBUG 8703 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
-2021-04-01 12:25:23.604 DEBUG 8703 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 已激活(String)
-2021-04-01 12:25:23.620 DEBUG 8703 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 5
-2021-04-01 12:25:25.987 DEBUG 8703 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=? and user.user_status =?
-2021-04-01 12:25:25.988 DEBUG 8703 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 已激活(String)
-2021-04-01 12:25:25.995 DEBUG 8703 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 12:25:28.155 DEBUG 8703 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=? and user.user_status =?
-2021-04-01 12:25:28.156 DEBUG 8703 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 2(Integer), 已激活(String)
-2021-04-01 12:25:28.164 DEBUG 8703 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 2
-2021-04-01 12:25:31.155 DEBUG 8703 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=? and user.user_status =?
-2021-04-01 12:25:31.156 DEBUG 8703 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 已激活(String)
-2021-04-01 12:25:31.161 DEBUG 8703 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 12:25:34.737 DEBUG 8703 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=? and user.user_status =?
-2021-04-01 12:25:34.739 DEBUG 8703 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 未激活(String)
-2021-04-01 12:25:34.745 DEBUG 8703 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 0
-2021-04-01 12:25:41.002 DEBUG 8703 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-01 12:25:41.004 DEBUG 8703 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(String)
-2021-04-01 12:25:41.006 DEBUG 8703 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 0
+2021-04-01 12:25:18.087 DEBUG 8703 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
+2021-04-01 12:25:18.104 DEBUG 8703 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 未激活(String)
+2021-04-01 12:25:18.122 DEBUG 8703 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 4
+2021-04-01 12:25:20.891 DEBUG 8703 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
+2021-04-01 12:25:20.893 DEBUG 8703 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 已注销(String)
+2021-04-01 12:25:20.898 DEBUG 8703 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 12:25:23.603 DEBUG 8703 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
+2021-04-01 12:25:23.604 DEBUG 8703 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 已激活(String)
+2021-04-01 12:25:23.620 DEBUG 8703 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 5
+2021-04-01 12:25:25.987 DEBUG 8703 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=? and user.user_status =?
+2021-04-01 12:25:25.988 DEBUG 8703 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 已激活(String)
+2021-04-01 12:25:25.995 DEBUG 8703 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 12:25:28.155 DEBUG 8703 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=? and user.user_status =?
+2021-04-01 12:25:28.156 DEBUG 8703 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 2(Integer), 已激活(String)
+2021-04-01 12:25:28.164 DEBUG 8703 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 2
+2021-04-01 12:25:31.155 DEBUG 8703 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=? and user.user_status =?
+2021-04-01 12:25:31.156 DEBUG 8703 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 已激活(String)
+2021-04-01 12:25:31.161 DEBUG 8703 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 12:25:34.737 DEBUG 8703 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=? and user.user_status =?
+2021-04-01 12:25:34.739 DEBUG 8703 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer), 未激活(String)
+2021-04-01 12:25:34.745 DEBUG 8703 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 0
+2021-04-01 12:25:41.002 DEBUG 8703 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
+2021-04-01 12:25:41.004 DEBUG 8703 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(String)
+2021-04-01 12:25:41.006 DEBUG 8703 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 0
 2021-04-01 12:27:40.462  INFO 8703 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2021-04-01 12:27:40.464  INFO 8703 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-04-01 12:27:40.469  INFO 8703 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
@@ -1353,30 +1353,30 @@ Field error in object 'user' on field 'userId': rejected value [admin]; codes [t
 2021-04-01 12:32:53.274  INFO 8832 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2021-04-01 12:32:53.332  INFO 8832 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2021-04-01 12:32:53.433  INFO 8832 --- [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-04-01 12:32:53.439 DEBUG 8832 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_name like "%"?"%"
-2021-04-01 12:32:53.456 DEBUG 8832 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 张(String)
-2021-04-01 12:32:53.469 DEBUG 8832 --- [http-nio-9090-exec-1] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 0
-2021-04-01 12:32:54.492 DEBUG 8832 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_name like "%"?"%"
-2021-04-01 12:32:54.493 DEBUG 8832 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 张(String)
-2021-04-01 12:32:54.495 DEBUG 8832 --- [http-nio-9090-exec-2] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 0
-2021-04-01 12:33:03.125 DEBUG 8832 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_name like "%"?"%"
-2021-04-01 12:33:03.126 DEBUG 8832 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: Q(String)
-2021-04-01 12:33:03.136 DEBUG 8832 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 12:33:09.308 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_name like "%"?"%"
-2021-04-01 12:33:09.309 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: a(String)
-2021-04-01 12:33:09.321 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 5
-2021-04-01 12:33:20.806 DEBUG 8832 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_name like "%"?"%"
-2021-04-01 12:33:20.808 DEBUG 8832 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 2(String)
-2021-04-01 12:33:20.816 DEBUG 8832 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 4
-2021-04-01 12:34:26.550 DEBUG 8832 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
-2021-04-01 12:34:26.554 DEBUG 8832 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 已激活(String)
-2021-04-01 12:34:26.565 DEBUG 8832 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 5
-2021-04-01 12:35:20.324 DEBUG 8832 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_name like "%"?"%" and user.user_status =?
-2021-04-01 12:35:20.331 DEBUG 8832 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(String), 已激活(String)
-2021-04-01 12:35:20.334 DEBUG 8832 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 0
-2021-04-01 12:35:25.097 DEBUG 8832 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
-2021-04-01 12:35:25.098 DEBUG 8832 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters:
-2021-04-01 12:35:25.109 DEBUG 8832 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 10
+2021-04-01 12:32:53.439 DEBUG 8832 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_name like "%"?"%"
+2021-04-01 12:32:53.456 DEBUG 8832 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 张(String)
+2021-04-01 12:32:53.469 DEBUG 8832 --- [http-nio-9090-exec-1] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 0
+2021-04-01 12:32:54.492 DEBUG 8832 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_name like "%"?"%"
+2021-04-01 12:32:54.493 DEBUG 8832 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 张(String)
+2021-04-01 12:32:54.495 DEBUG 8832 --- [http-nio-9090-exec-2] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 0
+2021-04-01 12:33:03.125 DEBUG 8832 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_name like "%"?"%"
+2021-04-01 12:33:03.126 DEBUG 8832 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: Q(String)
+2021-04-01 12:33:03.136 DEBUG 8832 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 12:33:09.308 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_name like "%"?"%"
+2021-04-01 12:33:09.309 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: a(String)
+2021-04-01 12:33:09.321 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 5
+2021-04-01 12:33:20.806 DEBUG 8832 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_name like "%"?"%"
+2021-04-01 12:33:20.808 DEBUG 8832 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 2(String)
+2021-04-01 12:33:20.816 DEBUG 8832 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 4
+2021-04-01 12:34:26.550 DEBUG 8832 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_status =?
+2021-04-01 12:34:26.554 DEBUG 8832 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 已激活(String)
+2021-04-01 12:34:26.565 DEBUG 8832 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 5
+2021-04-01 12:35:20.324 DEBUG 8832 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_name like "%"?"%" and user.user_status =?
+2021-04-01 12:35:20.331 DEBUG 8832 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(String), 已激活(String)
+2021-04-01 12:35:20.334 DEBUG 8832 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 0
+2021-04-01 12:35:25.097 DEBUG 8832 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
+2021-04-01 12:35:25.098 DEBUG 8832 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters:
+2021-04-01 12:35:25.109 DEBUG 8832 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 10
 2021-04-01 12:35:49.465 DEBUG 8832 --- [http-nio-9090-exec-9] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
 2021-04-01 12:35:49.465 DEBUG 8832 --- [http-nio-9090-exec-9] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
 2021-04-01 12:35:49.469 DEBUG 8832 --- [http-nio-9090-exec-9] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 9
@@ -1392,9 +1392,9 @@ Field error in object 'user' on field 'userId': rejected value [admin]; codes [t
 2021-04-01 16:09:17.826 DEBUG 8832 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
 2021-04-01 16:09:17.827 DEBUG 8832 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
 2021-04-01 16:09:17.830 DEBUG 8832 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 9
-2021-04-01 16:10:07.410 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 16:10:07.410 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 16:10:07.413 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 16:10:07.410 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 16:10:07.410 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 16:10:07.413 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
 2021-04-01 16:10:13.032 DEBUG 8832 --- [http-nio-9090-exec-5] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
 2021-04-01 16:10:13.033 DEBUG 8832 --- [http-nio-9090-exec-5] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
 2021-04-01 16:10:13.035 DEBUG 8832 --- [http-nio-9090-exec-5] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 9
@@ -1419,27 +1419,27 @@ Field error in object 'user' on field 'userId': rejected value [admin]; codes [t
 2021-04-01 17:21:30.546 DEBUG 8832 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
 2021-04-01 17:21:30.546 DEBUG 8832 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
 2021-04-01 17:21:30.547 DEBUG 8832 --- [http-nio-9090-exec-2] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 9
-2021-04-01 17:21:34.178 DEBUG 8832 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 17:21:34.178 DEBUG 8832 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 17:21:34.180 DEBUG 8832 --- [http-nio-9090-exec-3] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 17:21:37.530 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=?
-2021-04-01 17:21:37.530 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
-2021-04-01 17:21:37.532 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 17:21:40.473 DEBUG 8832 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-01 17:21:40.474 DEBUG 8832 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 2(Integer)
-2021-04-01 17:21:40.477 DEBUG 8832 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 2
-2021-04-01 17:21:43.486 DEBUG 8832 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-01 17:21:43.487 DEBUG 8832 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
-2021-04-01 17:21:43.489 DEBUG 8832 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 17:21:45.369 DEBUG 8832 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
-2021-04-01 17:21:45.370 DEBUG 8832 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer)
-2021-04-01 17:21:45.375 DEBUG 8832 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 7
+2021-04-01 17:21:34.178 DEBUG 8832 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 17:21:34.178 DEBUG 8832 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 17:21:34.180 DEBUG 8832 --- [http-nio-9090-exec-3] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 17:21:37.530 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_id=?
+2021-04-01 17:21:37.530 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
+2021-04-01 17:21:37.532 DEBUG 8832 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 17:21:40.473 DEBUG 8832 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
+2021-04-01 17:21:40.474 DEBUG 8832 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 2(Integer)
+2021-04-01 17:21:40.477 DEBUG 8832 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 2
+2021-04-01 17:21:43.486 DEBUG 8832 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
+2021-04-01 17:21:43.487 DEBUG 8832 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 1(Integer)
+2021-04-01 17:21:43.489 DEBUG 8832 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 17:21:45.369 DEBUG 8832 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.position_id=?
+2021-04-01 17:21:45.370 DEBUG 8832 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 3(Integer)
+2021-04-01 17:21:45.375 DEBUG 8832 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 7
 2021-04-01 17:42:53.783 DEBUG 8832 --- [http-nio-9090-exec-8] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
 2021-04-01 17:42:53.784 DEBUG 8832 --- [http-nio-9090-exec-8] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
 2021-04-01 17:42:53.786 DEBUG 8832 --- [http-nio-9090-exec-8] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 9
-2021-04-01 17:42:53.856 DEBUG 8832 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 17:42:53.856 DEBUG 8832 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 17:42:53.859 DEBUG 8832 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 17:42:53.856 DEBUG 8832 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 17:42:53.856 DEBUG 8832 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 17:42:53.859 DEBUG 8832 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
 2021-04-01 18:09:31.287 DEBUG 8832 --- [http-nio-9090-exec-10] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
 2021-04-01 18:09:31.287 DEBUG 8832 --- [http-nio-9090-exec-10] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
 2021-04-01 18:09:31.288 DEBUG 8832 --- [http-nio-9090-exec-10] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 9
@@ -2289,24 +2289,24 @@ java.lang.IllegalArgumentException: invalid comparison: java.util.Date and java.
 2021-04-01 18:35:15.943  WARN 12031 --- [http-nio-9090-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.Date'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2020-03-31T16:00:00.000Z'; nested exception is java.lang.IllegalArgumentException: Parse attempt failed for value [2020-03-31T16:00:00.000Z]]
 2021-04-01 18:36:02.951  WARN 12031 --- [http-nio-9090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.Date'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2020-03-31T16:00:00.000Z'; nested exception is java.lang.IllegalArgumentException: Parse attempt failed for value [2020-03-31T16:00:00.000Z]]
 2021-04-01 18:36:51.658  WARN 12031 --- [http-nio-9090-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.Date'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-03-02T16:00:00.000Z'; nested exception is java.lang.IllegalArgumentException: Parse attempt failed for value [2021-03-02T16:00:00.000Z]]
-2021-04-01 18:37:12.033 DEBUG 12031 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 18:37:12.034 DEBUG 12031 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 18:37:12.038 DEBUG 12031 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 18:37:14.940 DEBUG 12031 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_gender = ?
-2021-04-01 18:37:14.941 DEBUG 12031 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 男(String)
-2021-04-01 18:37:14.946 DEBUG 12031 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 4
-2021-04-01 18:37:18.579 DEBUG 12031 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_gender = ?
-2021-04-01 18:37:18.586 DEBUG 12031 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 女(String)
-2021-04-01 18:37:18.592 DEBUG 12031 --- [http-nio-9090-exec-7] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 18:37:23.748 DEBUG 12031 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
-2021-04-01 18:37:23.749 DEBUG 12031 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters:
-2021-04-01 18:37:23.775 DEBUG 12031 --- [http-nio-9090-exec-8] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 10
-2021-04-01 18:38:18.403 DEBUG 12031 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-01 18:38:18.403 DEBUG 12031 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: 20210103@user.com(String)
-2021-04-01 18:38:18.404 DEBUG 12031 --- [http-nio-9090-exec-9] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
-2021-04-01 18:38:27.978 DEBUG 12031 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
-2021-04-01 18:38:27.978 DEBUG 12031 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : ==> Parameters: admin(String)
-2021-04-01 18:38:27.980 DEBUG 12031 --- [http-nio-9090-exec-10] com.emeims.entity.base.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 18:37:12.033 DEBUG 12031 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 18:37:12.034 DEBUG 12031 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 18:37:12.038 DEBUG 12031 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 18:37:14.940 DEBUG 12031 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_gender = ?
+2021-04-01 18:37:14.941 DEBUG 12031 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 男(String)
+2021-04-01 18:37:14.946 DEBUG 12031 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 4
+2021-04-01 18:37:18.579 DEBUG 12031 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_gender = ?
+2021-04-01 18:37:18.586 DEBUG 12031 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 女(String)
+2021-04-01 18:37:18.592 DEBUG 12031 --- [http-nio-9090-exec-7] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 18:37:23.748 DEBUG 12031 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id
+2021-04-01 18:37:23.749 DEBUG 12031 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters:
+2021-04-01 18:37:23.775 DEBUG 12031 --- [http-nio-9090-exec-8] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 10
+2021-04-01 18:38:18.403 DEBUG 12031 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
+2021-04-01 18:38:18.403 DEBUG 12031 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: 20210103@user.com(String)
+2021-04-01 18:38:18.404 DEBUG 12031 --- [http-nio-9090-exec-9] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
+2021-04-01 18:38:27.978 DEBUG 12031 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==>  Preparing: select * from emcims.user, emcims.position, emcims.company where user.position_id=position.position_id and user.company_id=company.company_id and user.user_email = ?
+2021-04-01 18:38:27.978 DEBUG 12031 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : ==> Parameters: admin(String)
+2021-04-01 18:38:27.980 DEBUG 12031 --- [http-nio-9090-exec-10] com.emeims.dao.UserMapper.getUserByInfo  : <==      Total: 1
 2021-04-01 18:38:31.474 DEBUG 12031 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
 2021-04-01 18:38:31.474 DEBUG 12031 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
 2021-04-01 18:38:31.477 DEBUG 12031 --- [http-nio-9090-exec-1] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 11
@@ -2316,12 +2316,12 @@ java.lang.IllegalArgumentException: invalid comparison: java.util.Date and java.
 2021-04-01 18:42:22.738 DEBUG 12031 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
 2021-04-01 18:42:22.738 DEBUG 12031 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
 2021-04-01 18:42:22.740 DEBUG 12031 --- [http-nio-9090-exec-3] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 11
-2021-04-01 18:42:31.928 DEBUG 12031 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 18:42:31.929 DEBUG 12031 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 18:42:31.932 DEBUG 12031 --- [http-nio-9090-exec-4] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
-2021-04-01 18:42:36.007 DEBUG 12031 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.updateUser     : ==>  Preparing: update emcims.user SET user.user_status=? where user_id=?
-2021-04-01 18:42:36.007 DEBUG 12031 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.updateUser     : ==> Parameters: 已注销(String), 2(Integer)
-2021-04-01 18:42:36.016 DEBUG 12031 --- [http-nio-9090-exec-5] com.emeims.entity.base.UserMapper.updateUser     : <==    Updates: 1
+2021-04-01 18:42:31.928 DEBUG 12031 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 18:42:31.929 DEBUG 12031 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 18:42:31.932 DEBUG 12031 --- [http-nio-9090-exec-4] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 18:42:36.007 DEBUG 12031 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.updateUser     : ==>  Preparing: update emcims.user SET user.user_status=? where user_id=?
+2021-04-01 18:42:36.007 DEBUG 12031 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.updateUser     : ==> Parameters: 已注销(String), 2(Integer)
+2021-04-01 18:42:36.016 DEBUG 12031 --- [http-nio-9090-exec-5] com.emeims.dao.UserMapper.updateUser     : <==    Updates: 1
 2021-04-01 18:42:36.019 ERROR 12031 --- [http-nio-9090-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 
 java.lang.NullPointerException: null
@@ -2377,9 +2377,9 @@ java.lang.NullPointerException: null
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.43.jar:9.0.43]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_282]
 
-2021-04-01 18:42:41.795 DEBUG 12031 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
-2021-04-01 18:42:41.796 DEBUG 12031 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getAllUser     : ==> Parameters:
-2021-04-01 18:42:41.798 DEBUG 12031 --- [http-nio-9090-exec-6] com.emeims.entity.base.UserMapper.getAllUser     : <==      Total: 10
+2021-04-01 18:42:41.795 DEBUG 12031 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : ==>  Preparing: select * from emcims.user u, emcims.position p, emcims.company c where u.position_id=p.position_id and u.company_id=c.company_id
+2021-04-01 18:42:41.796 DEBUG 12031 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : ==> Parameters:
+2021-04-01 18:42:41.798 DEBUG 12031 --- [http-nio-9090-exec-6] com.emeims.dao.UserMapper.getAllUser     : <==      Total: 10
 2021-04-01 18:46:00.837 DEBUG 12031 --- [http-nio-9090-exec-7] c.e.dao.PurchaseMapper.getAllPurchase    : ==>  Preparing: select * from emcims.purchase;
 2021-04-01 18:46:00.838 DEBUG 12031 --- [http-nio-9090-exec-7] c.e.dao.PurchaseMapper.getAllPurchase    : ==> Parameters: 
 2021-04-01 18:46:00.839 DEBUG 12031 --- [http-nio-9090-exec-7] c.e.dao.PurchaseMapper.getAllPurchase    : <==      Total: 11

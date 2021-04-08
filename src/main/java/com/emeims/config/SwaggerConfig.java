@@ -1,6 +1,5 @@
 package com.emeims.config;
 
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -15,6 +14,12 @@ import java.util.ArrayList;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
+
+    /**
+     * 用户API,用户注册登录,查询更改用户的信息
+     * swagger API测试
+     *http://localhost:9090/swagger-ui.html#/
+     */
 
     @Bean
     public Docket docket(){
@@ -35,7 +40,7 @@ public class SwaggerConfig {
                 "v1.0", // 版本
                 "http://terms.service.url/组织链接", // 组织链接
                 contact, // 联系人信息
-                "Apach 2.0 许可", // 许可
+                "Apache 2.0 许可", // 许可
                 "许可链接", // 许可连接
                 new ArrayList<>()// 扩展
         );

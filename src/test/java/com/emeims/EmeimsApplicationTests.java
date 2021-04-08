@@ -1,9 +1,12 @@
 package com.emeims;
 
+import com.emeims.dao.CountMapper;
 import com.emeims.dao.PositionMapper;
-import com.emeims.entity.base.UserMapper;
+import com.emeims.dao.UserMapper;
 import com.emeims.entity.base.Stock;
 import com.emeims.entity.base.User;
+import com.emeims.entity.count.PurchaseCount;
+import com.emeims.entity.count.UserCount;
 import com.emeims.service.stockService.StockServiceImpl;
 import com.emeims.service.userService.UserServiceImpl;
 import org.junit.jupiter.api.Test;
@@ -14,10 +17,7 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @SpringBootTest
 class EmeimsApplicationTests {
@@ -36,6 +36,9 @@ class EmeimsApplicationTests {
 
     @Autowired
     private PositionMapper positionMapper;
+
+    @Autowired
+    private CountMapper countMapper;
 
     @Test
     void contextLoads() throws SQLException {
@@ -115,12 +118,9 @@ class EmeimsApplicationTests {
         map.put("userId",3);
         map.put("userEmail","qwert@user.com");
         List<User> user = userMapper.getUserByInfo(map);
-
         for (User user1 : user) {
             System.out.println(user1);
         }
-
-
     }
 
     @Test
@@ -148,7 +148,6 @@ class EmeimsApplicationTests {
                 .replaceAll("-","")+1;
     }
 
-
     @Test
     public void test(){
         Map map = new HashMap<>();
@@ -168,7 +167,6 @@ class EmeimsApplicationTests {
         System.out.println(String.valueOf(new Date().getTime())+123);
     }
 
-
     @Test
     public void  updateStock(){
         Map mapUpdateStock = new HashMap<>();
@@ -186,7 +184,33 @@ class EmeimsApplicationTests {
         for (Stock stock : allStock) {
             System.out.println(stock);
         }
+    }
 
+    @Test
+    public void countUser(){
+        List<UserCount> countUser = userMapper.countUser();
+        userService.countUser();
+    }
+
+
+    @Test
+    public void countPurchaseByDay(){
+        Map map = new HashMap<>();
+        Date thisDate = new Date();
+        int past = 7;
+        Calendar instance = Calendar.getInstance();
+        instance.setTime(thisDate);
+        instance.set(Calendar.DATE,instance.get(Calendar.DATE)-past);
+        Date startDate = instance.getTime();
+        String today = new SimpleDateFormat("yyyy-MM-dd").format(thisDate);
+        String sD = new SimpleDateFormat("yyyy-MM-dd").format(startDate);
+
+        map.put("startTime",sD);
+        map.put("endTime",today);
+        List<PurchaseCount> purchaseCounts = countMapper.countPurchaseByDay(map);
+        for (PurchaseCount purchaseCount : purchaseCounts) {
+            System.out.println(purchaseCount);
+        }
     }
 
 

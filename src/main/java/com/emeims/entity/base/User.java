@@ -30,4 +30,5 @@ public class User {
     private Position position;
     private Company company;
 
+    private Integer userNumber;
 }

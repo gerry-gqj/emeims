@@ -1,6 +1,7 @@
 package com.emeims.controller;
 
 import com.emeims.entity.base.User;
+import com.emeims.entity.count.UserCount;
 import com.emeims.service.userService.UserServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -237,7 +238,7 @@ public class UserController {
      * @param  userStatus (String null)
      * localhost:9090/user/updateUser
      * */
-    @ApiOperation("更改用户信息")
+    @ApiOperation("更改用户状态")
     @RequestMapping(value = "/updateUserStatus",method = RequestMethod.POST)
     public Map updateUserStatus(Integer userId,
                                 Integer positionId,
@@ -269,10 +270,15 @@ public class UserController {
     }
 
 
-
-
-
-
+    /**
+     * 统计系统用户
+     * localhost:9090/user/countUser
+     * */
+    @ApiOperation("统计用户")
+    @RequestMapping(value = "/countUser",method = RequestMethod.GET)
+    public List<UserCount> countUser(){
+        return userService.countUser();
+    }
 
     /**
      * 抽取重复代码

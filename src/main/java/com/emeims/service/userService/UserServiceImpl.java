@@ -1,7 +1,8 @@
 package com.emeims.service.userService;
 
-import com.emeims.entity.base.UserMapper;
+import com.emeims.dao.UserMapper;
 import com.emeims.entity.base.User;
+import com.emeims.entity.count.UserCount;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -47,6 +48,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteUser(Map map) {
         userMapper.deleteUser(map);
+    }
+
+    @Override
+    public List<UserCount> countUser() {
+        return userMapper.countUser();
     }
 
 

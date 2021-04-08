@@ -1,5 +1,7 @@
-package com.emeims.entity.base;
+package com.emeims.dao;
 
+import com.emeims.entity.base.User;
+import com.emeims.entity.count.UserCount;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -43,5 +45,10 @@ public interface UserMapper {
      * 注销用户
      * */
     void deleteUser(Map map);
+
+    /**
+     * 用户统计
+     * */
+    List<UserCount> countUser();
 
 }

@@ -1,6 +1,7 @@
 package com.emeims.service.userService;
 
 import com.emeims.entity.base.User;
+import com.emeims.entity.count.UserCount;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,5 +21,7 @@ public interface UserService {
     void updateUser(Map map);
 
     void deleteUser(Map map);
+
+    List<UserCount> countUser();
 
 }

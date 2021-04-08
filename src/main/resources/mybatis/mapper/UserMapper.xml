@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.emeims.entity.base.UserMapper">
+<mapper namespace="com.emeims.dao.UserMapper">
 
 
     <resultMap id="allUserMap" type="User">
@@ -124,4 +124,17 @@
     </update>
 
 
+    <resultMap id="countMap" type="UserCount">
+        <result property="userNumber" column="user_number"/>
+        <association property="position" javaType="Position">
+            <result property="postName" column="position_name"/>
+        </association>
+    </resultMap>
+    <select id="countUser" resultMap="countMap">
+        select position.position_name,count(user.position_id) user_number
+        from emcims.user,
+             emcims.position
+        where user.position_id=position.position_id
+        group by user.position_id;
+    </select>
 </mapper>
