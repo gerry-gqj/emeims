@@ -8,7 +8,6 @@
         <result property="purchaseDate" column="purchase_date"/>
         <result property="countPurchaseNumber" column="purchase_number"/>
     </resultMap>
-
     <select id="countPurchaseByDay" parameterType="map" resultMap="countPurchaseByDayMap">
         select DATE_FORMAT(emcims.purchase.purchase_end_time,'%Y-%m-%d') purchase_date,
                count(emcims.purchase.purchase_id) purchase_number
@@ -46,7 +45,6 @@
         group by sales_date;
     </select>
 
-
     <resultMap id="countStockByTypeMap" type="StockCount">
         <result property="stockMotorType" column="stock_motor_type"/>
         <result property="stockMotorNumber" column="stockMotorNumber"/>
@@ -55,6 +53,128 @@
         select stock_motor_type,count(emcims.stock.stock_id) stockMotorNumber
         from emcims.stock
         group by emcims.stock.stock_motor_type;
+    </select>
+
+
+
+    <resultMap id="countPurchaseByOperatorMap" type="PurchaseCount">
+        <result property="purchaseDate" column="purchase_date"/>
+        <result property="countPurchaseNumber" column="purchase_number"/>
+    </resultMap>
+    <select id="countPurchaseByOperatorSubmit" parameterType="map" resultMap="countPurchaseByOperatorMap">
+        select DATE_FORMAT(emcims.purchase.purchase_start_time,'%Y-%m-%d') purchase_date,
+        count(emcims.purchase.purchase_id) purchase_number
+        from emcims.purchase
+        <where>
+            <if test="startTime!=null">
+                and purchase.purchase_end_time &gt;= #{startTime}
+            </if>
+            <if test="endTime!=null">
+                and purchase.purchase_end_time &lt;= #{endTime}
+            </if>
+            <if test="purchaseOperator!=null and purchaseOperator!=''">
+                and emcims.purchase.purchase_operator_submit=#{purchaseOperator}
+            </if>
+        </where>
+        and purchase.purchase_status='已提交'
+        group by purchase_date;
+    </select>
+    <select id="countPurchaseByOperatorComfirm" parameterType="map" resultMap="countPurchaseByOperatorMap">
+        select DATE_FORMAT(emcims.purchase.purchase_end_time,'%Y-%m-%d') purchase_date,
+        count(emcims.purchase.purchase_id) purchase_number
+        from emcims.purchase
+        <where>
+            <if test="startTime!=null">
+                and purchase.purchase_end_time &gt;= #{startTime}
+            </if>
+            <if test="endTime!=null">
+                and purchase.purchase_end_time &lt;= #{endTime}
+            </if>
+            <if test="purchaseOperator!=null and purchaseOperator!=''">
+                and emcims.purchase.purchase_operator_confirm=#{purchaseOperator}
+            </if>
+        </where>
+        and purchase.purchase_status='已完成'
+        group by purchase_date;
+    </select>
+    <select id="countPurchaseByOperatorCancel" parameterType="map" resultMap="countPurchaseByOperatorMap">
+        select DATE_FORMAT(emcims.purchase.purchase_return_time,'%Y-%m-%d') purchase_date,
+        count(emcims.purchase.purchase_id) purchase_number
+        from emcims.purchase
+        <where>
+            <if test="startTime!=null">
+                and purchase.purchase_end_time &gt;= #{startTime}
+            </if>
+            <if test="endTime!=null">
+                and purchase.purchase_end_time &lt;= #{endTime}
+            </if>
+            <if test="purchaseOperator!=null and purchaseOperator!=''">
+                and emcims.purchase.purchase_operator_cancel=#{purchaseOperator}
+            </if>
+        </where>
+        and purchase.purchase_status='已取消'
+        group by purchase_date;
+    </select>
+
+    <!--####################################################################-->
+
+    <resultMap id="countSalesByOperatorMap" type="SalesCount">
+        <result property="salesDate" column="sales_date"/>
+        <result property="countSalesNumber" column="sales_number"/>
+    </resultMap>
+    <select id="countSalesByOperatorSubmit" parameterType="map" resultMap="countSalesByOperatorMap">
+        select DATE_FORMAT(emcims.sales.sales_start_time,'%Y-%m-%d') sales_date,
+        count(emcims.sales.sales_id) sales_number
+        from emcims.sales
+        <where>
+            <if test="startTime!=null">
+                and emcims.sales.sales_end_time &gt;= #{startTime}
+            </if>
+            <if test="endTime!=null">
+                and emcims.sales.sales_end_time &lt;= #{endTime}
+            </if>
+            <if test="salesOperator!=null and salesOperator!=''">
+                and emcims.sales.sales_operator_submit=#{salesOperator}
+            </if>
+        </where>
+        and emcims.sales.sales_status='已提交'
+        group by sales_date;
+    </select>
+    <select id="countSalesByOperatorComfirm" parameterType="map" resultMap="countSalesByOperatorMap">
+        select DATE_FORMAT(emcims.sales.sales_end_time,'%Y-%m-%d') sales_date,
+        count(emcims.sales.sales_id) sales_number
+        from emcims.sales
+        <where>
+            <if test="startTime!=null">
+                and emcims.sales.sales_end_time &gt;= #{startTime}
+            </if>
+            <if test="endTime!=null">
+                and emcims.sales.sales_end_time &lt;= #{endTime}
+            </if>
+            <if test="salesOperator!=null and salesOperator!=''">
+                and emcims.sales.sales_operator_confirm=#{salesOperator}
+            </if>
+        </where>
+        and emcims.sales.sales_status='已完成'
+        group by sales_date;
+    </select>
+    <select id="countSalesByOperatorCancel" parameterType="map" resultMap="countSalesByOperatorMap">
+        select DATE_FORMAT(emcims.sales.sales_return_time,'%Y-%m-%d') sales_date,
+        count(emcims.sales.sales_id) sales_number
+        from emcims.sales
+        <where>
+            <if test="startTime!=null">
+                and emcims.sales.sales_end_time &gt;= #{startTime}
+            </if>
+            <if test="endTime!=null">
+                and emcims.sales.sales_end_time &lt;= #{endTime}
+            </if>
+            <if test="salesOperator!=null and salesOperator!=''">
+                and emcims.sales.sales_operator_cancel=#{salesOperator}
+            </if>
+        </where>
+        and emcims.sales.sales_status='已取消'
+        group by sales_date;
     </select>
 
 </mapper>

@@ -13,4 +13,13 @@ public interface CountService {
     List<PurchaseCount> countPurchaseByDay(Map map);
     List<SalesCount> countSalesByDay(Map map);
     List<StockCount> countStockByType();
+
+    List<PurchaseCount> countPurchaseByOperatorSubmit(Map map);
+    List<PurchaseCount> countPurchaseByOperatorComfirm(Map map);
+    List<PurchaseCount> countPurchaseByOperatorCancel(Map map);
+
+    List<SalesCount> countSalesByOperatorSubmit(Map map);
+    List<SalesCount> countSalesByOperatorComfirm(Map map);
+    List<SalesCount> countSalesByOperatorCancel(Map map);
+
 }

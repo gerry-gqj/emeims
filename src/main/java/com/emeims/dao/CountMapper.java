@@ -22,5 +22,14 @@ public interface CountMapper {
 
     List<StockCount> countStockByType();
 
+    List<PurchaseCount> countPurchaseByOperatorSubmit(Map map);
+    List<PurchaseCount> countPurchaseByOperatorComfirm(Map map);
+    List<PurchaseCount> countPurchaseByOperatorCancel(Map map);
+
+    List<SalesCount> countSalesByOperatorSubmit(Map map);
+    List<SalesCount> countSalesByOperatorComfirm(Map map);
+    List<SalesCount> countSalesByOperatorCancel(Map map);
+
+
 
 }

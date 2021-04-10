@@ -11,7 +11,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class SalesCount {
 
-    //统计库存单的数量
+    //统计销售单的数量
     private Integer countSalesNumber;
 
     //统计库存单的价格

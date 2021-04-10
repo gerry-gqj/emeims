@@ -35,4 +35,34 @@ public class CountServiceImpl implements CountService{
         return countMapper.countStockByType();
     }
 
+
+    @Override
+    public List<PurchaseCount> countPurchaseByOperatorSubmit(Map map) {
+        return countMapper.countPurchaseByOperatorSubmit(map);
+    }
+
+    @Override
+    public List<PurchaseCount> countPurchaseByOperatorComfirm(Map map) {
+        return countMapper.countPurchaseByOperatorComfirm(map);
+    }
+
+    @Override
+    public List<PurchaseCount> countPurchaseByOperatorCancel(Map map) {
+        return countMapper.countPurchaseByOperatorCancel(map);
+    }
+
+    @Override
+    public List<SalesCount> countSalesByOperatorSubmit(Map map) {
+        return countMapper.countSalesByOperatorSubmit(map);
+    }
+
+    @Override
+    public List<SalesCount> countSalesByOperatorComfirm(Map map) {
+        return countMapper.countSalesByOperatorComfirm(map);
+    }
+
+    @Override
+    public List<SalesCount> countSalesByOperatorCancel(Map map) {
+        return countMapper.countSalesByOperatorCancel(map);
+    }
 }

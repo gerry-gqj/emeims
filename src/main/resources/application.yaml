@@ -1,26 +1,31 @@
 spring:
+  #数据源基本配置
   datasource:
       #?serverTimezone=UTC解决时区的报错
       url: jdbc:mysql://localhost:3306/emcims?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
       driver-class-name: com.mysql.cj.jdbc.Driver
       username: root
       password: root
+  #接收参数的日期格式
   mvc:
     format:
       date: yyyy-MM-dd
-
+  #响应的日期格式
   jackson:
     default-property-inclusion: always
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
 
 mybatis:
+  #类型别名
   type-aliases-package: com.emeims.entity
+  #mapper地址
   mapper-locations: classpath:mybatis/mapper/*.xml
+  #开启缓存
   configuration:
     cache-enabled: true
 
-
+#日志配置
 logging:
   level:
     com.emeims.dao:

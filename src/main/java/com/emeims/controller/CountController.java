@@ -23,9 +23,9 @@ public class CountController {
         this.countService = countService;
     }
 
-    @RequestMapping(value = "/countPurchaseByDay",method = RequestMethod.GET)
-    public List<PurchaseCount> countPurchaseByDay(){
-        Integer past = 7;
+
+    private Map dateSelector(){
+        Integer past = 15;
         Date thisDate = new Date();
 
         //日历实例
@@ -41,35 +41,23 @@ public class CountController {
         String sD = new SimpleDateFormat("yyyy-MM-dd").format(startDate);
 
         Map map = new HashMap<>();
-            map.put("startTime",sD);
-            map.put("endTime",today);
+        map.put("startTime",sD);
+        map.put("endTime",today);
+        return map;
+    }
+
+    @RequestMapping(value = "/countPurchaseByDay",method = RequestMethod.GET)
+    public List<PurchaseCount> countPurchaseByDay(){
+        Map map = dateSelector();
         return countService.countPurchaseByDay(map);
     }
 
 
     @RequestMapping(value = "/countSalesByDay",method = RequestMethod.GET)
     public List<SalesCount> countSalesByDay(){
-        Integer past = 7;
-        Date thisDate = new Date();
-
-        //日历实例
-        Calendar instance = Calendar.getInstance();
-        //设置日历的值
-        instance.setTime(thisDate);
-        //想要更改的值
-        instance.set(Calendar.DATE,instance.get(Calendar.DATE)-past);
-
-        Date startDate = instance.getTime();
-
-        String today = new SimpleDateFormat("yyyy-MM-dd").format(thisDate);
-        String sD = new SimpleDateFormat("yyyy-MM-dd").format(startDate);
-
-        Map map = new HashMap<>();
-            map.put("startTime",sD);
-            map.put("endTime",today);
+        Map map = dateSelector();
         return countService.countSalesByDay(map);
     }
-
 
     @RequestMapping(value = "/countStockByType",method = RequestMethod.GET)
     public List<StockCount> countStockByType(){
@@ -78,5 +66,30 @@ public class CountController {
 
 
 
+    @RequestMapping(value = "/countOrderByOperator",method = RequestMethod.POST)
+    public Map countOrderByOperator(String operator){
+
+        Map map = dateSelector();
+        map.put("purchaseOperator",operator);
+        List<PurchaseCount> countPurchaseByOperatorSubmit = countService.countPurchaseByOperatorSubmit(map);
+        List<PurchaseCount> countPurchaseByOperatorComfirm = countService.countPurchaseByOperatorComfirm(map);
+        List<PurchaseCount> countPurchaseByOperatorCancel = countService.countPurchaseByOperatorCancel(map);
+
+        map.put("salesOperator",operator);
+        List<SalesCount> countSalesByOperatorSubmit = countService.countSalesByOperatorSubmit(map);
+        List<SalesCount> countSalesByOperatorComfirm = countService.countSalesByOperatorComfirm(map);
+        List<SalesCount> countSalesByOperatorCancel = countService.countSalesByOperatorCancel(map);
+
+        Map returnMap = new HashMap<>();
+        returnMap.put("countPurchaseByOperatorSubmit",countPurchaseByOperatorSubmit);
+        returnMap.put("countPurchaseByOperatorComfirm",countPurchaseByOperatorComfirm);
+        returnMap.put("countPurchaseByOperatorCancel",countPurchaseByOperatorCancel);
+
+        returnMap.put("countSalesByOperatorSubmit",countSalesByOperatorSubmit);
+        returnMap.put("countSalesByOperatorComfirm",countSalesByOperatorComfirm);
+        returnMap.put("countSalesByOperatorCancel",countSalesByOperatorCancel);
+
+        return returnMap;
+    }
 
 }
