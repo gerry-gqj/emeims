@@ -189,7 +189,10 @@ class EmeimsApplicationTests {
     @Test
     public void countUser(){
         List<UserCount> countUser = userMapper.countUser();
-        userService.countUser();
+        List<UserCount> userCountList = userService.countUser();
+        for (UserCount userCount : userCountList) {
+            System.out.println(userCount);
+        }
     }
 
 
@@ -213,6 +216,50 @@ class EmeimsApplicationTests {
         }
     }
 
+
+    @Test
+    public void countSalesByOperatorSubmit(){
+        Map map = dateSelector();
+        map.put("purchaseOperator","admin");
+        List<PurchaseCount> purchaseCountList = countMapper.countPurchaseByOperatorSubmit(map);
+        for (PurchaseCount purchaseCount : purchaseCountList) {
+            System.out.println(purchaseCount);
+        }
+    }
+
+    @Test
+    public void countPurchaseByOperatorCancel(){
+        Map map = dateSelector();
+        map.put("purchaseOperator","admin");
+        List<PurchaseCount> purchaseCountList = countMapper.countPurchaseByOperatorCancel(map);
+        for (PurchaseCount purchaseCount : purchaseCountList) {
+            System.out.println(purchaseCount);
+        }
+    }
+
+
+
+    private Map dateSelector(){
+        Integer past = 30;
+        Date thisDate = new Date();
+
+        //日历实例
+        Calendar instance = Calendar.getInstance();
+        //设置日历的值
+        instance.setTime(thisDate);
+        //想要更改的值
+        instance.set(Calendar.DATE,instance.get(Calendar.DATE)-past);
+
+        Date startDate = instance.getTime();
+
+        String today = new SimpleDateFormat("yyyy-MM-dd").format(thisDate);
+        String sD = new SimpleDateFormat("yyyy-MM-dd").format(startDate);
+
+        Map map = new HashMap<>();
+        map.put("startTime",sD);
+        map.put("endTime",today);
+        return map;
+    }
 
 }
 

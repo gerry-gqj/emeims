@@ -25,7 +25,7 @@ public class CountController {
 
 
     private Map dateSelector(){
-        Integer past = 15;
+        Integer past = 7;
         Date thisDate = new Date();
 
         //日历实例
@@ -37,7 +37,10 @@ public class CountController {
 
         Date startDate = instance.getTime();
 
-        String today = new SimpleDateFormat("yyyy-MM-dd").format(thisDate);
+        instance.set(Calendar.DATE,instance.get(Calendar.DATE)+past+1);
+        Date time = instance.getTime();
+
+        String today = new SimpleDateFormat("yyyy-MM-dd").format(time);
         String sD = new SimpleDateFormat("yyyy-MM-dd").format(startDate);
 
         Map map = new HashMap<>();
@@ -70,12 +73,11 @@ public class CountController {
     public Map countOrderByOperator(String operator){
 
         Map map = dateSelector();
-        map.put("purchaseOperator",operator);
+        map.put("operator",operator);
         List<PurchaseCount> countPurchaseByOperatorSubmit = countService.countPurchaseByOperatorSubmit(map);
         List<PurchaseCount> countPurchaseByOperatorComfirm = countService.countPurchaseByOperatorComfirm(map);
         List<PurchaseCount> countPurchaseByOperatorCancel = countService.countPurchaseByOperatorCancel(map);
 
-        map.put("salesOperator",operator);
         List<SalesCount> countSalesByOperatorSubmit = countService.countSalesByOperatorSubmit(map);
         List<SalesCount> countSalesByOperatorComfirm = countService.countSalesByOperatorComfirm(map);
         List<SalesCount> countSalesByOperatorCancel = countService.countSalesByOperatorCancel(map);

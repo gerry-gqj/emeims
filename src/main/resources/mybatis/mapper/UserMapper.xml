@@ -52,8 +52,7 @@
         from emcims.user,
              emcims.position,
              emcims.company
-        where user.position_id=position.position_id and
-              user.company_id=company.company_id
+        where user.position_id=position.position_id
             <if test="userId!=null and userId!=''">
                 and user.user_id=#{userId}
             </if>
@@ -125,16 +124,15 @@
 
 
     <resultMap id="countMap" type="UserCount">
-        <result property="userNumber" column="user_number"/>
-        <association property="position" javaType="Position">
-            <result property="postName" column="position_name"/>
-        </association>
+        <result property="userNumber" column="un"/>
+        <result property="positionName" column="pn"/>
     </resultMap>
     <select id="countUser" resultMap="countMap">
-        select position.position_name,count(user.position_id) user_number
+        select position.position_name pn,count(user.position_id) un
         from emcims.user,
              emcims.position
         where user.position_id=position.position_id
         group by user.position_id;
     </select>
+
 </mapper>

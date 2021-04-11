@@ -277,6 +277,11 @@ public class UserController {
     @ApiOperation("统计用户")
     @RequestMapping(value = "/countUser",method = RequestMethod.GET)
     public List<UserCount> countUser(){
+        List<UserCount> userCounts = userService.countUser();
+        System.out.println(userCounts);
+        for (UserCount userCount : userCounts) {
+            System.out.println(userCount);
+        }
         return userService.countUser();
     }
 
