@@ -4,6 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.emeims.dao.CountMapper">
 
+    <cache eviction="LRU" flushInterval="100000" readOnly="true" size="1024"/>
+
     <resultMap id="countPurchaseByDayMap" type="PurchaseCount">
         <result property="purchaseDate" column="purchase_date"/>
         <result property="countPurchaseNumber" column="purchase_number"/>

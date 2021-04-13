@@ -5,6 +5,8 @@
 
 <mapper namespace="com.emeims.dao.UserMapper">
 
+    <cache eviction="LRU" flushInterval="100000" readOnly="true" size="1024"/>
+
 
     <resultMap id="allUserMap" type="User">
         <result property="userId" column="user_id"/>

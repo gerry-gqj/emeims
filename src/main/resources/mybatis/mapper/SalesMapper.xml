@@ -5,6 +5,8 @@
 
 <mapper namespace="com.emeims.dao.SalesMapper">
 
+    <cache eviction="LRU" flushInterval="100000" readOnly="true" size="1024"/>
+
 
     <insert id="addSales" parameterType="map">
         insert into emcims.sales (sales_id,

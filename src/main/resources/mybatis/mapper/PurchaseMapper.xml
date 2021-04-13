@@ -5,6 +5,8 @@
 
 <mapper namespace="com.emeims.dao.PurchaseMapper">
 
+    <cache eviction="LRU" flushInterval="100000" readOnly="true" size="1024"/>
+
     <insert id="addPurchase" parameterType="map">
         insert into emcims.purchase (purchase_id,
                                      purchase_supplier,
