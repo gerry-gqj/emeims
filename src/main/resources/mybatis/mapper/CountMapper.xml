@@ -78,7 +78,6 @@
                 and emcims.purchase.purchase_operator_submit=#{operator}
             </if>
         </where>
-        and purchase.purchase_status='已提交'
         group by purchase_date;
     </select>
     <select id="countPurchaseByOperatorComfirm" parameterType="map" resultMap="countPurchaseByOperatorMap">
@@ -139,7 +138,6 @@
                 and emcims.sales.sales_operator_submit=#{operator}
             </if>
         </where>
-        and emcims.sales.sales_status='已提交'
         group by sales_date;
     </select>
     <select id="countSalesByOperatorComfirm" parameterType="map" resultMap="countSalesByOperatorMap">

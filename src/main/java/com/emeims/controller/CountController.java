@@ -23,7 +23,6 @@ public class CountController {
         this.countService = countService;
     }
 
-
     private Map dateSelector(){
         Integer past = 7;
         Date thisDate = new Date();

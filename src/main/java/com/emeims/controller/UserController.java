@@ -3,15 +3,23 @@ package com.emeims.controller;
 import com.emeims.entity.base.User;
 import com.emeims.entity.count.UserCount;
 import com.emeims.service.userService.UserServiceImpl;
+import com.emeims.utils.CookieUtil;
+import com.emeims.utils.JwtUtils;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static com.sun.activation.registries.LogSupport.log;
 
 /**
  * 用户API,用户注册登录,查询更改用户的信息
@@ -19,6 +27,7 @@ import java.util.Map;
  *http://localhost:9090/swagger-ui.html#/
  */
 
+@Slf4j
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -53,27 +62,21 @@ public class UserController {
      * @return String;
      * */
     @ApiOperation("用户注册")
-    @RequestMapping(value = "/logUp",method = RequestMethod.POST)
-    public Map logUp(String userName,
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    public Map login(String userName,
                        String userEmail,
                        String userPassword){
-
         System.out.println(userName);
         System.out.println(userEmail);
         System.out.println(userPassword);
-
         Map userInfoMap = userInfo(userEmail);
         List<User> users = userService.getUserByInfo(userInfoMap);
-
         Map mapReturn = new HashMap<>();
         if (users.isEmpty()){
-
             mapReturn.put("status","success");
-
             Map addUserMap = userInfo(userName,userEmail,userPassword);
             userService.addUser(addUserMap);
             System.out.println(addUserMap);
-
         }else {
             mapReturn.put("status","isExist");
         }
@@ -84,30 +87,44 @@ public class UserController {
     /**
      * @URL localhost:9090/user/login
      * 登录验证
-     * @param userEmail (String not null)
-     * @param userPassword (String not null)
+     * @param user User [
+     *             userEmail (String not null)
+     *             userPassword (String not null)
+     *            ]
      * */
     @ApiOperation("用户登录验证")
-    @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public Map login(String userEmail,
-                     String userPassword) {
-
-        System.out.println("邮箱: "+userEmail+"密码: "+userPassword);
-
-        Map map = userInfo(userEmail);
-        List<User> users = userService.getUserByInfo(map);
-
-//        users.get(0).getUserPassword();
-
+    @RequestMapping(value = "/logup",method = RequestMethod.POST)
+    public Map logup(User user,HttpServletResponse response,HttpServletRequest request) {
+        log.info("邮箱地址:[{}]",user.getUserEmail());
+        log.info("用户密码:[{}]",user.getUserPassword());
         Map mapReturn = new HashMap<>();
+        Map map = userInfo(user.getUserEmail());
+        List<User> users = userService.getUserByInfo(map);
         if (users.isEmpty()){
             mapReturn.put("status","notExist");
+            mapReturn.put("msg","用户不存在");
         }else if (users.get(0).getUserStatus().equals("未激活")){
             mapReturn.put("status","inActivated");
+            mapReturn.put("msg","用户未激活");
         }else if (users.get(0).getUserStatus().equals("已注销")){
             mapReturn.put("status","loggedOut");
-        }else if (users.get(0).getUserPassword().equals(userPassword)){
+            mapReturn.put("msg","用户已注销");
+        }else if (users.get(0).getUserPassword().equals(user.getUserPassword())){
+            Map<String,String> payload = new HashMap<>();
+            payload.put("id",users.get(0).getUserId().toString());
+            payload.put("name",users.get(0).getUserName());
+            payload.put("email",users.get(0).getUserEmail());
+            String token = JwtUtils.getToken(payload);
+
+            Cookie cookie = new Cookie("token",token);
+            cookie.setSecure(true);
+            cookie.setPath("/");
+            cookie.setMaxAge(7*24*60*60);
+            response.addCookie(cookie);
+
             mapReturn.put("status","success");
+            mapReturn.put("msg","用户登录成功");
+
             mapReturn.put("userId",users.get(0).getUserId());
             mapReturn.put("userName",users.get(0).getUserName());
             mapReturn.put("position",users.get(0).getPosition().getPostName());
@@ -115,8 +132,45 @@ public class UserController {
         return mapReturn;
     }
 
-//
-//
+    /**
+     * 验证token是否有效
+     * localhost:9090/user/verify
+     * */
+    @ApiOperation("验证token")
+    @RequestMapping(value = "/verify",method = RequestMethod.GET)
+    public Map verify(){
+        log.info("token有效,验证通过");
+        Map map = new HashMap<>();
+        map.put("state","true");
+        map.put("msg","token有效");
+        return map;
+    }
+
+
+    @ApiOperation("用户注销")
+    @RequestMapping(value = "/logout",method = RequestMethod.POST)
+    public Map logout(HttpServletRequest request,HttpServletResponse response){
+        Map map = new HashMap<>();
+//        Cookie[] cookies = request.getCookies();
+//        for (Cookie cookie : cookies) {
+//            if (cookie.getName().equals("token")){
+//                cookie.getValue();
+//                cookie.setValue("");
+//                cookie.setMaxAge(0);
+//                cookie.setPath("/");
+//            }
+//        }
+        Cookie cookie = new Cookie("token","");
+        cookie.setSecure(true);
+        cookie.setPath("/");
+        cookie.setMaxAge(0);
+        response.addCookie(cookie);
+        map.put("msg","注销登录成功");
+        map.put("state","success");
+        return map;
+    }
+
+
 //    /**
 //     * @URL  localhost:9090/user/addUser
 //     * 注销用户,方式:将用户状态更改为(已注销)
@@ -130,9 +184,8 @@ public class UserController {
 //        userService.deleteUser(map);
 //        return "用户已注销";
 //    }
-//
-//
-//
+
+
 //    /**
 //     * @URL  localhost:9090/user/addUser
 //     * 激活用户,方式:将用户状态更改为(已激活)
@@ -148,10 +201,6 @@ public class UserController {
 //    }
 //
 
-
-
-
-
     /**
      * @URL localhost:9090/user/allUser
      * 查询所有用户信息
@@ -162,9 +211,6 @@ public class UserController {
     public List<User> getAllUser(){
         return userService.getAllUser();
     }
-
-
-
     /**
      * @URL localhost:9090/user/getUserByInfo
      * 查询用户信息,根据传入参数动态查询用户的信息
@@ -178,7 +224,6 @@ public class UserController {
      @ApiOperation("查询用户的信息")
      @RequestMapping(value = "/getUserByInfo",method = RequestMethod.POST)
      public List<User> getUserByInfo(User user){
-
          System.out.println(user);
          Map map = new HashMap<>();
             map.put("userId",user.getUserId());
@@ -193,25 +238,24 @@ public class UserController {
      }
 
 
-
     /**
      * 更改用户信息,根据传入参数动态更改用户的信息
-     * @param user userId (int not null)
-     * @param user userName (String null)
-     * @param user userEmail (String null)
-     * @param user userPassword (String null)
-     * @param user userGender (String null)
-     * @param user positionId (int null)
-     * @param user userStatus (String null)
+     * @param user User[
+     *             userId (int not null)
+     *             userName (String null)
+     *             userGender (String null)
+     *             userEmail (String null)
+     *             userPassword (String null)
+     *             positionId (int null)
+     *             userStatus (String null)
+     *             ]
      * localhost:9090/user/updateUser
      * */
     @ApiOperation("更改用户信息")
     @RequestMapping(value = "/updateUserInfo",method = RequestMethod.POST)
     public Map updateUserInfo(User user){
-
         System.out.println(user);
         Map map = new HashMap();
-
             map.put("userId", user.getUserId());
             map.put("userName", user.getUserName());
             map.put("userEmail", user.getUserEmail());
@@ -225,7 +269,6 @@ public class UserController {
         mapReturn.put("status","success");
         System.out.println(map);
         userService.updateUser(map);
-
         return mapReturn;
     }
 
@@ -244,11 +287,9 @@ public class UserController {
                                 Integer positionId,
                                 String userStatus){
         Map map = new HashMap<>();
-
             map.put("userId", userId);
             map.put("positionId", positionId);
             map.put("userStatus", userStatus);
-
         Map mapReturn = new HashMap<>();
         if(userStatus.equals("已激活")){
             mapReturn.put("status","active success");
