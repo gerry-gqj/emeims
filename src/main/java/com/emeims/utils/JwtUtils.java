@@ -20,7 +20,8 @@ public class JwtUtils{
         map.forEach((k,v)->{
             builder.withClaim(k,v);
         });
-        String Token = builder.withExpiresAt(instance.getTime()).sign(Algorithm.HMAC256(SIGN));
+        String Token = builder.withExpiresAt(instance.getTime())
+                .sign(Algorithm.HMAC256(SIGN));
         return Token;
     }
 
@@ -34,5 +35,4 @@ public class JwtUtils{
     public static DecodedJWT getTokenInfo(String token){
         return JWT.require(Algorithm.HMAC256(SIGN)).build().verify(token);
     }
-
 }

@@ -24,7 +24,6 @@ public class StockController {
         this.stockService = stockService;
     }
 
-
 //    /* ********************[Method:No.1]: createStockId()**********************/
 //    /**
 //     * [Method:No.1]: createStockId()

@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @ApiModel("库存单")
 public class Stock {
-
     @ApiModelProperty("库存单号")
     private String stockId;
     @ApiModelProperty("电机供应商")
@@ -24,10 +23,8 @@ public class Stock {
     private Integer stockMotorQuantity;
     @ApiModelProperty("电机库存价值")
     private Float stockMotorPriceIn;
-
     @ApiModelProperty("电机库存平均单价")
     private Float stockMotorAvgPrice;
-
     @ApiModelProperty("电机销售价格")
     private Float stockMotorPriceOut;
     @ApiModelProperty("订单状态")
@@ -40,5 +37,4 @@ public class Stock {
     private String stockUpTime;
     @ApiModelProperty("下架时间")
     private String stockDownTime;
-
 }

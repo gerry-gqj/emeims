@@ -112,7 +112,8 @@ public class PurchaseController {
             map.put("purchaseMotorQuality",purchase.getPurchaseMotorQuality());
             map.put("purchaseMotorPrice",purchase.getPurchaseMotorPrice());
             /* 订单价格统计*/
-            Float purchase_total_price=purchase.getPurchaseMotorPrice()* purchase.getPurchaseMotorQuality();
+            Float purchase_total_price=purchase.getPurchaseMotorPrice()
+                    * purchase.getPurchaseMotorQuality();
             map.put("purchaseTotalPrice",purchase_total_price);
             /* 自动生成当前时间
              * 时间格式化在application.yaml已经自动配置好
@@ -245,7 +246,8 @@ public class PurchaseController {
             * */
             if(stockList.isEmpty()){
                 Map mapAddStock = new HashMap<>();
-                    mapAddStock.put("stockId",String.valueOf(new Date().getTime())+purchase.getPurchaseId());
+                    mapAddStock.put("stockId",String.valueOf(new Date().
+                            getTime())+purchase.getPurchaseId());
                     mapAddStock.put("stockSupplier",supplier);
                     mapAddStock.put("stockMotorType",motorType);
                     mapAddStock.put("stockMotorModel",motorModel);

@@ -16,11 +16,10 @@ import java.util.HashMap;
 
 @Slf4j
 public class JwtInterceptor implements HandlerInterceptor {
-
-
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-
+    public boolean preHandle(HttpServletRequest request,
+                             HttpServletResponse response,
+                             Object handler) throws Exception {
         HashMap<String, Object> map = new HashMap<>();
         String token = null;
         Cookie[] cookies = request.getCookies();

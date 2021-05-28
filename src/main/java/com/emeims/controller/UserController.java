@@ -52,7 +52,6 @@ public class UserController {
         return userService.getUserById(id);
     }*/
 
-
     /**
      * @URL localhost:9090/user/logUp
      * 用户注册(只有注册页面能够注册用户)
@@ -94,7 +93,8 @@ public class UserController {
      * */
     @ApiOperation("用户登录验证")
     @RequestMapping(value = "/logup",method = RequestMethod.POST)
-    public Map logup(User user,HttpServletResponse response,HttpServletRequest request) {
+    public Map logup(User user,HttpServletResponse response,
+                     HttpServletRequest request) {
         log.info("邮箱地址:[{}]",user.getUserEmail());
         log.info("用户密码:[{}]",user.getUserPassword());
         Map mapReturn = new HashMap<>();

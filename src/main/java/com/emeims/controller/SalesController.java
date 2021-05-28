@@ -118,17 +118,13 @@ public class SalesController {
                 Float salesTotalPrice = sales.getSalesMotorPrice() * sales.getSalesMotorQuality();
                 map.put("salesTotalPrice",salesTotalPrice);
                 map.put("salesStartTime",new Date());
-
-
                 Map mapStock = new HashMap<>();
                 mapStock.put("stockId",stockId);
                 mapStock.put("stockMotorQuantity",stockMotorQuantity-salesMotorQuality);
                 mapStock.put("stockMotorPriceIn",stockRemainingValue);
-
 //                if (stockMotorQuantity-salesMotorQuality==0){
 //                    mapStock.put("stockStatus","已下架");
 //                }
-
                 stockService.updateStock(mapStock);
                 System.out.println(map);
                 salesService.addSales(map);
@@ -142,7 +138,6 @@ public class SalesController {
         }
         return returnMap;
     }
-
 
     /* ********************[Method:No.3]: addAllSales()**********************/
     /**
@@ -292,6 +287,7 @@ public class SalesController {
                 mapStockCheck.put("stockSupplier",supplier);
                 mapStockCheck.put("stockMotorType",type);
                 mapStockCheck.put("stockMotorModel",model);
+
             List<Stock> stockList = stockService.getStockByInfo(mapStockCheck);
             String stockId = stockList.get(0).getStockId();
             Float stockMotorPriceIn = stockList.get(0).getStockMotorPriceIn();
@@ -304,6 +300,8 @@ public class SalesController {
                 mapUpdateStock.put("stockId",stockId);
                 mapUpdateStock.put("stockMotorQuantity",motorQuantity+salesMotorQuality);
                 mapUpdateStock.put("salesTotalPrice",stockMotorPriceIn+salesTotalPrice);
+
+            System.out.println(stockMotorPriceIn+salesTotalPrice);
 
             stockService.updateStock(mapUpdateStock);
 

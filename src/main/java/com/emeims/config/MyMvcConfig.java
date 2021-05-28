@@ -24,8 +24,10 @@ public class MyMvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new JwtInterceptor())
-                .addPathPatterns("/user/**","/purchase/**","/sales/**","/count/**","/stock/**")
-                .excludePathPatterns("/user/login","/user/logup","/user/logout");
+                .addPathPatterns("/user/**","/purchase/**",
+                        "/sales/**","/count/**","/stock/**")
+                .excludePathPatterns("/user/login",
+                        "/user/logup","/user/logout");
     }
 
 }
